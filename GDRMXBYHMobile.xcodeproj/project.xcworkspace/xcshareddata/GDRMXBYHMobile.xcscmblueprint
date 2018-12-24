@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2693a6d5-1ebd-46bd-a85d-33a72c51ae1b++1740",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "2693a6d5-1ebd-46bd-a85d-33a72c51ae1b++1740" : {
+
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "06133A958C1F618BD34B4D86A591A564EB6C52C1" : 0,
+    "2693a6d5-1ebd-46bd-a85d-33a72c51ae1b++1740" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47BF166B-A8E6-469D-A615-5D737A0C5A87",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "06133A958C1F618BD34B4D86A591A564EB6C52C1" : "GDRMMobileXBYH\/",
+    "2693a6d5-1ebd-46bd-a85d-33a72c51ae1b++1740" : "GDRMMobileXBYH\/"
+
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GDRMXBYHMobile",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GDRMXBYHMobile.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/192.168.0.253\/volume1\/GitRepos\/GDRMMobile",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "06133A958C1F618BD34B4D86A591A564EB6C52C1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/svn.edaoyou.com\/edaoyou",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2693a6d5-1ebd-46bd-a85d-33a72c51ae1b++1740"
+
+    }
+  ]
+}

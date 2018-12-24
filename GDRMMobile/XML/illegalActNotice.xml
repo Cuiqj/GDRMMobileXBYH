@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<illegalActNotice>
+    <Paper size = "A4" width = "595" height = "842">
+        <Margin top= "0" left = "0" right = "65" bottom = "65" />
+        <orientation isPortrait="YES" />
+    </Paper>
+    <StaticTable>
+        <Lines>
+            <defaultLineWidth>0.2</defaultLineWidth>
+            <line x1="33" y1="58" x2="95" y2="58" />
+            
+            <line x1="76" y1="69" x2="171" y2="69" />
+            
+            <line x1="98" y1="80" x2="125" y2="80" />
+        </Lines>
+        <Texts>
+            <defaultFontSize>19</defaultFontSize>
+            <!--标题-->
+            <Text>
+                <text>违法行为告知书</text>
+                <!--字体大小，可选配置，在UILayouts内同-->
+                <fontSize>25</fontSize>
+                <!--字体是否粗体，可选配置，在UILayouts内同-->
+                <isBold>YES</isBold>
+                <!--origin为左上点计算边距后的相对位置，UILayouts里意义同-->
+                <origin x="78" y="31" />
+                <size width="170" height="6" />
+            </Text>
+            <!--你（单位）在-->
+            <Text>
+                <text>你（单位）在</text>
+                <fontSize>15</fontSize>
+                <origin x="44" y="63" />
+                <size width="36" height="6" />
+            </Text>
+            <!--高速公路建筑控制区内修建-->
+            <Text>
+                <text>高速公路建筑控制区内修建</text>
+                <fontSize>15</fontSize>
+                <origin x="33" y="74" />
+                <size width="140" height="6" />
+            </Text>
+            <!--一案，经现场调查-->
+            <Text>
+                <text>一案，经现场调查</text>
+                <fontSize>15</fontSize>
+                <origin x="131" y="74" />
+                <size width="52" height="6" />
+            </Text>
+            <!--已违反了《中华人民共和国公路法》第五十六条规定：禁止-->
+            <Text>
+                <text>已违反了《中华人民共和国公路法》第五十六条规定：禁止</text>
+                <fontSize>15</fontSize>
+                <origin x="33" y="85" />
+                <size width="140" height="6" />
+            </Text>
+            <!--在公路两侧的建筑控制区内修建建筑物和地面构筑物；《公-->
+            <Text>
+                <text>在公路两侧的建筑控制区内修建建筑物和地面构筑物；《公</text>
+                <fontSize>15</fontSize>
+                <origin x="33" y="96" />
+                <size width="140" height="6" />
+            </Text>
+            <!--路安全保护条例》第十三条规定：在公路建筑控制区内，-->
+            <Text>
+                <text> 路安全保护条例》第十三条规定：在公路建筑控制区内，</text>
+                <fontSize>16</fontSize>
+                <origin x="33" y="107" />
+                <size width="149" height="6" />
+            </Text>
+            <!--除公路保护需要外，禁止修建建筑物和地面构筑物；现责-->
+            <Text>
+                <text>除公路保护需要外，禁止修建建筑物和地面构筑物；现责</text>
+                <fontSize>15</fontSize>
+                <origin x="33" y="118" />
+                <size width="140" height="6" />
+            </Text>
+            <!--令你停止违法行为，恢复原貌。否则，因此造成一切责任事-->
+            <Text>
+                <text>令你停止违法行为，恢复原貌。否则，因此造成一切责任事</text>
+                <fontSize>15</fontSize>
+                <origin x="33" y="129" />
+                <size width="149" height="6" />
+            </Text>
+            <!--故以及法律后果由你（单位）负责。）-->
+            <Text>
+                <text>故以及法律后果由你（单位）负责。</text>
+                <fontSize>15</fontSize>
+                <origin x="33" y="140" />
+                <size width="100" height="6" />
+            </Text>
+            <!---->
+            <Text>
+                <text>特此告知</text>
+                <fontSize>15</fontSize>
+                <origin x="50" y="151" />
+                <size width="50" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <text>广东省公路管理局西部沿海高速公路</text>
+                <fontSize>15</fontSize>
+                <origin x="85" y="201" />
+                <size width="124" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <text>办公地址：</text>
+                <origin x="30" y="241" />
+                <size width="30" height="6"/>
+                
+            </Text>
+            <!---->
+            <Text>
+                <text>联系电话</text>
+                <origin x="30" y="251" />
+                <size width="124" height="6" />
+                
+            </Text>
+            
+        </Texts>
+    </StaticTable>
+    <DataTable>
+        <!--姓名-->
+        <UITextField>
+            <origin x="35" y="50" />
+            <size width="40" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>party</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="84" y="61" />
+            <size width="120" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>location</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--号-->
+        <UITextField>
+            <origin x="106" y="72" />
+            <size width="19" height = "6"/>
+            <alignment>Center</alignment>
+            <content>
+                <data>
+                    <attributeName>buildingtype</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--当事人：-->
+        <UITextField>
+            <origin x="115" y="214" />
+            <size width="30" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>senddate</attributeName>
+                     <fontSize>15</fontSize>
+                    <entityName></entityName>
+                    <mode>yyyy年MM月dd日hh时MM分</mode>
+<!--                    yyyy年MM月dd日hh时MM分-->
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="115" y="224" />
+            <size width="30" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>sendorgname</attributeName>
+                    <fontSize>15</fontSize>
+                    <entityName></entityName>
+                    <!--                    yyyy年MM月dd日hh时MM分-->
+                </data>
+            </content>
+        </UITextField>
+        <!--当事人地址-->
+        <UITextField>
+            <origin x="50" y="241" />
+            <size width="90" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>linkaddress</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--当事人-->
+        <UITextField>
+            <origin x="50" y="251" />
+            <size width="150" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>linktel</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+            </DataTable>
+</illegalActNotice>

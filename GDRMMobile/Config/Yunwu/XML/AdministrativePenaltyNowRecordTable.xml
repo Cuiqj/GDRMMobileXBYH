@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdministrativePenaltyNowRecordTable>
+    <!--所有尺寸单位以mm计算-->
+    <!--定义纸张尺寸-->
+<!--    <Paper size="A4" width="842" height="595">-->
+<!--        <!--定义纸张边距，上，左，右，下-->-->
+<!--        <Margin top="0"  left="0" right="0" bottom="3" />-->
+<!--        <orientation isPortrait="No" />-->
+<!--    </Paper>-->
+<!--    <Paper size="A4" width="595" height="842">-->
+<!--    <!--定义纸张边距，上，左，右，下-->-->
+<!--        <Margin top="0"  left="0" right="65" bottom="65" />-->
+<!--    </Paper>-->
+    <Paper size="A4" width="595" height="842">
+    <!--定义纸张边距，上，左，右，下-->
+        <Margin top="0"  left="0" right="65" bottom="65" />
+    </Paper>
+    <!--所有缺省设置元素，default*之类均必不可少-->
+    <!--固定表格-->
+    <StaticTable>
+        <Lines>
+                <!--默认线宽-->
+            <defaultLineWidth>0.2</defaultLineWidth>
+                <!--上下左右-->
+            <line x1="30" y1="38" x2="180" y2="38" />
+            <line x1="30" y1="247.5" x2="180" y2="247.5" />
+            <line x1="30" y1="38" x2="30" y2="247.5" />
+            <line x1="180" y1="38" x2="180" y2="247.5" />
+                <!--左侧全竖线-->
+            <line x1="44" y1="38" x2="44" y2="247.5" />
+                <!--执法人员上线    执法证号上线 -->
+            <line x1="30" y1="54" x2="180" y2="54" />
+                <!--执法人员中线    执法证号中线 -->
+            <line x1="44" y1="65.5" x2="70" y2="65.5" />
+            <line x1="92" y1="65.5" x2="132" y2="65.5" />
+                <!--执法人员下线    执法证号下线 -->
+            <line x1="30" y1="77" x2="180" y2="77" />
+                <!--现场人员基本情况 车（船）号下线 -->
+            <line x1="30" y1="122" x2="180" y2="122" />
+                <!--姓名    性别 下线 -->
+            <line x1="44" y1="86" x2="180" y2="86" />
+                <!--身份证号    与案件关系 下线-->
+            <line x1="44" y1="95" x2="180" y2="95" />
+                <!--单位及职务    联系电话 下线 -->
+            <line x1="44" y1="106" x2="180" y2="106" />
+                <!--联系地址 下线   -->
+            <line x1="44" y1="114" x2="180" y2="114" />
+                <!--左侧第一个半竖线-->
+            <line x1="70" y1="54" x2="70" y2="122" />
+                <!--左侧第二个半竖线   执法时间左侧线-->
+            <line x1="92" y1="38" x2="92" y2="77" />
+                <!--执法时间右侧线    性别 与案件关系 联系电话 右侧线-->
+            <line x1="132" y1="38" x2="132" y2="106" />
+                <!--   性别 与案件关系 联系电话 左侧线-->
+            <line x1="107" y1="77" x2="107" y2="106" />
+                <!--   车（船）型 左右侧线-->
+            <line x1="113" y1="114" x2="113" y2="122" />
+            <line x1="138" y1="114" x2="138" y2="122" />
+                <!--   记录人右侧线-->
+            <line x1="151" y1="54" x2="151" y2="77" />
+                
+                <!--   主要内容 在检查中发现-->
+            <line x1="81" y1="130" x2="179" y2="130" />
+            <line x1="45" y1="138.1" x2="179" y2="138.1" />
+            <line x1="45" y1="146.2" x2="179" y2="146.2" />
+            <line x1="45" y1="154.3" x2="179" y2="154.3" />
+            <line x1="45" y1="162.4" x2="179" y2="162.4" />
+            <line x1="45" y1="170.5" x2="179" y2="170.5" />
+            <line x1="45" y1="178.6" x2="179" y2="178.6" />
+            <line x1="45" y1="186.7" x2="179" y2="186.7" />
+            <line x1="45" y1="194.8" x2="179" y2="194.8" />
+                <!--备注 上线-->
+            <line x1="44" y1="223.5" x2="180" y2="223.5" />
+                <!--执法人员签名 上线-->
+            <line x1="44" y1="233.5" x2="180" y2="233.5" />
+            <!--   执法人员签名线             -->
+            <line x1="75" y1="243" x2="100" y2="243" />
+            <line x1="105" y1="243" x2="130" y2="243" />
+        </Lines>
+  
+        <Title>
+            <defaultFontSize>14</defaultFontSize>
+            <Text>
+                    <text>现 场 笔 录</text>
+                    <fontSize>15</fontSize>
+                    <origin x="83" y="80" />
+                    <size width="426" height="14" />
+            </Text>
+                
+        </Title>
+        <Texts>
+                
+            <Text>
+                    <text>执法</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="40" />
+                    <size width="48" height="17" />
+            </Text>
+            <Text>
+                    <text>地点</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="47" />
+                    <size width="48" height="17" />
+            </Text>
+            <Text>
+                    <text>执法时间</text>
+                    <fontSize>12</fontSize>
+                    <origin x="105" y="44" />
+                    <size width="48" height="17" />
+            </Text>
+            <Text>
+                    <text>      年   月   日</text>
+                    <fontSize>12</fontSize>
+                    <origin x="148" y="40" />
+                    <size width="100" height="17" />
+            </Text>
+            <Text>
+                    <text>   时   分至   时   分</text>
+                    <fontSize>12</fontSize>
+                    <origin x="140" y="47" />
+                    <size width="120" height="17" />
+            </Text>
+            <Text>
+                    <text>执法</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="58" />
+                    <size width="60" height="17" />
+            </Text>
+            <Text>
+                    <text>人员</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="67" />
+                    <size width="100" height="17" />
+            </Text>
+            <Text>
+                    <text>执法证号</text>
+                    <fontSize>12</fontSize>
+                    <origin x="73.5" y="62.5" />
+                    <size width="96" height="17" />
+            </Text>
+            <Text>
+                    <text>记录人</text>
+                    <fontSize>12</fontSize>
+                    <origin x="135.5" y="62.5" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>现场</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="84" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>人员</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="92" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>基本</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="100" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>情况</text>
+                    <fontSize>12</fontSize>
+                    <origin x="33" y="108" />
+                    <size width="72" height="17" />
+            </Text>
+                
+            <Text>
+                    <text>姓    名</text>
+                    <fontSize>12</fontSize>
+                    <origin x="48" y="79" />
+                    <size width="60" height="17" />
+            </Text>
+            <Text>
+                    <text>性  别</text>
+                    <fontSize>12</fontSize>
+                    <origin x="113" y="79" />
+                    <size width="60" height="17" />
+            </Text>
+            <Text>
+                    <text>身份证号</text>
+                    <fontSize>12</fontSize>
+                    <origin x="48" y="88" />
+                    <size width="96" height="17" />
+            </Text>
+                
+            <Text>
+                    <text>与案件关系</text>
+                    <fontSize>12</fontSize>
+                    <origin x="109" y="88" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>单位及职务</text>
+                    <fontSize>12</fontSize>
+                    <origin x="46" y="98" />
+                    <size width="60" height="17" />
+            </Text>
+            <Text>
+                    <text>联系电话</text>
+                    <fontSize>12</fontSize>
+                    <origin x="111" y="98" />
+                    <size width="180" height="17" />
+            </Text>
+            <Text>
+                    <text>联系地址</text>
+                    <fontSize>12</fontSize>
+                    <origin x="48" y="107.5" />
+                    <size width="80" height="17" />
+            </Text>
+            <Text>
+                    <text>车（船）号</text>
+                    <fontSize>12</fontSize>
+                    <origin x="46" y="115.5" />
+                    <size width="80" height="17" />
+            </Text>
+            <Text>
+                    <text>车（船）型</text>
+                    <fontSize>12</fontSize>
+                    <origin x="115" y="115.5" />
+                    <size width="84" height="17" />
+            </Text>
+            <Text>
+                    <text>主</text>
+                    <fontSize>12</fontSize>
+                    <origin x="36" y="155" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>要</text>
+                    <fontSize>12</fontSize>
+                    <origin x="36" y="172" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>内</text>
+                    <fontSize>12</fontSize>
+                    <origin x="36" y="189" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>容</text>
+                    <fontSize>12</fontSize>
+                    <origin x="36" y="206" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>在检查中发现：</text>
+                    <fontSize>12</fontSize>
+                    <origin x="53" y="124" />
+                    <size width="100" height="17" />
+            </Text>
+            <Text>
+                    <text>上述笔录我已看过（或已向我宣读过），情况属实无误。</text>
+                    <fontSize>12</fontSize>
+                    <origin x="53" y="199" />
+                    <size width="300" height="17" />
+            </Text>
+            <Text>
+                    <text>现场人员签名：</text>
+                    <fontSize>12</fontSize>
+                    <origin x="120" y="208" />
+                    <size width="120" height="17" />
+            </Text>
+            <Text>
+                    <text>时间：</text>
+                    <fontSize>12</fontSize>
+                    <origin x="136" y="218" />
+                    <size width="72" height="17" />
+            </Text>
+            <Text>
+                    <text>备注：</text>
+                    <fontSize>12</fontSize>
+                    <origin x="46" y="227" />
+                    <size width="60" height="17" />
+            </Text>
+            <Text>
+                    <text>执法人员签名：</text>
+                    <fontSize>12</fontSize>
+                    <origin x="46" y="237.5" />
+                    <size width="120" height="17" />
+            </Text>
+            <Text>
+                    <text>时间：</text>
+                    <fontSize>12</fontSize>
+                    <origin x="132" y="237.5" />
+                    <size width="60" height="17" />
+            </Text>
+        </Texts>
+    </StaticTable>
+    <DataTable>
+        <DefaultFontSize>19</DefaultFontSize>
+        <!--   执法地点     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="48" y="35" />
+            <lineHeight>24</lineHeight>
+            <size width="45" height="24" />
+            <content>
+                <data>
+                    <attributeName>remark</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--   开始时间     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="138" y="40" />
+            <size width="20" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>yyyy</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="153.5" y="40" />
+            <size width="10" height="6" />
+            <content>
+                <!--$F{start_date_time}-->
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>MM</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="163.5" y="40" />
+            <size width="20" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>dd</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="135" y="47" />
+            <size width="10" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>HH</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="145.5" y="47" />
+            <size width="10" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>mm</mode>
+                </data>
+            </content>
+        </UITextField>
+        <!--  结束时间     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="160" y="47" />
+            <size width="10" height="6" />
+            <content>
+                <data>
+                    <attributeName>end_date_time</attributeName>
+                    <mode>HH</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="170.5" y="47" />
+            <size width="10" height="6" />
+            <content>
+                <data>
+                    <attributeName>end_date_time</attributeName>
+                    <mode>mm</mode>
+                </data>
+            </content>
+        </UITextField>
+        <!-- 执法人员     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="48" y="57" />
+            <size width="100" height="6" />
+            <content>
+                <data>
+                    <attributeName>prover1</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="48" y="68" />
+            <size width="100" height="6" />
+            <content>
+                <data>
+                    <attributeName>prover2</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  执法证号     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="98" y="57" />
+            <size width="120" height="6" />
+            <content>
+                <data>
+                    <attributeName>prover1_exelawid</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="98" y="68" />
+            <size width="120" height="6" />
+            <content>
+                <data>
+                    <attributeName>prover2_exelawid</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!-- 记录人   -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="155" y="62.5" />
+            <size width="100" height="6" />
+            <content>
+                <data>
+                    <attributeName>recorder</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  姓名     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="80" y="79" />
+            <size width="120" height="6" />
+            <content>
+                <data>
+                    <attributeName>party</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  性别     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="145" y="79" />
+            <size width="100" height="6" />
+            <content>
+                <data>
+                    <attributeName>sex</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  身份证     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="78" y="88" />
+            <size width="120" height="6" />
+            <content>
+                <data>
+                    <attributeName>card_no</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  案件关系   -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="143" y="88" />
+            <size width="100" height="6" />
+            <content>
+                <data>
+                    <attributeName>nexus</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!-- 单位及职务    -->
+        <UITextField>
+            <fontSize>10</fontSize>
+            <origin x="75" y="98" />
+            <size width="120" height="6" />
+            <content>
+                <data>
+                    <attributeName>nameAndprincipal_duty</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  联系电话     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="140" y="98" />
+            <size width="100" height="6" />
+            <content>
+                <data>
+                    <attributeName>tel_number</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  联系地点   -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="74" y="107.5" />
+            <size width="700" height="6" />
+            <content>
+                <data>
+                    <attributeName>address</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  车船号     -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="77" y="115.5" />
+            <size width="150" height="6" />
+            <content>
+                <data>
+                    <attributeName>automobile_number</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--  车船型   -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="142" y="115.5" />
+            <size width="250" height="6" />
+            <content>
+                <data>
+                    <attributeName>automobile_pattern</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="45" y="125" />
+            <size width="135" height="72" />
+            <lineHeight>23</lineHeight>
+            <leftOffSet>38</leftOffSet>
+            <content>
+                <data>
+                    <attributeName>event_desc_found</attributeName>
+                </data>
+            </content>
+        </UITextView>
+        <!--  在检查中发现  可能与caseproveinfo冲突  -->
+<!--        <UITextField>-->
+<!--            <fontSize>12</fontSize>-->
+<!--            <origin x="155" y="62.5" />-->
+<!--            <size width="100" height="6" />-->
+<!--            <content>-->
+<!--                <data>-->
+<!--                    <attributeName>remark</attributeName>-->
+<!--                </data>-->
+<!--            </content>-->
+<!--        </UITextField>-->
+    </DataTable>
+</AdministrativePenaltyNowRecordTable>
+            
+<!--        <Texts>-->
+<!--            <defaultFontSize>14</defaultFontSize>-->
+<!--            <!--标题:-->-->
+<!--            <Text>-->
+<!--                <text>广东省高速公路路政管理局西部沿海高速公路路政大队</text>-->
+<!--                <!--字体大小，可选配置，在UILayouts内同-->-->
+<!--                <fontSize>23</fontSize>-->
+<!--                <!--origin为左上点计算边距后的相对位置，UILayouts里意义同-->-->
+<!--                <origin x="57" y="9" />-->
+<!--                <size width="600" height="6" />-->
+<!--            </Text>-->
+<!--            <!--标题:-->-->
+<!--            <Text>-->
+<!--                <text>违 章 建 筑 案 件 现 场 勘 查 图</text>-->
+<!--                <fontSize>23</fontSize>-->
+<!--                <isBold>Yes</isBold>-->
+<!--                <origin x="84" y="20" />-->
+<!--                <size width="600" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>案发</text>-->
+<!--                <origin x="22" y="29" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>时间</text>-->
+<!--                <origin x= "22" y= "33" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>年</text>-->
+<!--                <origin x= "46.5" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>月</text>-->
+<!--                <origin x= "56" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>日</text>-->
+<!--                <origin x= "64.5" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>时</text>-->
+<!--                <origin x= "73.5" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>分</text>-->
+<!--                <origin x= "82" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>地点</text>-->
+<!--                <origin x= "93.5" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>西部沿海高速</text>-->
+<!--                <origin x= "107" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>方向</text>-->
+<!--                <origin x= "137" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>Km+</text>-->
+<!--                <origin x= "155" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>m</text>-->
+<!--                <origin x= "174.5" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>天气</text>-->
+<!--                <origin x= "178" y= "31.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>违章</text>-->
+<!--                <origin x= "205" y= "29" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>项目</text>-->
+<!--                <origin x= "205" y= "33" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>说明：</text>-->
+<!--                <origin x= "20" y= "157.5" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>绘图时间：</text>-->
+<!--                <origin x= "173" y= "183" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>年</text>-->
+<!--                <origin x= "205" y= "183" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>月</text>-->
+<!--                <origin x= "218" y= "183" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>日</text>-->
+<!--                <origin x= "231" y= "183" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>时</text>-->
+<!--                <origin x= "244" y= "183" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>分</text>-->
+<!--                <origin x= "257" y= "183" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>路政勘察员：</text>-->
+<!--                <origin x= "20" y= "189" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>绘图员：</text>-->
+<!--                <origin x= "115" y= "189" />-->
+<!--                <size width="100" height="6" />-->
+<!--            </Text>-->
+<!--            <Text>-->
+<!--                <text>当事人或见证人签字：</text>-->
+<!--                <origin x= "176" y= "189" />-->
+<!--                <size width="200" height="6" />-->
+<!--            </Text>-->
+<!--        </Texts>-->
+<!--    </StaticTable>-->
+<!--    <DataTable>-->
+<!--        <DefaultFontSize>19</DefaultFontSize>-->
+<!--            <!--年-->-->
+<!--            <UITextField>-->
+<!--                <origin x="38.5" y="31" />-->
+<!--                <size width="100" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>happen_date</attributeName>-->
+<!--                        <mode>yyyy</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--月-->-->
+<!--            <UITextField>-->
+<!--                <origin x="52.7" y="31" />-->
+<!--                <size width="100" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>happen_date</attributeName>-->
+<!--                        <mode>MM</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--日-->-->
+<!--            <UITextField>-->
+<!--                <origin x="61" y="31" />-->
+<!--                <size width="100" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>happen_date</attributeName>-->
+<!--                        <mode>dd</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--时-->-->
+<!--            <UITextField>-->
+<!--                <origin x="69.5" y="31" />-->
+<!--                <size width="100" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>happen_date</attributeName>-->
+<!--                        <mode>HH</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--分-->-->
+<!--            <UITextField>-->
+<!--                <origin x="78" y="31" />-->
+<!--                <size width="100" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>happen_date</attributeName>-->
+<!--                        <mode>mm</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--方向-->-->
+<!--            <UITextField>-->
+<!--                <origin x="127" y="31" />-->
+<!--                <size width="100" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>side_short</attributeName>-->
+<!--                        <entityName></entityName>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--Km-->-->
+<!--            <UITextField>-->
+<!--                <origin x="148" y="31" />-->
+<!--                <size width="10" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>station_start_km</attributeName>-->
+<!--                        <entityName></entityName>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--m-->-->
+<!--            <UITextField>-->
+<!--                <origin x="164" y="31" />-->
+<!--                <size width="23" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>station_start_m</attributeName>-->
+<!--                        <entityName></entityName>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--天气-->-->
+<!--            <UITextField>-->
+<!--                <origin x="190" y="31" />-->
+<!--                <size width="5" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>weater</attributeName>-->
+<!--                        <entityName></entityName>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--路面性质-->-->
+<!--            <UITextField>-->
+<!--                <origin x="220" y="31" />-->
+<!--                <size width="90" height = "6"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>case_short_desc</attributeName>-->
+<!--                        <entityName></entityName>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--绘图-->-->
+<!--            <UIImgView>-->
+<!--                <origin x="20.5" y="37.5" />-->
+<!--                <size width="259" height="116" />-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>map_file</attributeName>-->
+<!--                        <entityName></entityName>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UIImgView>-->
+<!--            <!--说明：-->-->
+<!--            <UITextView>-->
+<!--                <origin x="22" y="155.2" />-->
+<!--                <size width="255" height="25" />-->
+<!--                <leftOffSet>14</leftOffSet>-->
+<!--                <lineHeight>18</lineHeight>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>map_remark</attributeName>-->
+<!--                        <entityName></entityName>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextView>-->
+<!--            <!--绘图时间-->-->
+<!--            <!--年-->-->
+<!--            <UITextField>-->
+<!--                <origin x="194" y="181.5" />-->
+<!--                <size width="20" height = "5.5"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>draw_time</attributeName>-->
+<!--                        <mode>yyyy</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--月-->-->
+<!--            <UITextField>-->
+<!--                <origin x="210" y="181.5" />-->
+<!--                <size width="20" height = "5.5"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>draw_time</attributeName>-->
+<!--                        <mode>MM</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--日-->-->
+<!--            <UITextField>-->
+<!--                <origin x="223" y="181.5" />-->
+<!--                <size width="20" height = "5.5"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>draw_time</attributeName>-->
+<!--                        <mode>dd</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--            <!--时-->-->
+<!--            <UITextField>-->
+<!--                <origin x="235" y="181.5" />-->
+<!--                <size width="20" height = "5.5"/>-->
+<!--                <content>-->
+<!--                    <data>-->
+<!--                        <attributeName>draw_time</attributeName>-->
+<!--                        <mode>HH</mode>-->
+<!--                    </data>-->
+<!--                </content>-->
+<!--            </UITextField>-->
+<!--        <!--分-->-->
+<!--        <UITextField>-->
+<!--            <origin x="248" y="181.5" />-->
+<!--            <size width="20" height = "5.5"/>-->
+<!--            <content>-->
+<!--                <data>-->
+<!--                    <attributeName>draw_time</attributeName>-->
+<!--                    <mode>mm</mode>-->
+<!--                </data>-->
+<!--            </content>-->
+<!--        </UITextField>-->
+<!--        <!--路政勘查员-->-->
+<!--        <UITextField>-->
+<!--            <origin x="46" y="187" />-->
+<!--            <size width="50" height = "5.5"/>-->
+<!--            <content>-->
+<!--                <data>-->
+<!--                    <attributeName>prover</attributeName>-->
+<!--                    <entityName></entityName>-->
+<!--                </data>-->
+<!--            </content>-->
+<!--        </UITextField>-->
+<!--        <!--绘图员-->-->
+<!--        <UITextField>-->
+<!--            <origin x="134" y="187" />-->
+<!--            <size width="50" height = "5.5"/>-->
+<!--            <content>-->
+<!--                <data>-->
+<!--                    <attributeName>draftsman_name</attributeName>-->
+<!--                    <entityName></entityName>-->
+<!--                </data>-->
+<!--            </content>-->
+<!--        </UITextField>-->
+<!--    </DataTable>-->
+<!--</CaseRecordTable>-->

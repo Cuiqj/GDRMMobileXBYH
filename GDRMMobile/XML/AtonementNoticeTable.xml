@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AtonementNoticeTable>
+    <Paper size = "A4" width = "595" height = "842">
+        <Margin top= "0" left = "0" right = "65" bottom = "65" />
+        <orientation isPortrait="YES" />
+    </Paper>
+    <StaticTable>
+        <Lines>
+            <defaultLineWidth>0.2</defaultLineWidth>
+            <line x1="46" y1="69" x2="76" y2="69" />
+            
+            <line x1="55" y1="83" x2="145" y2="83" />
+            
+            <line x1="43" y1="93" x2="90" y2="93" />
+            
+            <line x1="110" y1="93" x2="160" y2="93" />
+            
+            <line x1="132" y1="103" x2="183" y2="103" />
+            
+            <line x1="25" y1="113" x2="183" y2="113" />
+            <line x1="25" y1="123" x2="183" y2="123" />
+            <!--            <line x1="25" y1="132" x2="183" y2="132" />-->
+            <!--            <line x1="25" y1="140" x2="183" y2="140" />-->
+            
+            <line x1="66" y1="137" x2="179" y2="137" />
+            
+            <!--            <line x1="92" y1="143" x2="183" y2="143" />-->
+            <!--            <line x1="29" y1="151.5" x2="183" y2="151.5" />-->
+            <line x1="55" y1="157" x2="183" y2="157" />
+            <line x1="29" y1="167" x2="183" y2="167" />
+            <!--            <line x1="29" y1="177" x2="183" y2="177" />-->
+            
+            <line x1="72" y1="190" x2="120" y2="190" />
+            <line x1="90" y1="202" x2="140" y2="202" />
+            
+            <!--            <line x1="160" y1="197.5" x2="179" y2="197.5" />-->
+            <!--            <line x1="29" y1="208" x2="90" y2="208" />-->
+            
+            <line x1="80" y1="222" x2="125" y2="222" />
+        </Lines>
+        <Texts>
+            <defaultFontSize>19</defaultFontSize>
+            <!--标题-->
+            <Text>
+                <text>公路赔（补）偿通知书</text>
+                <!--字体大小，可选配置，在UILayouts内同-->
+                <fontSize>16</fontSize>
+                <!--字体是否粗体，可选配置，在UILayouts内同-->
+                <isBold>YES</isBold>
+                <!--origin为左上点计算边距后的相对位置，UILayouts里意义同-->
+                <origin x="76" y="20" />
+                <size width="70" height="6" />
+            </Text>
+            <!--（-->
+            <Text>
+                <text>（</text>
+                <fontSize>16</fontSize>
+                <origin x="65" y="37" />
+                <size width="36" height="6" />
+            </Text>
+            <!--）年-->
+            <Text>
+                <text>）年</text>
+                <fontSize>16</fontSize>
+                <origin x="81" y="37" />
+                <size width="24" height="6" />
+            </Text>
+            <!--交赔字第-->
+            <Text>
+                <text>交赔字第</text>
+                <fontSize>16</fontSize>
+                <origin x="106" y="37" />
+                <size width="52" height="6" />
+            </Text>
+            <!--号-->
+            <Text>
+                <text>号</text>
+                <fontSize>16</fontSize>
+                <origin x="143" y="37" />
+                <size width="24" height="6" />
+            </Text>
+            <!--当事人-->
+            <Text>
+                <text>当事人：</text>
+                <origin x="29" y="65" />
+                <size width="24" height="6" />
+            </Text>
+            <!--当事人地址-->
+            <Text>
+                <text>当事人地址：</text>
+                <origin x="29" y="75" />
+                <size width="30" height="6" />
+            </Text>
+            <!--当事人-->
+            <Text>
+                <text>当事人</text>
+                <origin x="29" y="87" />
+                <size width="24" height="6" />
+            </Text>
+            <!--一案，经-->
+            <Text>
+                <text>一案，经</text>
+                <origin x="90" y="87" />
+                <size width="24" height="6" />
+            </Text>
+            <!--市（县）-->
+            <!--            <Text>-->
+            <!--                <text>市（县）</text>-->
+            <!--                <origin x="165" y="107" />-->
+            <!--                <size width="24" height="6" />-->
+            <!--            </Text>-->
+            <!---->
+            <Text>
+                <text>依法调查核实：</text>
+                <origin x="160" y="87" />
+                <size width="30" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <text>当事人</text>
+                <origin x="35" y="99" />
+                <size width="24" height="6" />
+                
+            </Text>
+            <Text>
+                <text>于</text>
+                <origin x="70" y="99" />
+                <size width="24" height="6" />
+                
+            </Text>
+            <Text>
+                <text>年</text>
+                <origin x="93" y="99" />
+                <size width="24" height="6" />
+                
+            </Text>
+            <Text>
+                <text>月</text>
+                <origin x="110" y="99" />
+                <size width="24" height="6" />
+                
+            </Text>
+            <Text>
+                <text>日</text>
+                <origin x="125" y="99" />
+                <size width="24" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <text>上述事实，由</text>
+                <origin x="40" y="131" />
+                <size width="30" height="6"/>
+                
+            </Text>
+            <!---->
+            <Text>
+                <fontSize>13</fontSize>
+                <text>予以佐证。本单位认为，当事人损坏路产的事实清楚，应依法承担民事责任，</text>
+                <origin x="29" y="140" />
+                <size width="324" height="6" />
+                
+            </Text>
+            <Text>
+                <fontSize>13</fontSize>
+                <text>赔偿路产损失。依</text>
+                <origin x="29" y="152" />
+                <size width="324" height="6" />
+                
+            </Text>
+            <Text>
+                <text>之规定，本单位依法做出如下赔（补）偿处理认定：</text>
+                <origin x="29" y="173" />
+                <size width="324" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <fontSize>13</fontSize>
+                <text>当事人赔（补）偿</text>
+                <origin x="38" y="184" />
+                <size width="124" height="6" />
+                
+            </Text>
+            <Text>
+                <fontSize>13</fontSize>
+                <text>元。当事人必须在收到本通知</text>
+                <origin x="118" y="184" />
+                <size width="124" height="6" />
+                
+            </Text>
+            <Text>
+                <fontSize>13</fontSize>
+                <text>书之日起15日内持本通知书到</text>
+                <origin x="29" y="194" />
+                <size width="124" height="6" />
+                
+            </Text>
+            <Text>
+                <text>缴纳路产赔（补）偿费.</text>
+                <origin x="140" y="194" />
+                <size width="224" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <fontSize>14</fontSize>
+                <text>当事人对本通知书认定的事实和赔（补）偿费有疑义的，可在收</text>
+                <origin x="38" y="205" />
+                <size width="224" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <text>到本通知书之日起60日，向</text>
+                <origin x="29" y="217" />
+                <size width="124" height="6" />
+                
+            </Text>
+            <!---->
+            <Text>
+                <text>申请复核，或者依照《民事诉</text>
+                <origin x="125" y="217" />
+                <size width="124" height="6" />
+            </Text>
+            <Text>
+                <fontSize>14</fontSize>
+                <text>讼法》向人民法院起诉。</text>
+                <origin x="29" y="227" />
+                <size width="124" height="6" />
+            </Text>
+            <Text>
+                <fontSize>16</fontSize>
+                <text>公路赔（补）偿认定单位（印章）</text>
+                <origin x="105" y="240" />
+                <size width="124" height="6" />
+            </Text>
+            <Text>
+                <origin x="120" y="261" />
+                <size width="5" height="5" />
+                <text>年</text>
+            </Text>
+            <Text>
+                <origin x="140" y="261" />
+                <size width="5" height="5" />
+                <text>月</text>
+            </Text>
+            <Text>
+                <origin x="155" y="261" />
+                <size width="5" height="5" />
+                <text>日</text>
+            </Text>
+        </Texts>
+    </StaticTable>
+    <DataTable>
+        <!--年号-->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="77" y="37" />
+            <size width="20" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>case_mark2</attributeName>
+                    <entityName>CaseInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="97" y="37" />
+            <size width="20" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>organization_label</attributeName>
+                    <entityName>CaseInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--号-->
+        <UITextField>
+            <origin x="121" y="37" />
+            <size width="19" height = "6"/>
+            <alignment>Right</alignment>
+            <content>
+                <data>
+                    <attributeName>full_case_mark3</attributeName>
+                    <entityName>CaseInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--当事人：-->
+        <UITextField>
+            <origin x="60" y="65" />
+            <size width="30" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>party</attributeName>
+                    <entityName>Citizen</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--当事人地址-->
+        <UITextField>
+            <origin x="56" y="78" />
+            <size width="90" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>address</attributeName>
+                    <entityName>Citizen</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--当事人-->
+        <UITextField>
+            <origin x="53" y="81" />
+            <size width="40" height = "18"/>
+            <content>
+                <data>
+                    <attributeName>case_long_desc</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--经   市-->
+        <UITextField>
+            <origin x="108" y="79" />
+            <size width="38" height = "18"/>
+            <content>
+                <text></text>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="119" y="87" />
+            <size width="38" height = "6"/>
+            <alignment>left</alignment>
+            <content>
+                <data>
+                    <attributeName>organization_info</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--当事人于-->
+        <!--当事人-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="24" y="100" />
+            <size width="153" height="38" />
+            <leftOffSet>28</leftOffSet>
+            <lineHeight>25</lineHeight>
+            <content>
+                <data>
+                    <attributeName>party</attributeName>
+                    <entityName>Citizen</entityName>
+                </data>
+            </content>
+        </UITextView>
+        <!--年-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="86" y="100" />
+            <size width="12" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>yyyy</mode>
+                </data>
+            </content>
+        </UITextView>
+        <!--月-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="104" y="100" />
+            <size width="7" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>MM</mode>
+                </data>
+            </content>
+        </UITextView>
+        <!--日-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="116" y="100" />
+            <size width="8" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>dd</mode>
+                </data>
+            </content>
+        </UITextView>
+        <!--案件描述-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="22" y="100" />
+            <size width="166" height="38" />
+            <leftOffSet>108</leftOffSet>
+            <lineHeight>25</lineHeight>
+            <content>
+                <data>
+                    <attributeName>new_case_desc</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextView>
+        <!--上述事实由-->
+        <UITextField>
+            <origin x="68" y="131" />
+            <size width="103" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>witness</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--本单位认为, 当事人-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="30" y="153" />
+            <size width="156" height="45" />
+            <leftOffSet>34</leftOffSet>
+            <lineHeight>23</lineHeight>
+            <content>
+                <data>
+                    <attributeName>new_pay_reason</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextView>
+        <!--当事人赔（补）偿-->
+        <!--        <UITextView>-->
+        <!--            <fontSize>12</fontSize>-->
+        <!--            <origin x="77" y="186.5" />-->
+        <!--            <size width="50" height="16" />-->
+        <!--            <content>-->
+        <!--                <data>-->
+        <!--                    <attributeName>pay_mode</attributeName>-->
+        <!--                    <entityName></entityName>-->
+        <!--                </data>-->
+        <!--            </content>-->
+        <!--        </UITextView>-->
+        <UITextField>
+            <origin x="80" y="178" />
+            <size width="40" height = "18"/>
+            <content>
+                <data>
+                    <attributeName>pay_mode</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--通知书到-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="97" y="193" />
+            <size width="42" height="16" />
+            <offset left="165" top = "188" />
+            <lineHeight>8</lineHeight>
+            <content>
+                <data>
+                    <attributeName>bank_name</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextView>
+        <!--60日,向-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="92" y="217" />
+            <size width="150" height="16" />
+            <content>
+                <text>广东省公路管理局</text>
+            </content>
+        </UITextView>
+        <!--年-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="110" y="262" />
+            <size width="12" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>yyyy</mode>
+                </data>
+            </content>
+        </UITextView>
+        <!--月-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="130" y="262" />
+            <size width="7" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>MM</mode>
+                </data>
+            </content>
+        </UITextView>
+        <!--日-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="146" y="262" />
+            <size width="8" height="6" />
+            <content>
+                <data>
+                    <attributeName>start_date_time</attributeName>
+                    <mode>dd</mode>
+                </data>
+            </content>
+        </UITextView>
+        
+        
+        
+    </DataTable>
+</AtonementNoticeTable>

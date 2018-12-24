@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdminstrativePenaltyConstructionTable>
+    <Paper size="A4" width="595" height="842">
+        <Margin top= "0" left = "0" right = "65" bottom = "65" />
+        <orientation isPortrait="YES" />
+    </Paper>
+    <!--固定表格-->
+    <StaticTable>
+        <Lines>
+            <!--默认线宽-->
+            <defaultLineWidth>0.2</defaultLineWidth>
+            <!--案号-->
+            <line x1="120" y1="34" x2="140" y2="34"/>
+            <line x1="164" y1="34" x2="176.5" y2="34"/>
+            <!--需整改单位或个人-->
+            <line x1="36" y1="43" x2="120" y2="43"/>
+            <!--违法事实-->
+            <line x1="36" y1="58.5" x2="180" y2="58.5"/>
+            <line x1="36" y1="67" x2="180" y2="67"/>
+            
+            <line x1="36" y1="75.5" x2="180" y2="75.5"/>
+            <line x1="36" y1="84" x2="180" y2="84"/>
+            
+            <line x1="36" y1="92.5" x2="180" y2="92.5"/>
+            <line x1="36" y1="101" x2="180" y2="101"/>
+            
+            <line x1="36" y1="109.5" x2="180" y2="109.5"/>
+            <line x1="36" y1="118" x2="180" y2="118"/>
+            <!--根据             规定-->
+            <line x1="53" y1="126" x2="130" y2="126"/>
+            <line x1="53.5" y1="133" x2="86" y2="133"/>
+            <line x1="129" y1="133" x2="166" y2="133"/>
+            <!--整改完毕时间-->
+            <line x1="40" y1="140" x2="54" y2="140"/>
+            <line x1="58.5" y1="140" x2="68" y2="140"/>
+            <line x1="72.5" y1="140" x2="82" y2="140"/>
+            <!--改正内容和要求如下-->
+            <line x1="40" y1="157" x2="180" y2="157"/>
+            <line x1="40" y1="165" x2="180" y2="165"/>
+            <line x1="40" y1="173" x2="180" y2="173"/>
+            <line x1="40" y1="181" x2="180" y2="181"/>
+<!--            签名及时间-->
+            <line x1="36" y1="206" x2="100" y2="206"/>
+            <line x1="128" y1="205" x2="180" y2="205"/>
+            <line x1="128" y1="213" x2="180" y2="213"/>
+            
+        </Lines>
+        <Title>
+            <defaultFontSize>14</defaultFontSize>
+            <Text>
+                <text>责令改正通知书</text>
+                <fontSize>15</fontSize>
+                <origin x="83" y="55" />
+                <size width="426" height="14" />
+            </Text>
+            
+        </Title>
+        <Texts>
+            <Text>
+                <text>责改（2017）</text>
+                <fontSize>12</fontSize>
+                <origin x= "140" y= "30"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>号</text>
+                <fontSize>12</fontSize>
+                <origin x= "177" y= "30"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>：</text>
+                <fontSize>12</fontSize>
+                <origin x= "121" y= "38.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>经调查，你（单位）存在下列违法事实：</text>
+                <fontSize>12</fontSize>
+                <origin x= "45" y= "48"/>
+                <size width="250" height="6" />
+            </Text>
+            <Text>
+                <text>1.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36.5" y= "54.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>2.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36.5" y= "71.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>3.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36.5" y= "88.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>4.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36.5" y= "105.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>根据</text>
+                <fontSize>12</fontSize>
+                <origin x= "45" y= "122"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>的规定，现责令你（单位）</text>
+                <fontSize>12</fontSize>
+                <origin x= "130.5" y= "122"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>对上述第</text>
+                <fontSize>12</fontSize>
+                <origin x= "36" y= "129.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>项问题立即改正: 对第</text>
+                <fontSize>12</fontSize>
+                <origin x= "86.5" y= "129.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>项问题</text>
+                <fontSize>12</fontSize>
+                <origin x= "166.5" y= "129.5"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>于</text>
+                <fontSize>12</fontSize>
+                <origin x= "36" y= "137"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>年</text>
+                <fontSize>12</fontSize>
+                <origin x= "54.5" y= "137"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>月</text>
+                <fontSize>12</fontSize>
+                <origin x= "68.5" y= "137"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>日前整改完毕。</text>
+                <fontSize>12</fontSize>
+                <origin x= "82.5" y= "137"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>改正内容和要求如下:</text>
+                <fontSize>12</fontSize>
+                <origin x= "45" y= "145"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>1.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36" y= "153"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>2.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36" y= "161"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>3.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36" y= "169"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>4.</text>
+                <fontSize>12</fontSize>
+                <origin x= "36" y= "177"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>被责令改正人签名及时间：</text>
+                <fontSize>12</fontSize>
+                <origin x= "36" y= "195"/>
+                <size width="180" height="6" />
+            </Text>
+            <Text>
+                <text>执法人员签名及执法证号：</text>
+                <fontSize>12</fontSize>
+                <origin x= "125" y= "195"/>
+                <size width="180" height="6" />
+            </Text>
+        </Texts>
+    </StaticTable>
+    <DataTable>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="121" y="29" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>smallplace</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="166" y="29" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>mark</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="41" y="38" />
+            <size width="400" height="6" />
+            <content>
+                <!--责改单位或个人名称-->
+                <data>
+                    <attributeName>correct_name</attributeName>
+                </data>
+            </content>
+        </UITextField>
+<!--        存在违法事实-->
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="42" y="53" />
+            <size width="138" height="15" />
+            <fontSize>12</fontSize>
+            <lineHeight>22</lineHeight>
+            <content>
+                <data>
+                    <attributeName>breakLaw_one</attributeName>
+                </data>
+            </content>
+        </UITextView>
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="42" y="70" />
+            <size width="138" height="15" />
+            <fontSize>12</fontSize>
+            <lineHeight>22</lineHeight>
+            <content>
+                <data>
+                    <attributeName>breakLaw_two</attributeName>
+                </data>
+            </content>
+        </UITextView>
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="42" y="87" />
+            <size width="138" height="15" />
+            <fontSize>12</fontSize>
+            <lineHeight>22</lineHeight>
+            <content>
+                <data>
+                    <attributeName>breakLaw_three</attributeName>
+                </data>
+            </content>
+        </UITextView>
+        <UITextView>
+            <fontSize>12</fontSize>
+            <origin x="42" y="103" />
+            <size width="138" height="15" />
+            <fontSize>12</fontSize>
+            <lineHeight>22</lineHeight>
+            <content>
+                <data>
+                    <attributeName>breakLaw_four</attributeName>
+                </data>
+            </content>
+        </UITextView>
+         <!--根据 -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="59" y="120.5" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>law</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--对上述第   -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="60" y="128" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>at_once</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!-- 对第  -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="134" y="128" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>later</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--于  年    月     日    -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="46.5" y="135" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>end_date_time</attributeName>
+                    <mode>yyyy</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="60" y="135" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>end_date_time</attributeName>
+                    <mode>MM</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="73" y="135" />
+            <size width="400" height="6" />
+            <content>
+                <data>
+                    <attributeName>end_date_time</attributeName>
+                    <mode>dd</mode>
+                </data>
+            </content>
+        </UITextField>
+        <!-- 改正内容和要求  -->
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="44" y="152" />
+            <size width="139" height="6" />
+            <content>
+                <data>
+                    <attributeName>demand_one</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="44" y="160" />
+            <size width="139" height="6" />
+            <content>
+                <data>
+                    <attributeName>demand_two</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="44" y="168" />
+            <size width="139" height="6" />
+            <content>
+                <data>
+                    <attributeName>demand_three</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="44" y="176" />
+            <size width="139" height="6" />
+            <content>
+                <data>
+                    <attributeName>demand_four</attributeName>
+                </data>
+            </content>
+        </UITextField>
+    </DataTable>
+</AdminstrativePenaltyConstructionTable>

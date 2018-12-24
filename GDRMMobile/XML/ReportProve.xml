@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReportProve>
+    <Paper size = "A4" width = "595" height = "842">
+        <Margin top= "0" left = "0" right = "65" bottom = "65" />
+        <orientation isPortrait="YES" />
+    </Paper>
+    <StaticTable>
+        <Lines>
+            <defaultLineWidth>0.2</defaultLineWidth>
+        </Lines>
+        <Texts>
+            <defaultFontSize>19</defaultFontSize>
+            <!--标题-->
+            <Text>
+                <text>证     明</text>
+                <!--字体大小，可选配置，在UILayouts内同-->
+                <fontSize>22</fontSize>
+                <!--字体是否粗体，可选配置，在UILayouts内同-->
+                <isBold>YES</isBold>
+                <!--origin为左上点计算边距后的相对位置，UILayouts里意义同-->
+                <origin x="98" y="12" />
+                <size width="80" height="6" />
+            </Text>
+            <!--当事人-->
+            <!--<Text>
+                <text>当事人：</text>
+                <origin x="16" y="33" />
+                <size width="24" height="6" />
+            </Text>-->
+           
+        </Texts>
+    </StaticTable>
+    <DataTable>
+         <fontSize>19</fontSize>
+         
+        <UITextView>
+            <fontSize>15</fontSize>
+            <origin x="35" y="30" />
+            <size width="154" height="60" />
+            <leftOffSet>10</leftOffSet>
+            <lineHeight>24</lineHeight>
+            <content>
+                <data>
+                    <attributeName>report_desc</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextView>
+        <UITextField>
+             <fontSize>15</fontSize>
+            <origin x="115" y="104" />
+            <size width="120" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>orgname</attributeName>
+                    <entityName>OrgInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>15</fontSize>
+            <origin x="115" y="114" />
+            <size width="60" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>send_date</attributeName>
+                    <entityName></entityName>
+                    <mode>yyyy年MM月dd日hh时MM分</mode>
+                </data>
+            </content>
+        </UITextField>
+        
+    </DataTable>
+    
+    
+</ReportProve>
