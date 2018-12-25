@@ -588,12 +588,12 @@ InspectionCheckState inspectionState;
             InspectionPath * path  = [self.data objectAtIndex:i];
             NSLog(@"%@",path.stationname);
             if(![path.stationname isEqualToString:station]){
-                if ([path.stationname containsString:@"服务区"]) {
+                if ([path.stationname containsString:@"服务区"] ||[path.stationname isEqualToString:@"镇海湾大桥"]) {
                     continue;
                 }
                 roadline = [NSString stringWithFormat:@"%@-%@",roadline,[self selectStationforNSString:path.stationname]];
                 station = path.stationname;
-                NSLog(@"传值数据%@",station);
+//                NSLog(@"传值数据%@",station);
             }
         }
         return roadline;
