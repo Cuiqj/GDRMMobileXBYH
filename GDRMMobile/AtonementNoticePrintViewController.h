@@ -7,6 +7,7 @@
 //
 
 #import "CasePrintViewController.h"
+#import "DateSelectController.h"
 
 @interface AtonementNoticePrintViewController : CasePrintViewController
 @property (weak, nonatomic) IBOutlet UILabel *labelCaseCode;

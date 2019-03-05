@@ -1,7 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, "8.0"
 
-#xcodeproj 'GDRMMobile/GDRMMobile.xcodeproj“
 project 'GDRMXBYHMobile.xcodeproj'
 
 target 'GDRMXBYHMobile' do

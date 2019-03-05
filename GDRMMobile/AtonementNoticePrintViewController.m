@@ -29,6 +29,8 @@ static NSString * xmlName = @"AtonementNoticeTable";
 @interface AtonementNoticePrintViewController ()
 @property (nonatomic,retain) AtonementNotice * notice;
 
+@property (nonatomic,retain) UIPopoverController *pickerPopover;
+
 - (void)generateDefaultsForNotice:(AtonementNotice *)notice;
 @end
 
@@ -77,9 +79,40 @@ static NSString * xmlName = @"AtonementNoticeTable";
         
         [self loadPageInfo];
     }
+    self.labelDateSend.userInteractionEnabled = YES;
+    self.labelDateSend.backgroundColor = [UIColor lightGrayColor];
+    UITapGestureRecognizer *singleTap         = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    [self.labelDateSend addGestureRecognizer:singleTap];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
+    if ([self.pickerPopover isPopoverVisible]) {
+        [self.pickerPopover dismissPopoverAnimated:YES];
+    } else {
+        DateSelectController *datePicker=[self.storyboard instantiateViewControllerWithIdentifier:@"datePicker"];
+        datePicker.delegate   = self;
+        datePicker.pickerType = 0;
+        [datePicker showdate:self.labelDateSend.text];
+        self.pickerPopover=[[UIPopoverController alloc] initWithContentViewController:datePicker];
+        
+        CGRect rect = [self.labelDateSend frame];
+        [self.pickerPopover presentPopoverFromRect:rect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+        datePicker.dateselectPopover = self.pickerPopover;
+    }
+}
+-(void)setDate:(NSString *)date{
+    
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *temp=[dateFormatter dateFromString:date];
+    [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
+    NSString *dateString=[dateFormatter stringFromDate:temp];
+    self.labelDateSend.text = dateString;
+    self.notice.date_send = [dateFormatter dateFromString:self.labelDateSend.text];
+}
+
 -(NSString *)pinjie:(NSString *)notice{
     NSRange range = [notice rangeOfString:@"认定公路路产损坏的事实为："];
     if (range.location != NSNotFound) {

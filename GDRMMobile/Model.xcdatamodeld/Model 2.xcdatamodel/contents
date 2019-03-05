@@ -426,7 +426,7 @@
         <attribute name="yjr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="yjsj" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="yjsx" optional="YES" attributeType="String" defaultValueString="无" syncable="YES"/>
-        <attribute name="yjzb" optional="YES" attributeType="String" defaultValueString="巡查设备齐全完好" syncable="YES"/>
+        <attribute name="yjzb" optional="YES" attributeType="String" defaultValueString="巡查设备齐全完好。" syncable="YES"/>
     </entity>
     <entity name="InspectionCheck" representedClassName="InspectionCheck" syncable="YES">
         <attribute name="checkresult" optional="YES" attributeType="String" syncable="YES"/>
