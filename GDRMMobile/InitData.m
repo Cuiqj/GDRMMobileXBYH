@@ -213,6 +213,20 @@
                                     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                                     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HHmmss'.'SSSSSSSZ"];
                                     [obj setValue:[dateFormatter dateFromString:dateString] forKey:elementName];
+                                    if (![dateFormatter dateFromString:dateString] ) {
+                                        if ([dateString containsString:@"T"]) {
+                                            NSArray * array = [dateString componentsSeparatedByString:@"T"];
+                                            if ([array count] == 2) {
+                                                NSString * Downdatestr1 = array[0];
+                                                NSString * Downdatestr2 = array[1];
+                                                if (Downdatestr2.length>6 && Downdatestr1.length == 10) {
+                                                    NSString * Downdatestr = [NSString stringWithFormat:@"%@%@",Downdatestr1,[Downdatestr2 substringToIndex:6]];
+                                                    [dateFormatter setDateFormat:@"yyyy-MM-ddHHmmss"];
+                                                    [obj setValue:[dateFormatter dateFromString:Downdatestr] forKey:elementName];
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                                     break;
                                 case NSInteger16AttributeType:

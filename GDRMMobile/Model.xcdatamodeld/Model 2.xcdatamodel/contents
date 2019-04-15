@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1618" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="18D109" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="AtonementNotice" representedClassName="AtonementNotice" syncable="YES">
         <attribute name="case_desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="caseinfo_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -526,6 +526,7 @@
     </entity>
     <entity name="MaintainPlan" representedClassName="MaintianPlan" syncable="YES">
         <attribute name="close_desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="construct_org" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date_end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="date_start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -933,7 +934,7 @@
         <element name="LawbreakingAction" positionX="160" positionY="192" width="128" height="105"/>
         <element name="LawItems" positionX="160" positionY="192" width="128" height="120"/>
         <element name="Laws" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="MaintainPlan" positionX="117" positionY="189" width="128" height="195"/>
+        <element name="MaintainPlan" positionX="117" positionY="189" width="128" height="210"/>
         <element name="MaintainPlanCheck" positionX="126" positionY="198" width="128" height="450"/>
         <element name="MatchLaw" positionX="160" positionY="192" width="128" height="105"/>
         <element name="MatchLawDetails" positionX="160" positionY="192" width="128" height="120"/>

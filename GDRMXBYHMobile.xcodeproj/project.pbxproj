@@ -1384,6 +1384,7 @@
 		33693F3019A1EA1B004D0ABC /* InspectionConstruction */ = {
 			isa = PBXGroup;
 			children = (
+				331E21AE1E286938004E78C2 /* ShiGongCheckViewController.h */,
 				331E21AF1E286971004E78C2 /* ShiGongCheckViewController.m */,
 				33693F3119A1EA46004D0ABC /* InspectionConstructionViewController.h */,
 				33693F3219A1EA46004D0ABC /* InspectionConstructionViewController.m */,
@@ -1397,7 +1398,6 @@
 				33F6FCA919BEAEE70098D458 /* InspectionConstructionPDFViewController.m */,
 				33A2B6C41E07EA63005A14F7 /* UnderBridgeCheckViewController.h */,
 				33A2B6C51E07EA7D005A14F7 /* UnderBridgeCheckViewController.m */,
-				331E21AE1E286938004E78C2 /* ShiGongCheckViewController.h */,
 				3394F2F21E2F568B00DAE10F /* MaintainPlanPickerViewController.h */,
 				3394F2F31E2F569D00DAE10F /* MaintainPlanPickerViewController.m */,
 			);

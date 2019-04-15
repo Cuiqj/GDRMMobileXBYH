@@ -262,7 +262,7 @@ static NSString * xmlName = @"AtonementNoticeTable";
     self.notice.case_desc          = self.textViewCaseDesc.text;        //昊于2018年05月31日11时05分驾驶车牌为2...
     self.notice.pay_mode           = self.textPayMode.text;    //肆万贰仟玖佰伍拾元整
     self.notice.pay_reason         = self.textViewPayReason.text;//昊损坏公路路产的违法事实清楚，其行为违反了的《中华
-    self.notice.check_organization = self.textCheckOrg.text;        //广东省公路事务中心
+    self.notice.check_organization  = self.textCheckOrg.text;        //广东省公路事务中心
     self.notice.witness            = self.textWitness.text;     //勘验笔录，证人证词和现场拍摄的照片等材料
     //self.notice.party =  self.textParty.text;
     [[AppDelegate App] saveContext];

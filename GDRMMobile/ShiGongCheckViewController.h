@@ -51,6 +51,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *textDidian;
 
 @property (weak, nonatomic) IBOutlet UITextField *textProject;  //施工项目
+//@property (weak, nonatomic) IBOutlet UITextField *textCode;    //施工编号
+
 @property (weak, nonatomic) IBOutlet UITextField *textchedao;
 @property (weak, nonatomic) IBOutlet UITextField *textmaintain_cer;
 - (IBAction)selectProject:(UITextField *)sender;

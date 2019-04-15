@@ -148,6 +148,7 @@ typedef enum {
     self.textTingGong.alpha  = 0;
     self.textZhengGai.tag    = 109;
     self.textTingGong.tag    = 110;
+//    self.textCode.tag = 4;
     self.labelTingGong.alpha = 0;
     self.labelZhengGai.alpha = 0;
     self.navigationItem.title=@"施工检查";
@@ -268,6 +269,10 @@ typedef enum {
         }
             //self.timeState = kEndTime1;
             break;
+//        case 4:{
+//            [self.textCode resignFirstResponder];
+//            break;
+//        }
         default:{
             if ([self.pickerPopover isPopoverVisible]) {
                 [self.pickerPopover dismissPopoverAnimated:YES];
@@ -301,6 +306,7 @@ typedef enum {
     MaintainPlan *plan =[MaintainPlan maintainPlanInfoForID:PlanID];
     self.textDidian.text        = plan.project_address;
     self.textShiGongDanWei.text = plan.construct_org;
+    self.textmaintain_cer.text = plan.code;
     NSArray *inspectorArray     = [[NSUserDefaults standardUserDefaults] objectForKey:INSPECTORARRAYKEY];
     NSString *inspectorName     = @"";
     for (NSString *name in inspectorArray) {
@@ -365,6 +371,7 @@ typedef enum {
     checkInfo.check_date=[formatter dateFromString:self.check_date.text];
     //checkInfo.checktype=self.textchecktype.text;
     checkInfo.checker         = self.textchecker.text;
+    
     checkInfo.maintainPlan_id = self.maintainPlanID;
     checkInfo.have_stopwork   = self.weiguiSwitch.isOn?@"1":@"0";
     checkInfo.have_rectify    = self.weiguiSwitch.isOn?@"1":@"0";

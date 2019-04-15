@@ -57,7 +57,7 @@ enum kPageInfo {
     self.caseInquire.phone = self.textphone.text;
     self.caseInquire.address=self.textaddress.text ;
     self.caseInquire.locality=self.textlocality.text ;
-//    self.caseInquire.recorder_name = self.textrecorder_name.text;
+    self.caseInquire.recorder_name = self.textrecorder_name.text;
     citizen.postalcode = self.textpostalcode.text;
     self.caseInquire.postalcode = self.textpostalcode.text;
     self.caseInquire.inquiry_note = self.textinquiry_note.text;
@@ -72,7 +72,7 @@ enum kPageInfo {
     self.textdate_inquired.text =[dateFormatter stringFromDate:self.caseInquire.date_inquired];
     self.textlocality.text = self.caseInquire.locality;
     self.textinquirer_name.text = self.caseInquire.inquirer_name;
-    
+    self.textrecorder_name.text = self.caseInquire.recorder_name;
     self.textanswerer_name.text = self.caseInquire.answerer_name;
     self.textsex.text = self.caseInquire.sex;
     self.textage.text = (self.caseInquire.age.integerValue==0)?@"":[NSString stringWithFormat:@"%d",self.caseInquire.age.integerValue];

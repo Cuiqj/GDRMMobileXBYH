@@ -38,6 +38,7 @@
 @property (nonatomic, retain) NSString *rectify_items;
 @property (nonatomic, retain) NSString *closed_roadway;
 @property (nonatomic, retain) NSString *jiancha_didian;
-@property(nonatomic,retain)NSString*maintain_cer;
+@property(nonatomic,retain)NSString * maintain_cer;      //施工证号
+
 + (NSArray *)maintainCheckForID:(NSString *)maintainCheckID;
 @end

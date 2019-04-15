@@ -31,6 +31,8 @@
 
 - (NSString *)organization_info;
 
+
+
 - (NSString *)bank_name;
 - (NSString *)bank_namehead;
 -(NSString *)new_case_desc;

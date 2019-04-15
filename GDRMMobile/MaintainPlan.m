@@ -21,8 +21,9 @@
 @dynamic close_desc;
 @dynamic tel_number;
 @dynamic remark;
+@dynamic code;
+
 +(NSArray *)allMaintainPlan{
- 
     NSManagedObjectContext *moc=  [[AppDelegate App] managedObjectContext];
     NSEntityDescription *entity= [NSEntityDescription entityForName:NSStringFromClass([self class]) inManagedObjectContext:moc];
     NSFetchRequest *request = [[NSFetchRequest alloc]init];
@@ -30,6 +31,18 @@
     [request setPredicate:nil];
     return [moc executeFetchRequest:request error:nil];
 }
+
++(NSArray *)allMaintainPlanfordate:(NSDate *)date{
+    NSManagedObjectContext *moc=  [[AppDelegate App] managedObjectContext];
+    NSEntityDescription *entity= [NSEntityDescription entityForName:NSStringFromClass([self class]) inManagedObjectContext:moc];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    [request setEntity:entity];
+    [request setPredicate:nil];
+    return [moc executeFetchRequest:request error:nil];
+}
+
+
+
 +(NSString*)maintainPlanNameForID:(NSString*)maintainID{
     NSManagedObjectContext *moc=  [[AppDelegate App] managedObjectContext];
     NSEntityDescription *entity= [NSEntityDescription entityForName:NSStringFromClass([self class]) inManagedObjectContext:moc];

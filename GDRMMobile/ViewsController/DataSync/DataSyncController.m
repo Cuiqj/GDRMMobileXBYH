@@ -244,9 +244,8 @@
 }
 
 - (IBAction)btnUser:(id)sender {
-    
+    return;
     //初始化使用机内文书格式设置
-    
     NSArray *paths             = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *libraryDirectory = [paths objectAtIndex:0];
     NSString *plistFileName    = @"Settings.plist";

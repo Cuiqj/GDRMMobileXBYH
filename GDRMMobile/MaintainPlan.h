@@ -22,6 +22,8 @@
 @property (nonatomic, retain) NSString * close_desc;
 @property (nonatomic, retain) NSString * tel_number;
 @property (nonatomic, retain) NSString * remark;
+@property (nonatomic, retain) NSString * code;
+
 +(NSArray*) allMaintainPlan;
 +(NSString*)maintainPlanNameForID:(NSString*)maintainID;
 +(MaintainPlan*)maintainPlanInfoForID:(NSString*)maintainID;
