@@ -1844,23 +1844,40 @@ BOOL _wasKeyboardManagerEnabled;
 }
 
 //显示删除标签
-- (void)showDeleteMenu:(UILongPressGestureRecognizer *)gestureRecognizer
-{
+- (void)showDeleteMenu:(UILongPressGestureRecognizer *)gestureRecognizer{
+    // 案件中图片的   删除标签
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         if (self.photoArray.count > 0) {
             UIMenuController *menuController = [UIMenuController sharedMenuController];
             UIMenuItem *deleteMenuItem       = [[UIMenuItem alloc] initWithTitle:@"删除" action:@selector(deletePiece:)];
+            UIMenuItem *saveMenuItem       = [[UIMenuItem alloc] initWithTitle:@"保存图片" action:@selector(savePiece:)];
             [self becomeFirstResponder];
-            [menuController setMenuItems:@[deleteMenuItem]];
+            [menuController setMenuItems:@[deleteMenuItem,saveMenuItem]];
+//            [menuController setMenuItems:@[saveMenuItem]];
             [menuController setTargetRect:CGRectMake(self.infoView.frame.origin.x + SCROLLVIEW_WIDTH/2, self.infoView.frame.origin.y + SCROLLVIEW_HEIGHT/2, 0, 0) inView:self.view];
             [menuController setMenuVisible:YES animated:YES];
         }
     }
 }
+//保存案件的图片到相册       保存到相册 
+- (void)savePiece:(UIMenuController *)controller{
+    UIImage * saveimage = [self cachePhotoForIndex:self.imageIndex];
+    UIImageWriteToSavedPhotosAlbum(saveimage, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+}
+//#pragma mark 系统的完成保存图片的方法
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
+    NSString *msg = nil ;
+    if (error != NULL) {
+        msg = @"失败" ;
+    } else {
+        msg = @"成功" ;
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存图片到相册" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alert show];
+}
 
 //删除对应照片
-- (void)deletePiece:(UIMenuController *)controller
-{
+- (void)deletePiece:(UIMenuController *)controller{
     CaseInfo *caseInfo = [CaseInfo caseInfoForID:self.caseID];
     if (!caseInfo.isuploaded.boolValue) {
         NSString *photoName = [self.photoArray objectAtIndex:self.imageIndex];

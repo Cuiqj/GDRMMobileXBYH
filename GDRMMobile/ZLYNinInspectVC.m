@@ -55,13 +55,19 @@ typedef enum {
     inspectionRecord.end_time   = endDate ;
     [dateFormatter setDateFormat:@"HH:mm"];
     NSString* timeString=[dateFormatter stringFromDate: inspectionRecord.start_time  ];
-    inspectionRecord.remark=[NSString stringWithFormat:@"%@ 当班人员开展“青春足迹.丈量沿海”，徒步检查%@%@K%2d+%@M至K%2d+%@M路产设施、桥下空间及控制区，%@",timeString,self.textRoad.text,self.textSide.text,[self.textSKM.text intValue],self.textSM.text,[self.textEKM.text intValue],self.textEM.text,self.textRemark.text];
+    NSString * remark = [NSString stringWithFormat:@"%@ 当班人员开展“青春足迹.丈量沿海”，徒步检查%@%@%@K%2d+%@M至K%2d+%@M路产设施、桥下空间及控制区，%@",timeString,self.textRoad.text,self.textFix.text,self.textSide.text,[self.textSKM.text intValue],self.textSM.text,[self.textEKM.text intValue],self.textEM.text,self.textRemark.text];
+    if(self.textRemark.text.length>0){
+        
+    }else{
+        remark = [NSString stringWithFormat:@"%@未发现异常情况。",remark];
+    }
+    inspectionRecord.remark= remark;
     [[AppDelegate App] saveContext];
     
     [[AppDelegate App]saveContext];
     [self.delegate reloadRecordData];
     [self.delegate addObserverToKeyBoard];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)setup{
     self.textStartTime.tag = 1;

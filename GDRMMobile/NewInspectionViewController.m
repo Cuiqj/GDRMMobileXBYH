@@ -40,6 +40,9 @@
         NSString *preInspectionID=[[inspectionArray lastObject] valueForKey:@"myid"];
         NSArray *outCheckArray=[InspectionOutCheck outChecksForInspection:preInspectionID];
         NSMutableArray *tempMutableArray=[[NSMutableArray alloc] initWithCapacity:outCheckArray.count];
+        for (InspectionOutCheck * outCheck in outCheckArray) {
+            NSLog(@"%@ ------%@------%@------%@\n",outCheck.checkresult,outCheck.checktext,outCheck.inspectionid,outCheck.remark);
+        }
         for (InspectionOutCheck *outCheck in outCheckArray) {
             TempCheckItem *tempItem=[[TempCheckItem alloc] init];
             tempItem.checkText=outCheck.checktext;

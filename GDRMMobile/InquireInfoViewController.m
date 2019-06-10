@@ -1008,8 +1008,13 @@ Boolean isSelectMuban;
     //当事人
     Citizen *citizen = [Citizen citizenByCaseID:self.caseID];
     CaseInfo *caseinfo = [CaseInfo caseInfoForID:self.caseID];
+    if(citizen.automobile_address){
+        text = [text stringByReplacingOccurrencesOfString:@"#车辆所在地#" withString:citizen.automobile_address];
+    }else{
+        text = [text stringByReplacingOccurrencesOfString:@"#车辆所在地#" withString:@" "];
+    }
     
-    text = [text stringByReplacingOccurrencesOfString:@"#车辆所在地#" withString:citizen.automobile_address];
+    
     text = [text stringByReplacingOccurrencesOfString:@"#损坏路产情况#" withString:self.getDeformationInfo];
     text = [text stringByReplacingOccurrencesOfString:@"#机构#" withString:organizationName];
     text = [text stringByReplacingOccurrencesOfString:@"#案件基本情况描述#" withString:[CaseProveInfo generateEventDescForInquire:self.caseID] ];
@@ -1168,8 +1173,6 @@ Boolean isSelectMuban;
     NSString* text = @"";
     text = [Systype sysTypeForCodeNameAndTypeValue:@"询问笔录模板" withType_value:self.textMuban.text];
 //    text = [NSString stringWithFormat:@"问：我们是#机构#的路政员，现向你问起这事故的有关情况，你的证词将作为法律依据，请你如实回答。\n答：好的。\n问：你叫什么名字，在哪里工作？\n答：我叫#当事人#，在#车辆所在地#工作。\n问：你是什么时间，在什么地点，因何原因造成这起事故的？\n答：#案件基本情况描述#\n问：事故现场经我们勘验检查，损坏公路路产有：#损坏路产情况\n#。你是否承认？\n答：我承认。\n问：你是否还有什么需要陈述或申辩的？\n答：没有。"];
-    
-    
     text= [self paraseMuBan:text];
            return text;
 }

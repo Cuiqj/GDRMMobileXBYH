@@ -73,6 +73,21 @@
     return nil;
 }
 
+//+ (CasePhoto *)SavePhotoForCase:(NSString *)caseID photoName:(NSString *)photoName{
+//    NSManagedObjectContext *context=[[AppDelegate App] managedObjectContext];
+//    NSEntityDescription *entity=[NSEntityDescription entityForName:@"CasePhoto" inManagedObjectContext:context];
+//    NSFetchRequest *fetchRequest=[[NSFetchRequest alloc] init];
+//    fetchRequest.entity=entity;
+//    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"project_id == %@ && photo_name == %@",caseID,photoName];
+//    fetchRequest.predicate=predicate;
+//    NSArray *temp = [context executeFetchRequest:fetchRequest error:nil];
+//    if([temp count] > 0){
+//        return [[context executeFetchRequest:fetchRequest error:nil]objectAtIndex:0];
+//    }
+//    return nil;
+//}
+
+
 + (void)deletePhotoForCase:(NSString *)caseID photoName:(NSString *)photoName{
     NSManagedObjectContext *context=[[AppDelegate App] managedObjectContext];
     NSEntityDescription *entity=[NSEntityDescription entityForName:@"CasePhoto" inManagedObjectContext:context];

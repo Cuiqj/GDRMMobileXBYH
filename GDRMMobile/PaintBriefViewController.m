@@ -16,8 +16,7 @@
 @synthesize Image = _Image;
 @synthesize caseID = _caseID;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [self.view setBackgroundColor:BGCOLOR];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -34,7 +33,6 @@
         //add by 李晓明 2013.05.09
         //load 之前需要清除旧信息
         self.Image.image=nil;
-        
         NSArray *pathArray=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentPath=[pathArray objectAtIndex:0];
         NSString *mapPath=[NSString stringWithFormat:@"CaseMap/%@",self.caseID];
@@ -56,8 +54,7 @@
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
 	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 

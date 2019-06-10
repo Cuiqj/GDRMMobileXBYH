@@ -220,7 +220,6 @@ typedef enum {
 
 //车辆类型
 - (IBAction)selectCarType:(id)sender{
-    
     [self pickerPresentForIndex:4 fromRect:[(UITextField*)sender frame]];
 }
 

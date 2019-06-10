@@ -288,7 +288,7 @@
 
 - (IBAction)btnDismiss:(id)sender {
     [self.delegate addObserverToKeyBoard];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)btnSave:(id)sender {
@@ -350,7 +350,7 @@
             [[AppDelegate App] saveContext];
             [self.delegate reloadRecordData];
             [self.delegate addObserverToKeyBoard];
-            [self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     } else if(self.descState == kNormalDesc) {
         BOOL isBlank = NO;
@@ -384,7 +384,6 @@
             self.inspectRecordID = inspectionRecord.myid;
             [self.delegate reloadRecordData];
             [self.delegate addObserverToKeyBoard];
-            [self dismissModalViewControllerAnimated:YES];
         }
     }else if(self.descState==kUnderBridgeCheck){
         BOOL isBlank = NO;
@@ -423,6 +422,7 @@
             [self.delegate reloadRecordData];
             [self.delegate addObserverToKeyBoard];
             // [self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         
     }
@@ -462,7 +462,7 @@
         //NSLog(self.setInspectionRecordId: self.inspectionRecordID);
         [self.delegate reloadRecordData];
         [self.delegate addObserverToKeyBoard];
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
         
     }
 }
@@ -659,12 +659,12 @@
 - (IBAction)toCaseView:(id)sender {
     //UIViewController *caseView = [self.storyboard instantiateViewControllerWithIdentifier:@"CaseView"];
     [self.delegate addObserverToKeyBoard];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [((RoadInspectViewController*)self.delegate) performSegueWithIdentifier:@"inspectToCaseView" sender:self];
 }
 -(void)btnToShiGongCheck:(UIButton *)sender{
     [self.delegate addObserverToKeyBoard];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [((RoadInspectViewController*)self.delegate) performSegueWithIdentifier:@"inspectToShiGongCheck" sender:self];
 }
 - (IBAction)toUnderBridgeCheck:(id)sender {
@@ -682,7 +682,7 @@
     
     
     [self.delegate addObserverToKeyBoard];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [((RoadInspectViewController*)self.delegate) performSegueWithIdentifier:@"toUnderBridgeCheck" sender:self];
     
     
@@ -700,7 +700,7 @@
 - (IBAction)toAdminidtrativeCaseView:(id)sender{
     //UIViewController *caseView = [self.storyboard instantiateViewControllerWithIdentifier:@"CaseView"];
     [self.delegate addObserverToKeyBoard];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [((RoadInspectViewController*)self.delegate) performSegueWithIdentifier:@"insepectToAdminisCaseView" sender:self];
 }
 - (IBAction)toAttachmentView:(id)sender {
@@ -934,8 +934,6 @@
 - (IBAction)btnToZlyh:(UIButton *)sender {
     [self.delegate addObserverToKeyBoard];
     [self dismissViewControllerAnimated:YES completion:^{
-        
-        
         ZLYHRoadAssetCheckViewController *zlyhVC=[[ZLYHRoadAssetCheckViewController alloc]init];
         zlyhVC.inspectionID=(RoadInspectViewController*)self.inspectRecordID;
         zlyhVC.roadinspectVC=(RoadInspectViewController*)self.delegate;

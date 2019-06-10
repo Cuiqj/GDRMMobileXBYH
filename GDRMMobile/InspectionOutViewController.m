@@ -221,7 +221,7 @@
         [[NSUserDefaults standardUserDefaults] setValue:nil forKey:INSPECTIONKEY];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [self.delegate popBackToMainView];
-        [self dismissModalViewControllerAnimated:NO];
+        [self dismissViewControllerAnimated:NO completion:nil];
     }
 }
 
