@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaseMapTable>
+    <!--所有尺寸单位以mm计算-->
+    <!--定义纸张尺寸-->
+    <Paper size="A4" width="842" height="595">
+        <!--定义纸张边距，上，左，右，下-->
+        <Margin top="0"  left="0" right="0" bottom="3" />
+        <orientation isPortrait="No" />
+    </Paper>
+    <!--所有缺省设置元素，default*之类均必不可少-->
+    <!--固定表格-->
+    <StaticTable>
+        <Lines>
+            <!--默认线宽-->
+            <defaultLineWidth>0.4</defaultLineWidth>
+            <!--上线-->
+            <line x1="17" y1="32.5" x2="281" y2="32.5" lineWidth="0.5"/>
+            <!--下线-->
+            <line x1="17" y1="180" x2="281" y2="180" lineWidth="0.5"/>
+            <!-- 左边框 -->
+            <line x1="17" y1="32.5" x2="17" y2="180" lineWidth="0.5"/>
+            <!--右边框-->
+            <line x1="281" y1="32.5" x2="281" y2="180" lineWidth="0.5"/>
+            <!--案发时间下线-->
+            <line x1="17" y1="43.5" x2="281" y2="43.5" />
+            <!--说明上线-->
+            <line x1="17" y1="159.5" x2="281" y2="159.5"/>
+            <!--竖线1-->
+            <line x1="30" y1="32.5" x2="30" y2="43.5"/>
+            <!--竖线2-->
+            <line x1="88" y1="32.5" x2="88" y2="43.5"/>
+            <!--竖线3-->
+            <line x1="101" y1="32.5" x2="101" y2="43.5"/>
+            <!--竖线4-->
+            <line x1="167" y1="32.5" x2="167" y2="43.5"/>
+            <!--竖线5-->
+            <line x1="189" y1="32.5" x2="189" y2="43.5"/>
+            <!--竖线6-->
+            <line x1="251" y1="32.5" x2="251" y2="43.5"/>
+            <!--竖线7-->
+            <line x1="264" y1="32.5" x2="264" y2="43.5"/>
+            <!--绘制虚线网格-->
+            <!--横20条   分成21份-->
+            <line x1="17" y1="49.06" x2="281" y2="49.06" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="54.58" x2="281" y2="54.58" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="60.1" x2="281" y2="60.1" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="65.62" x2="281" y2="65.62" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="71.14" x2="281" y2="71.14" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="76.66" x2="281" y2="76.66" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="82.18" x2="281" y2="82.18" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="87.7" x2="281" y2="87.7" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="93.22" x2="281" y2="93.22" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="98.74" x2="281" y2="98.74" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--    后十条        -->
+            <line x1="17" y1="104.26" x2="281" y2="104.26" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="109.78" x2="281" y2="109.78" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="115.3" x2="281" y2="115.3" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="120.82" x2="281" y2="120.82" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="126.34" x2="281" y2="126.34" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="131.86" x2="281" y2="131.86" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="137.38" x2="281" y2="137.38" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="142.9" x2="281" y2="142.9" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="148.42" x2="281" y2="148.42" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="17" y1="153.94" x2="281" y2="153.94" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--竖62条  分成63份-->
+            <line x1="21.205" y1="43.5" x2="21.205" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="25.395" y1="43.5" x2="25.395" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="29.585" y1="43.5" x2="29.585" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="33.775" y1="43.5" x2="33.775" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="37.965" y1="43.5" x2="37.965" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="42.155" y1="43.5" x2="42.155" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="46.345" y1="43.5" x2="46.345" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="50.535" y1="43.5" x2="50.535" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="54.725" y1="43.5" x2="54.725" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="58.915" y1="43.5" x2="58.915" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--    十条        -->
+            <line x1="63.105" y1="43.5" x2="63.105" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="67.295" y1="43.5" x2="67.295" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="71.485" y1="43.5" x2="71.485" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="75.675" y1="43.5" x2="75.675" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="79.865" y1="43.5" x2="79.865" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="84.055" y1="43.5" x2="84.055" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="88.245" y1="43.5" x2="88.245" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="92.435" y1="43.5" x2="92.435" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="96.625" y1="43.5" x2="96.625" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="100.815" y1="43.5" x2="100.815" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--    十条        -->
+            <line x1="105.005" y1="43.5" x2="105.005" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="109.195" y1="43.5" x2="109.195" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="113.385" y1="43.5" x2="113.385" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="117.575" y1="43.5" x2="117.575" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="121.765" y1="43.5" x2="121.765" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="125.955" y1="43.5" x2="125.955" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="130.145" y1="43.5" x2="130.145" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="134.335" y1="43.5" x2="134.335" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="138.525" y1="43.5" x2="138.525" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="142.715" y1="43.5" x2="142.715" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--    十条        -->
+            <line x1="146.905" y1="43.5" x2="146.905" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="151.095" y1="43.5" x2="151.095" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="155.285" y1="43.5" x2="155.285" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="159.475" y1="43.5" x2="159.475" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="163.665" y1="43.5" x2="163.665" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="167.855" y1="43.5" x2="167.855" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="172.045" y1="43.5" x2="172.045" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="176.235" y1="43.5" x2="176.235" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="180.425" y1="43.5" x2="180.425" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="184.615" y1="43.5" x2="184.615" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--    十条        -->
+            <line x1="188.805" y1="43.5" x2="188.805" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="192.995" y1="43.5" x2="192.995" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="197.185" y1="43.5" x2="197.185" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="201.375" y1="43.5" x2="201.375" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="205.565" y1="43.5" x2="205.565" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="209.755" y1="43.5" x2="209.755" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="213.945" y1="43.5" x2="213.945" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="218.135" y1="43.5" x2="218.135" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="222.325" y1="43.5" x2="222.325" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="226.515" y1="43.5" x2="226.515" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--    十条        -->
+            <line x1="230.705" y1="43.5" x2="230.705" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="234.895" y1="43.5" x2="234.895" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="239.085" y1="43.5" x2="239.085" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="243.275" y1="43.5" x2="243.275" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="247.465" y1="43.5" x2="247.465" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="251.655" y1="43.5" x2="251.655" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="255.845" y1="43.5" x2="255.845" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="260.035" y1="43.5" x2="260.035" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="264.225" y1="43.5" x2="264.225" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="268.415" y1="43.5" x2="268.415" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <!--    二条        -->
+            <line x1="272.605" y1="43.5" x2="272.605" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/>
+            <line x1="276.795" y1="43.5" x2="276.795" y2="159.5" lineWidth="0.05" lineStyle = "dotted"/> 
+        </Lines>
+        <Title>
+            <defaultFontSize>19</defaultFontSize>
+            <!--标题:公路赔（补）偿案件询问笔录-->
+            <Text>
+                <text>违法案件现场勘验图</text>
+                <fontSize>19</fontSize>
+                <origin x="280" y="55" />
+                <size width="300" height="6" />
+            </Text>
+        </Title>
+        <Texts>
+            <defaultFontSize>14</defaultFontSize>
+            <Text>
+                <text>案由</text>
+                <origin x="19" y="37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>时间</text>
+                <origin x= "90" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>年</text>
+                <origin x= "115" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>月</text>
+                <origin x= "126.5" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                 <text>日</text>
+                <origin x= "138" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                 <text>时</text>
+                <origin x= "149.5" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                 <text>分</text>
+                <origin x= "161" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>地点</text>
+                <origin x= "173.5" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>天气</text>
+                <origin x= "253" y= "37.3" />
+                <size width="100" height="6" />
+            </Text>
+            
+            <Text>
+                <text>说明：</text>
+                <origin x= "19" y= "162" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>绘图人（签名):</text>
+                <origin x= "19" y= "184.5" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>勘验人（签名):</text>
+                <origin x= "80" y= "184.5" />
+                <size width="200" height="6" />
+            </Text>
+            <Text>
+                <text>当事人（签名):</text>
+                <origin x= "145" y= "184.5" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>被邀请人（签名):</text>
+                <origin x= "212" y= "184.5" />
+                <size width="200" height="6" />
+            </Text>
+        </Texts>
+    </StaticTable>
+    <DataTable>
+        <DefaultFontSize>19</DefaultFontSize>
+        <UITextField>
+            <origin x="31" y="35.2" />
+            <size width="55" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>case_short_desc</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="105" y="35.2" />
+            <size width="100" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>happen_date</attributeName>
+                    <mode>yyyy</mode>
+                </data>
+            </content>
+        </UITextField>
+        <!--月-->
+        <UITextField>
+            <origin x="120.5" y="35.2" />
+            <size width="100" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>happen_date</attributeName>
+                    <mode>MM</mode>
+                </data>
+            </content>
+         </UITextField>
+         <!--日-->
+        <UITextField>
+            <origin x="132" y="35.2" />
+            <size width="100" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>happen_date</attributeName>
+                    <mode>dd</mode>
+                </data>
+            </content>
+        </UITextField>
+         <!--时-->
+        <UITextField>
+            <origin x="143.5" y="35.2" />
+            <size width="100" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>happen_date</attributeName>
+                    <mode>HH</mode>
+                </data>
+            </content>
+        </UITextField>
+        <!--分-->
+        <UITextField>
+            <origin x="155" y="35.2" />
+            <size width="100" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>happen_date</attributeName>
+                    <mode>mm</mode>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="190" y="35.2" />
+            <size width="61" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>full_happen_place</attributeName>
+                    <entityName>CaseInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <!--天气-->
+        <UITextField>
+            <origin x="264" y="35.2" />
+            <alignment>Center</alignment>
+            <size width="17" height = "6"/>
+            <content>
+                <data>
+                    <attributeName>weater</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <!--绘图-->
+        <UIImgView>
+            <origin x="20.5" y="57.5" />
+            <size width="259" height="96" />
+            <content>
+                <data>
+                    <attributeName>map_file</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UIImgView>
+        <!--说明：-->
+        <UITextView>
+            <origin x="31" y="161.3" />
+            <size width="247.5" height="20" />
+            <leftOffSet>0</leftOffSet>
+            <lineHeight>18</lineHeight>
+            <content>
+                <data>
+                    <attributeName>map_remark</attributeName>
+                    <entityName></entityName>
+                </data>
+            </content>
+        </UITextView>
+    </DataTable>
+</CaseMapTable>

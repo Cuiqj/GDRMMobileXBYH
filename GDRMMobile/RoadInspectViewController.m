@@ -24,6 +24,7 @@
 #import "MaintainPlanCheck.h"
 #import "ShiGongCheckViewController.h"
 #import "Times+CoreDataClass.h"
+#import "EveryShiftViewController.h"
 @class ServicesCheckViewController;
 @interface RoadInspectViewController ()
 @property (nonatomic,retain) NSMutableArray      *data;
@@ -546,6 +547,7 @@ InspectionCheckState inspectionState;
                             rect.size.width = 72;
                             [self.uiButtonDeliver setFrame:rect];
                             [sender setTitle:@"交班" forState:UIControlStateNormal];
+                            [self.EveryShiftButton setHidden:NO];
                             [self.uiButtonAddNew setAlpha:1.0];
                             [self.uiButtonSave setAlpha:1.0];
                         }
@@ -686,6 +688,7 @@ InspectionCheckState inspectionState;
                         rect.size.width = 126;
                         [self.uiButtonDeliver setFrame:rect];
                         [self.uiButtonDeliver setTitle:@"返回当前巡查" forState:UIControlStateNormal];
+                        [self.EveryShiftButton setHidden:YES];
                         [self.uiButtonAddNew setAlpha:0.0];
                         [self.uiButtonSave setAlpha:0.0];
                     }
@@ -716,6 +719,13 @@ InspectionCheckState inspectionState;
     return NO;
 }
 
+
+- (IBAction)pushtoEveryShiftController:(id)sender {
+    UIStoryboard *mainstoryboard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    EveryShiftViewController * everyshift = [mainstoryboard instantiateViewControllerWithIdentifier:@"everyshift"];
+    everyshift.InspectionID = self.inspectionID;
+    [self.navigationController pushViewController:everyshift animated:YES];
+}
 
 - (void) createRecodeByCaseID:(NSString *)caseID{
     if ([caseID isEmpty]) {

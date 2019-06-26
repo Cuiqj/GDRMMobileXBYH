@@ -2218,6 +2218,17 @@
                                     <action selector="btnDeliver:" destination="x6v-go-kmQ" eventType="touchUpInside" id="37W-qZ-zPb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5ZB-DG-9yA">
+                                <rect key="frame" x="100" y="44" width="160" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="本班次巡查汇总">
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushtoEveryShiftController:" destination="x6v-go-kmQ" eventType="touchUpInside" id="6mW-QB-xii"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vB7-rd-OV4">
                                 <rect key="frame" x="98" y="15" width="906" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2306,6 +2317,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="EveryShiftButton" destination="5ZB-DG-9yA" id="NOO-fF-4zX"/>
                         <outlet property="inspectionRecordlabel" destination="CIe-wB-qjn" id="Ify-JK-2PB"/>
                         <outlet property="inspectionRecordtext" destination="syf-Oq-WP7" id="XYH-ih-OwV"/>
                         <outlet property="inspectionRecordtextButton" destination="HJ8-PE-gq6" id="cgy-9l-t4h"/>
@@ -2337,6 +2349,279 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvD-J1-WpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-713" y="3201"/>
+        </scene>
+        <!--Every Shift View Controller-->
+        <scene sceneID="hzJ-OH-MRk">
+            <objects>
+                <viewController storyboardIdentifier="everyshift" id="veD-O4-msd" customClass="EveryShiftViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYT-8B-ofs">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" id="Qoj-ij-aYr">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="巡查日期:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vrb-3A-hsE">
+                                        <rect key="frame" x="30" y="25" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2019-06-17" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="57M-aP-vf8">
+                                        <rect key="frame" x="185" y="25" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.81545681420000005" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="全天巡查里程合计:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dic-9O-iFL">
+                                        <rect key="frame" x="355" y="25" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="jrP-gP-80h">
+                                        <rect key="frame" x="510" y="25" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="当日参加巡查人次:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RkJ-7m-Cky">
+                                        <rect key="frame" x="690" y="23" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0/0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="FQu-yt-GFj">
+                                        <rect key="frame" x="845" y="23" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="发生交通事故/其中涉及路产损害:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X0u-Hx-0YF">
+                                        <rect key="frame" x="30" y="69" width="150" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0/0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="gW1-qx-cMD">
+                                        <rect key="frame" x="185" y="75" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="处理路产损害赔偿:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CaF-Ik-sRe">
+                                        <rect key="frame" x="355" y="75" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0/0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="fPP-Rg-D29">
+                                        <rect key="frame" x="510" y="75" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="处理路产保险理赔案件:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7VL-Ei-quc">
+                                        <rect key="frame" x="690" y="69" width="150" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0/0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="JRv-mh-AST">
+                                        <rect key="frame" x="845" y="75" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="发现报送道路、交安设施缺陷:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h6a-99-ha1">
+                                        <rect key="frame" x="30" y="119" width="150" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="b3O-Uz-dUF">
+                                        <rect key="frame" x="185" y="125" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="发现违法行为:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="afy-zS-GKz">
+                                        <rect key="frame" x="355" y="125" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="VmZ-iT-7wN">
+                                        <rect key="frame" x="510" y="125" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="纠正违法行为:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2qo-g7-KH2">
+                                        <rect key="frame" x="690" y="125" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="0PS-5v-dwV">
+                                        <rect key="frame" x="845" y="125" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="处理路面障碍物:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xWx-Bw-PR0">
+                                        <rect key="frame" x="30" y="175" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="DUT-uR-Y1e">
+                                        <rect key="frame" x="185" y="175" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="帮助故障车:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eww-ic-9Ti">
+                                        <rect key="frame" x="355" y="175" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="vox-m5-D0R">
+                                        <rect key="frame" x="510" y="175" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="检查施工点/纠正违反公路施工安全作业规程行为:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cbc-Sd-g7d">
+                                        <rect key="frame" x="655" y="170" width="185" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0/0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="kdh-xP-rnD">
+                                        <rect key="frame" x="845" y="175" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="告知交通综合行政执法局处理案件:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iVB-7e-k95">
+                                        <rect key="frame" x="30" y="219" width="150" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Ze3-8g-C6w">
+                                        <rect key="frame" x="185" y="225" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="发出法律文书:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qPB-oZ-QTW">
+                                        <rect key="frame" x="355" y="225" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="770-4Y-eXE">
+                                        <rect key="frame" x="510" y="225" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="劝离行人:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uVf-UA-zJ2">
+                                        <rect key="frame" x="690" y="225" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0/0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="bjn-Pj-dJm">
+                                        <rect key="frame" x="845" y="225" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F93-cq-50y">
+                                <rect key="frame" x="580" y="500" width="100" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="保存数据">
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnSaveDataClick:" destination="veD-O4-msd" eventType="touchUpInside" id="qhu-6S-LcG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GaI-od-xne">
+                                <rect key="frame" x="300" y="500" width="120" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="删除当前数据">
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DeleteDataClick:" destination="veD-O4-msd" eventType="touchUpInside" id="7AN-oM-ELn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yAA-lq-rA8"/>
+                    <connections>
+                        <outlet property="textaccident_num" destination="gW1-qx-cMD" id="vZf-dt-Inc"/>
+                        <outlet property="textbzgzc" destination="vox-m5-D0R" id="KXF-Ae-dLX"/>
+                        <outlet property="textcllmzaw" destination="DUT-uR-Y1e" id="sqV-n7-ZYs"/>
+                        <outlet property="textdate_inspection" destination="57M-aP-vf8" id="58x-OQ-FVD"/>
+                        <outlet property="textdeal_accident_num" destination="fPP-Rg-D29" id="3RQ-Hy-JUu"/>
+                        <outlet property="textdeal_bxlp_num" destination="JRv-mh-AST" id="90N-wi-xiW"/>
+                        <outlet property="textfcflws" destination="770-4Y-eXE" id="YXY-Ec-FFQ"/>
+                        <outlet property="textfxqx" destination="b3O-Uz-dUF" id="Iyy-5u-zpR"/>
+                        <outlet property="textfxwfxw" destination="VmZ-iT-7wN" id="X9C-Vj-4QC"/>
+                        <outlet property="textgzzfj" destination="Ze3-8g-C6w" id="hi4-60-Bum"/>
+                        <outlet property="textinspection_man_num" destination="FQu-yt-GFj" id="a0f-wz-QZ9"/>
+                        <outlet property="textinspection_mile" destination="jrP-gP-80h" id="Guv-ZQ-eEo"/>
+                        <outlet property="textjcsgd" destination="kdh-xP-rnD" id="xzG-Tc-E1v"/>
+                        <outlet property="textjzwfxw" destination="0PS-5v-dwV" id="VRE-E1-RBb"/>
+                        <outlet property="textqlxr" destination="bjn-Pj-dJm" id="Exp-zM-qfY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jtt-mF-FZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="3284"/>
         </scene>
         <!--Case Construction Change Back View Controller-->
         <scene sceneID="i3I-fY-6mH">
@@ -5409,7 +5694,7 @@
                                         <rect key="frame" x="0.0" y="22" width="0.0" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DiV-CA-P8I" id="TXt-PV-TEX">
-                                            <rect key="frame" x="-23" y="0.0" width="23" height="43.5"/>
+                                            <rect key="frame" x="-10" y="0.0" width="10" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -6434,11 +6719,11 @@
             </objects>
             <point key="canvasLocation" x="2562" y="381"/>
         </scene>
-        <!--现场勘验图信息-->
+        <!--违法现场勘验图信息-->
         <scene sceneID="Da0-ix-dqi">
             <objects>
-                <viewController storyboardIdentifier="PaintBriefOfAdministrativePenalty" title="现场勘验图信息" id="yHm-9n-Prp" customClass="PaintBriefViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IJ3-n7-51Y">
+                <viewController storyboardIdentifier="PaintBriefOfAdministrativePenalty" title="违法现场勘验图信息" id="yHm-9n-Prp" customClass="PaintBriefViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="IJ3-n7-51Y">
                         <rect key="frame" x="0.0" y="0.0" width="654" height="348"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -6463,11 +6748,11 @@
         <scene sceneID="FbG-NA-GKo">
             <objects>
                 <viewController storyboardIdentifier="PaintBriefInfo" title="现场勘验图信息" id="9K2-BD-tf6" customClass="PaintBriefViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RBi-dE-Gu6">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="RBi-dE-Gu6">
                         <rect key="frame" x="0.0" y="0.0" width="654" height="348"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" id="7VC-nh-qPq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" misplaced="YES" id="7VC-nh-qPq">
                                 <rect key="frame" x="0.0" y="0.0" width="654" height="348"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -6482,7 +6767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahp-TA-vlk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4347" y="381"/>
+            <point key="canvasLocation" x="4378" y="248"/>
         </scene>
         <!--Text Input View Controller-->
         <scene sceneID="EaV-cb-OWp">
@@ -6725,7 +7010,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJo-1u-hBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5329" y="1316"/>
+            <point key="canvasLocation" x="6205" y="1052"/>
+        </scene>
+        <!--Adminstrative Penalty Map Table View Controller-->
+        <scene sceneID="vP4-ny-CHH">
+            <objects>
+                <viewController storyboardIdentifier="AdminstrativePenaltyMapTable" id="DZY-JS-R2B" customClass="AdminstrativePenaltyMapTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pze-yd-qJq">
+                        <rect key="frame" x="0.0" y="0.0" width="900" height="656"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="    违 法 案 件 现 场 勘 验 图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XWG-CN-ud7">
+                                <rect key="frame" x="100" y="35" width="700" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="案由" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PzB-NY-xCO">
+                                <rect key="frame" x="40" y="90" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Us3-ao-c9N">
+                                <rect key="frame" x="80" y="85" width="230" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PeX-6f-ueE">
+                                <rect key="frame" x="315" y="90" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MsY-Wg-ULE">
+                                <rect key="frame" x="355" y="85" width="155" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="地点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QR9-iP-fHA">
+                                <rect key="frame" x="515" y="90" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cC7-d5-uV4">
+                                <rect key="frame" x="555" y="85" width="230" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="天气" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kBW-se-9Vj">
+                                <rect key="frame" x="790" y="90" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6qs-vT-DNl">
+                                <rect key="frame" x="835" y="85" width="60" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="dic-3L-NoH">
+                                <rect key="frame" x="40" y="145" width="840" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" id="llU-1m-XNK">
+                                <rect key="frame" x="100" y="505" width="780" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66671651600000004" green="0.66670370099999998" blue="0.66671240330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Omm-Ff-TcQ">
+                                <rect key="frame" x="40" y="515" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <size key="freeformSize" width="900" height="656"/>
+                    <connections>
+                        <outlet property="caseDesclabel" destination="Us3-ao-c9N" id="xTQ-VM-MBz"/>
+                        <outlet property="datetimelabel" destination="MsY-Wg-ULE" id="OJ2-u1-68K"/>
+                        <outlet property="imageview" destination="dic-3L-NoH" id="vTy-zn-BFK"/>
+                        <outlet property="placeadresslabel" destination="cC7-d5-uV4" id="EBX-3F-fjl"/>
+                        <outlet property="remarktextview" destination="llU-1m-XNK" id="pQB-i3-eQd"/>
+                        <outlet property="weatherlabel" destination="6qs-vT-DNl" id="DDh-Ln-HfS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXB-xE-Q9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6246" y="1817"/>
         </scene>
         <!--NowRecordPrinter View Controller 违章 现场草图-->
         <scene sceneID="tAV-Ej-weh">
@@ -7366,7 +7757,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V00-W3-Bwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8525" y="1317"/>
+            <point key="canvasLocation" x="10025" y="1249"/>
         </scene>
         <!--违章文书送达回证-->
         <scene sceneID="4uT-dx-bcc">
@@ -7452,7 +7843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gz6-Rm-aVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9580" y="1184.5"/>
+            <point key="canvasLocation" x="11020" y="1249"/>
         </scene>
         <!--违章责令整改通知书-->
         <scene sceneID="yV9-bo-96E">
@@ -7709,7 +8100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXF-Dh-dzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10644" y="1184.5"/>
+            <point key="canvasLocation" x="12074" y="1249"/>
         </scene>
         <!--Administrative Penalty Prove Info Print View Controller-->
         <scene sceneID="rdv-MH-wJ2">
@@ -9175,8 +9566,8 @@
                                     <outlet property="delegate" destination="J1d-Ys-YtB" id="n8W-Ep-9Dc"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="当事人" borderStyle="roundedRect" minimumFontSize="17" id="05R-NL-QQh">
-                                <rect key="frame" x="436" y="25" width="152" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="当事人" borderStyle="roundedRect" minimumFontSize="17" id="05R-NL-QQh">
+                                <rect key="frame" x="320" y="25" width="110" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -9185,23 +9576,23 @@
                                     <outlet property="delegate" destination="J1d-Ys-YtB" id="g7R-yY-Ijb"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="性别" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JlE-We-DiT">
-                                <rect key="frame" x="59" y="79" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" misplaced="YES" text="性别" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JlE-We-DiT">
+                                <rect key="frame" x="59" y="74" width="42" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="uVV-ua-EJc">
-                                <rect key="frame" x="152" y="68" width="90" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="uVV-ua-EJc">
+                                <rect key="frame" x="152" y="75" width="90" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="男"/>
                                     <segment title="女"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="年龄" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="R7q-QK-Asi">
-                                <rect key="frame" x="289" y="79" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" misplaced="YES" text="年龄" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="R7q-QK-Asi">
+                                <rect key="frame" x="289" y="74" width="42" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -9363,8 +9754,8 @@
                                     <outlet property="delegate" destination="J1d-Ys-YtB" id="kd1-EZ-MdH"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="民族" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qGR-kL-FCB">
-                                <rect key="frame" x="463" y="79" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" misplaced="YES" text="民族" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qGR-kL-FCB">
+                                <rect key="frame" x="463" y="74" width="42" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -9380,12 +9771,29 @@
                                     <outlet property="delegate" destination="J1d-Ys-YtB" id="q4i-ic-opt"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="当事人在场" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mhY-1j-i5A">
+                                <rect key="frame" x="470" y="30" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1d5-CZ-QHW">
+                                <rect key="frame" x="563" y="30" width="14" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="unchecked.png"/>
+                                <state key="selected" image="checked.png"/>
+                                <connections>
+                                    <action selector="SceneClick:" destination="J1d-Ys-YtB" eventType="touchUpInside" id="dE3-PG-9Fz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80726855993270874" green="0.82521450519561768" blue="0.84927475452423096" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="654" height="470"/>
                     <connections>
+                        <outlet property="citizenOneTheScene" destination="1d5-CZ-QHW" id="YYd-o2-rF8"/>
                         <outlet property="textAddress" destination="cmR-z6-XG6" id="hyW-FW-Weh"/>
                         <outlet property="textAge" destination="6im-0E-abT" id="7EP-wV-jmC"/>
                         <outlet property="textCardNO" destination="MuW-OR-MAf" id="9g6-8R-kxN"/>
@@ -11551,7 +11959,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1v-Vi-R4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6450" y="1439.5"/>
+            <point key="canvasLocation" x="7997" y="1272"/>
         </scene>
         <!--Case Count Print View Controller-->
         <scene sceneID="iph-fq-yUE">
@@ -15217,7 +15625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpT-Kl-maE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7437" y="1379.5"/>
+            <point key="canvasLocation" x="8979" y="1272"/>
         </scene>
     </scenes>
     <resources>
@@ -15252,20 +15660,20 @@
         <image name="违法登记.png" width="189" height="69"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="igo-Ui-LX5"/>
-        <segue reference="6lk-Nl-vz9"/>
+        <segue reference="nsa-p9-XQO"/>
+        <segue reference="Nlb-lU-TKd"/>
         <segue reference="CBw-Kr-1du"/>
         <segue reference="0Ek-I7-xpQ"/>
         <segue reference="tFF-tV-z37"/>
         <segue reference="vQ0-4d-GPt"/>
         <segue reference="RB0-Vc-zey"/>
         <segue reference="LH0-e5-T0o"/>
-        <segue reference="HAB-gn-8eY"/>
+        <segue reference="eon-yW-bpX"/>
         <segue reference="B55-m9-xva"/>
-        <segue reference="JLY-dB-ghi"/>
-        <segue reference="byz-V4-8Qu"/>
-        <segue reference="Oku-Sd-2QN"/>
-        <segue reference="RIr-Pz-GWT"/>
-        <segue reference="YD9-lU-M6O"/>
+        <segue reference="6B5-e1-bgj"/>
+        <segue reference="8OW-OQ-xnw"/>
+        <segue reference="CIm-gV-nba"/>
+        <segue reference="UL8-xp-Il7"/>
+        <segue reference="Fl6-7H-frt"/>
     </inferredMetricsTieBreakers>
 </document>

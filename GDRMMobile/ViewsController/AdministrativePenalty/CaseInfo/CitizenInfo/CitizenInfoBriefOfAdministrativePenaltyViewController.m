@@ -9,6 +9,7 @@
 #import "CitizenInfoBriefOfAdministrativePenaltyViewController.h"
 #import "CaseInquire.h"
 #import "AutoNumerPickerViewController.h"
+#import "CaseInfo.h"
 
 @interface CitizenInfoBriefOfAdministrativePenaltyViewController ()
 @property (nonatomic,retain) UIPopoverController *picker;
@@ -33,9 +34,9 @@
 @synthesize textOrgPrincipalDuty = _textOrgPrincipalDuty;
 @synthesize textOriginalHome     = _textOriginalHome;
 @synthesize pickerType           = _pickerType;
+@synthesize citizenOneTheScene = _citizenOneTheScene;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -43,8 +44,8 @@
     [aibtn setTitle:@"识别" forState:UIControlStateNormal];
     [self.view addSubview:aibtn];
 }
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
+    [self setCitizenOneTheScene:nil];
     [self setTextParty:nil];
     [self setTextNexus:nil];
     [self setTextSex:nil];
@@ -63,8 +64,7 @@
     [[AipOcrService shardService] authWithAK:@"Paqy6c1Gp7xVDgvUYzmLjrI1" andSK:@"KFR81SO1RBCRZboQ0aej579hbOtcNzrX"];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
@@ -204,6 +204,12 @@
         caseInquire.postalcode    = citizen.postalcode;
         caseInquire.address       = citizen.address;
         
+        CaseInfo * caseinfo = [CaseInfo caseInfoForID:caseID];
+        if (self.citizenOneTheScene.selected == NO) {
+            caseinfo.is_from_civilaction = @(1);
+        }else{
+            caseinfo.is_from_civilaction = @(0);
+        }
         
         [[AppDelegate App] saveContext];
         
@@ -211,14 +217,13 @@
     [self loadCitizenInfoForCase:caseID andNexus:self.textNexus.text];
 }
 
--(void)loadCitizenInfoForCase:(NSString *)caseID andNexus:(NSString *)nexus{
-    
-    
-    {
+-(void)loadCitizenInfoForCase:(NSString *)caseID andNexus:(NSString *)nexus{{
         //姓名
         self.textParty.text = @"";
         //当事人
         self.textNexus.text = @"当事人";
+        //当事人在场
+        [self.citizenOneTheScene setSelected:YES];
         //性别
         self.textSex.selectedSegmentIndex = 0;
         //年龄
@@ -277,6 +282,10 @@
     } else {
         self.textNexus.text = nexus;
     }
+    CaseInfo * caseinfo = [CaseInfo caseInfoForID:caseID];
+    if ([caseinfo.is_from_civilaction intValue] == 1) {
+        [self.citizenOneTheScene setSelected:NO];
+    }
 }
 
 -(void)newDataForCase:(NSString *)caseID{
@@ -295,4 +304,12 @@
     self.textProfession.text       = @"司机";
 }
 
+- (IBAction)SceneClick:(id)sender {
+    RadioButton * button = sender;
+    if (button.selected == YES) {
+        [button setSelected:NO];
+    }else{
+        [button setSelected:YES];
+    }
+}
 @end

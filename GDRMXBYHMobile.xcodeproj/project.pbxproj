@@ -346,6 +346,9 @@
 		8444102621144C5300505843 /* AdminstrativePenaltyConstructionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444102521144C5300505843 /* AdminstrativePenaltyConstructionTableViewController.m */; };
 		8444102921144C7300505843 /* AdminstrativePenaltyServiceReceiptTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444102821144C7300505843 /* AdminstrativePenaltyServiceReceiptTableViewController.m */; };
 		84486E4320EE039F0034D1A7 /* TrafficRemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 84486E4220EE039F0034D1A7 /* TrafficRemark.m */; };
+		845D2BB922BC7F6E00323CAD /* AdminstrativePenaltyMapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D2BB822BC7F6E00323CAD /* AdminstrativePenaltyMapTableViewController.m */; };
+		845D2BBB22BC838500323CAD /* AdminstrativePenaltyMapTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 845D2BBA22BC838500323CAD /* AdminstrativePenaltyMapTable.xml */; };
+		846D6F0022B78A180064EEA8 /* EveryShiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D6EFF22B78A170064EEA8 /* EveryShiftViewController.m */; };
 		84763D9B219EA71B00C22A15 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84763D9A219EA71B00C22A15 /* bg1.png */; };
 		8477DB7C1FD68EFA00CC8241 /* UIImage+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477DB5B1FD68EFA00CC8241 /* UIImage+XLExtension.m */; };
 		8477DB7D1FD68EFA00CC8241 /* UIView+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477DB5D1FD68EFA00CC8241 /* UIView+XLExtension.m */; };
@@ -404,6 +407,7 @@
 		84B459912021C11F00FAEAF6 /* 桥涵检查.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B459902021C11F00FAEAF6 /* 桥涵检查.png */; };
 		84B459942022AE5900FAEAF6 /* InitBridgeCheckItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B459932022AE5900FAEAF6 /* InitBridgeCheckItem.m */; };
 		84BDFB8C20045FEF006F0193 /* VersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFB8B20045FEF006F0193 /* VersionUpdate.m */; };
+		84E830DC22B3315500B7C5AC /* Inspection_Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E830DB22B3315500B7C5AC /* Inspection_Main.m */; };
 		84ED1B111FCBF0F600BA89E8 /* 其它检查.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED1B0F1FCBF0F600BA89E8 /* 其它检查.png */; };
 		84ED1B121FCBF0F600BA89E8 /* 服务区检查.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED1B101FCBF0F600BA89E8 /* 服务区检查.png */; };
 		84ED1B141FCC07D600BA89E8 /* 识别.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED1B131FCC07D600BA89E8 /* 识别.png */; };
@@ -1036,6 +1040,11 @@
 		8444102821144C7300505843 /* AdminstrativePenaltyServiceReceiptTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminstrativePenaltyServiceReceiptTableViewController.m; sourceTree = "<group>"; };
 		84486E4120EE039F0034D1A7 /* TrafficRemark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrafficRemark.h; sourceTree = "<group>"; };
 		84486E4220EE039F0034D1A7 /* TrafficRemark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficRemark.m; sourceTree = "<group>"; };
+		845D2BB722BC7F6E00323CAD /* AdminstrativePenaltyMapTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminstrativePenaltyMapTableViewController.h; sourceTree = "<group>"; };
+		845D2BB822BC7F6E00323CAD /* AdminstrativePenaltyMapTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminstrativePenaltyMapTableViewController.m; sourceTree = "<group>"; };
+		845D2BBA22BC838500323CAD /* AdminstrativePenaltyMapTable.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AdminstrativePenaltyMapTable.xml; sourceTree = "<group>"; };
+		846D6EFE22B78A170064EEA8 /* EveryShiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EveryShiftViewController.h; sourceTree = "<group>"; };
+		846D6EFF22B78A170064EEA8 /* EveryShiftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryShiftViewController.m; sourceTree = "<group>"; };
 		84763D9A219EA71B00C22A15 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
 		8477DB5A1FD68EFA00CC8241 /* UIImage+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XLExtension.h"; sourceTree = "<group>"; };
 		8477DB5B1FD68EFA00CC8241 /* UIImage+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XLExtension.m"; sourceTree = "<group>"; };
@@ -1130,6 +1139,8 @@
 		84B459932022AE5900FAEAF6 /* InitBridgeCheckItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitBridgeCheckItem.m; sourceTree = "<group>"; };
 		84BDFB8A20045FEF006F0193 /* VersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionUpdate.h; sourceTree = "<group>"; };
 		84BDFB8B20045FEF006F0193 /* VersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionUpdate.m; sourceTree = "<group>"; };
+		84E830DA22B3315500B7C5AC /* Inspection_Main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inspection_Main.h; sourceTree = "<group>"; };
+		84E830DB22B3315500B7C5AC /* Inspection_Main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Inspection_Main.m; sourceTree = "<group>"; };
 		84ED1B0F1FCBF0F600BA89E8 /* 其它检查.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "其它检查.png"; sourceTree = "<group>"; };
 		84ED1B101FCBF0F600BA89E8 /* 服务区检查.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "服务区检查.png"; sourceTree = "<group>"; };
 		84ED1B131FCC07D600BA89E8 /* 识别.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "识别.png"; sourceTree = "<group>"; };
@@ -1238,18 +1249,20 @@
 		330158ED1A37F42400F641C5 /* CaseDocuments */ = {
 			isa = PBXGroup;
 			children = (
+				33268B441A3979C200445E03 /* AdministrativePenaltyProveInfoPrintViewController.h */,
+				33268B451A3979C200445E03 /* AdministrativePenaltyProveInfoPrintViewController.m */,
 				33268B4C1A39893B00445E03 /* AdministrativePenaltyMapPrinterViewController.h */,
 				33268B4D1A39893B00445E03 /* AdministrativePenaltyMapPrinterViewController.m */,
 				8444101E211423A800505843 /* AdminisInquireTableViewController.h */,
 				8444101F211423A800505843 /* AdminisInquireTableViewController.m */,
 				8444102721144C7300505843 /* AdminstrativePenaltyServiceReceiptTableViewController.h */,
 				8444102821144C7300505843 /* AdminstrativePenaltyServiceReceiptTableViewController.m */,
+				845D2BB722BC7F6E00323CAD /* AdminstrativePenaltyMapTableViewController.h */,
+				845D2BB822BC7F6E00323CAD /* AdminstrativePenaltyMapTableViewController.m */,
 				8444102421144C5300505843 /* AdminstrativePenaltyConstructionTableViewController.h */,
 				8444102521144C5300505843 /* AdminstrativePenaltyConstructionTableViewController.m */,
 				33268B421A3979C200445E03 /* AdministrativePenaltyInquirePrinterViewController.h */,
 				33268B431A3979C200445E03 /* AdministrativePenaltyInquirePrinterViewController.m */,
-				33268B441A3979C200445E03 /* AdministrativePenaltyProveInfoPrintViewController.h */,
-				33268B451A3979C200445E03 /* AdministrativePenaltyProveInfoPrintViewController.m */,
 			);
 			name = CaseDocuments;
 			path = ViewsController/AdministrativePenalty/CaseDocuments;
@@ -1612,9 +1625,9 @@
 				330EF718152D754A0096F7D9 /* PaintArea.m */,
 				330EF70D152D740C0096F7D9 /* DWStroke.h */,
 				330EF70E152D740C0096F7D9 /* DWStroke.m */,
-				3386EE6D15469D260089D0EB /* PaintBriefViewController.h */,
 				842B398020C7CA3700984830 /* SelectTypeResultController.h */,
 				842B398120C7CA3700984830 /* SelectTypeResultController.m */,
+				3386EE6D15469D260089D0EB /* PaintBriefViewController.h */,
 				3386EE6E15469D270089D0EB /* PaintBriefViewController.m */,
 				337E108315A1892C005BC222 /* CasePaintDelegate.h */,
 				3399CA3E15AEB87F00CE9028 /* TextInputViewController.h */,
@@ -1934,6 +1947,8 @@
 				67CAEBEF178AF569000BF8A7 /* FileCode.m */,
 				CCA0BA26178AA3A300F03873 /* TrafficRecord.h */,
 				CCA0BA27178AA3A300F03873 /* TrafficRecord.m */,
+				84E830DA22B3315500B7C5AC /* Inspection_Main.h */,
+				84E830DB22B3315500B7C5AC /* Inspection_Main.m */,
 				335B9F6D16669AF600A94D65 /* CaseProveInfo.h */,
 				335B9F6E16669AF600A94D65 /* CaseProveInfo.m */,
 				336CEE4216635895004A6763 /* Inspection.h */,
@@ -2206,6 +2221,8 @@
 				CCA0BA1D178A950500F03873 /* Global.h */,
 				33C8047A1547F8980035EFB5 /* RoadInspectViewController.h */,
 				33C8047B1547F8980035EFB5 /* RoadInspectViewController.m */,
+				846D6EFE22B78A170064EEA8 /* EveryShiftViewController.h */,
+				846D6EFF22B78A170064EEA8 /* EveryShiftViewController.m */,
 				33C0B34315F72D0B00ADC00C /* NewInspectionViewController.h */,
 				33C0B34415F72D0B00ADC00C /* NewInspectionViewController.m */,
 				338C2EFE1601DB9500C49E96 /* InspectionOutViewController.h */,
@@ -2316,6 +2333,7 @@
 				33268B481A397AC600445E03 /* AdministrativePenaltyInquireTable.xml */,
 				33268B491A397AC600445E03 /* AdministrativePenaltyInquireTable2_new.xml */,
 				334C74A31A392D9800CB0CC6 /* AdministrativePenaltyProveInfoTable.xml */,
+				845D2BBA22BC838500323CAD /* AdminstrativePenaltyMapTable.xml */,
 				80D20812180722FD00D17F47 /* AdminstrativePenaltyServiceReceiptTable.xml */,
 				841132F42119AE97007E9180 /* AdminstrativePenaltyConstructionTable.xml */,
 				334E456419BEF39700E1D14B /* InspectionConstructionTable.xml */,
@@ -2762,6 +2780,7 @@
 				3394F2EE1E2DAC5700DAE10F /* TingGongTongZhiShu.xml in Resources */,
 				33318EAE1E15F86F00C4F18A /* AssistanceNoticeTable.xml in Resources */,
 				80D20817180722FD00D17F47 /* CaseCountTable.xml in Resources */,
+				845D2BBB22BC838500323CAD /* AdminstrativePenaltyMapTable.xml in Resources */,
 				80D20818180722FD00D17F47 /* CaseMapTable.xml in Resources */,
 				80D20819180722FD00D17F47 /* CaseMapTemplate.xml in Resources */,
 				330AD2B51E56D16600913004 /* 应急保障事件.png in Resources */,
@@ -2949,6 +2968,7 @@
 				335DE5EC1E67B81700DF7A45 /* PoliceReport.m in Sources */,
 				33C8047C1547F8980035EFB5 /* RoadInspectViewController.m in Sources */,
 				33AFFAFE1548DEC400DB27D2 /* RoadAssetAcceptanceViewController.m in Sources */,
+				84E830DC22B3315500B7C5AC /* Inspection_Main.m in Sources */,
 				3316730A1EB9AA6C0090EDE7 /* ServiceOrg.m in Sources */,
 				33AFFB021548DF8700DB27D2 /* RoadAssetDamageListViewController.m in Sources */,
 				84B4596A2021AB2200FAEAF6 /* IQUIViewController+Additions.m in Sources */,
@@ -2984,6 +3004,7 @@
 				3373F0B815E5D679004B86A4 /* CheckType.m in Sources */,
 				3373F0C715E5D767004B86A4 /* CheckStatus.m in Sources */,
 				3373F0CA15E5D768004B86A4 /* CheckHandle.m in Sources */,
+				845D2BB922BC7F6E00323CAD /* AdminstrativePenaltyMapTableViewController.m in Sources */,
 				3373F0CD15E5D768004B86A4 /* CheckReason.m in Sources */,
 				3369577815E618360078EDBC /* InitInspectionCheck.m in Sources */,
 				3369577C15E625930078EDBC /* InspectionCheckPickerViewController.m in Sources */,
@@ -3016,6 +3037,7 @@
 				337C4089160963CF0035618B /* RoadSegmentPickerViewController.m in Sources */,
 				331A56E9160C55EA00048168 /* LoginViewController.m in Sources */,
 				33CF2570160FED9B0074172F /* UserPickerViewController.m in Sources */,
+				846D6F0022B78A180064EEA8 /* EveryShiftViewController.m in Sources */,
 				330F2E0D1E091277007D3D33 /* Table101.m in Sources */,
 				33D8BC9D1623FE4D00C04B81 /* InitData.m in Sources */,
 				33B2DEA71CD83AE000DAF01E /* MMProgressHUD+Animations.m in Sources */,

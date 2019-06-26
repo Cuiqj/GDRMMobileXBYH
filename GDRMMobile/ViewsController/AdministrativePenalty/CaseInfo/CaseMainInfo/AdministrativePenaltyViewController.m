@@ -411,6 +411,13 @@ BOOL _wasKeyboardManagerEnabled;
     }
     UITableViewCell *myCell=[tableView cellForRowAtIndexPath:indexPath];
     currentFileName = myCell.textLabel.text;
+    if (indexPath.row == 0) {
+        if ([self.caseInfo.is_from_civilaction intValue] == 1) {
+            currentFileName = @"违章勘验（检查）笔录";
+        }else{
+            currentFileName = @"违章现场笔录";
+        }
+    }
     if (![self.caseID isEmpty]) {
         [self saveCaseInfoForCase:self.caseID];
     }

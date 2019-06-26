@@ -57,7 +57,7 @@
 //当事人职务及电话
 - (NSString *)nameAndprincipal_duty{
     if (self.org_name && self.org_principal_duty) {
-        return [NSString stringWithFormat:@"%@%@",self.org_name,self.org_principal_duty];
+        return [NSString stringWithFormat:@"%@ %@",self.org_name,self.org_principal_duty];
     }else if (!self.org_name){
         return self.org_principal_duty;
     }else if (self.org_principal_duty){

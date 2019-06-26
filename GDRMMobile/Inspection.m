@@ -82,4 +82,39 @@
  }
  }
  */
++ (Inspection *)oneDatainspectionForID:(NSString *)ID{
+    if(ID==nil) return nil;
+    NSManagedObjectContext *context = [[ AppDelegate  App ] managedObjectContext];
+    NSEntityDescription *entity=[NSEntityDescription entityForName:NSStringFromClass([self class]) inManagedObjectContext:context ];
+    NSFetchRequest *fetchRequest    = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"myid==%@",ID];
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setEntity:entity];
+    NSArray * arr = [context executeFetchRequest:fetchRequest error:nil];
+    if(arr.count>0)
+        return [[context executeFetchRequest:fetchRequest error:nil] objectAtIndex:0];
+    else
+        return nil;
+}
+
++(NSDate *)inspectionfortime_endsettingtimeyjsj:(NSDate *)time_end andtime_start:(NSDate *)time_start andclasse:(NSString *)classe{
+    NSDate * temp;
+    NSDateFormatter * matter = [[NSDateFormatter alloc] init];
+    [matter setDateFormat:@"yyyy年MM月dd日"];
+    NSString * timestring;
+    if([classe containsString:@"晚班"]){
+        temp = time_end;
+        timestring = [NSString stringWithFormat:@"%@08时00分",[matter stringFromDate:temp]];
+    }else if([classe containsString:@"早班"]){
+        temp = time_start;
+        timestring = [NSString stringWithFormat:@"%@16时00分",[matter stringFromDate:temp]];
+    }else if([classe containsString:@"中班"]){
+        temp = [NSDate dateWithTimeInterval:24*60*60 sinceDate:time_start];
+        timestring = [NSString stringWithFormat:@"%@00时00分",[matter stringFromDate:temp]];
+    }
+    [matter setDateFormat:@"yyyy年MM月dd日HH时mm分"];
+    return [matter dateFromString:timestring];
+}
+
+
 @end

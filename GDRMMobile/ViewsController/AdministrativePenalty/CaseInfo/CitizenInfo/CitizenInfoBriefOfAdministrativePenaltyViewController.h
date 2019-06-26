@@ -12,6 +12,7 @@
 #import "CaseIDHandler.h"
 #import "AutoNumerPickerViewController.h"
 #import <AipOcrSdk/AipOcrSdk.h>
+#import "RadioButton.h"
 
 @interface CitizenInfoBriefOfAdministrativePenaltyViewController : UIViewController<UITextFieldDelegate,AutoNumberPickerDelegate,AipOcrDelegate>
 - (IBAction)showPicker:(id)sender;
@@ -19,6 +20,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *textParty;
 //当事人
 @property (weak, nonatomic) IBOutlet UITextField *textNexus;
+//当事人在场
+@property (weak, nonatomic) IBOutlet UIButton *citizenOneTheScene;
+//选择当事人是否在场    默认在场已选
+- (IBAction)SceneClick:(id)sender;
+
 //性别
 @property (weak, nonatomic) IBOutlet UISegmentedControl *textSex;
 //年龄

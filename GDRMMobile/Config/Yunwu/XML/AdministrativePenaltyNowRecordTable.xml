@@ -86,10 +86,8 @@
                     <origin x="83" y="80" />
                     <size width="426" height="14" />
             </Text>
-                
         </Title>
         <Texts>
-                
             <Text>
                     <text>执法</text>
                     <fontSize>12</fontSize>
@@ -464,8 +462,8 @@
         <!--  身份证     -->
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="78" y="88" />
-            <size width="120" height="6" />
+            <origin x="71.5" y="88" />
+            <size width="35.5" height="6" />
             <content>
                 <data>
                     <attributeName>card_no</attributeName>
@@ -485,9 +483,9 @@
         </UITextField>
         <!-- 单位及职务    -->
         <UITextField>
-            <fontSize>10</fontSize>
-            <origin x="75" y="98" />
-            <size width="120" height="6" />
+<!--            <fontSize>10</fontSize>-->
+            <origin x="71.5" y="95.5" />
+            <size width="35" height="10" />
             <content>
                 <data>
                     <attributeName>nameAndprincipal_duty</attributeName>

@@ -22,7 +22,6 @@
 @property (nonatomic,strong) NSMutableArray * SelectDataarray;
 -(void)initServer;
 
-
 -(NSMutableArray *)getAllOrgInfo:(NSString *)belongtoid;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

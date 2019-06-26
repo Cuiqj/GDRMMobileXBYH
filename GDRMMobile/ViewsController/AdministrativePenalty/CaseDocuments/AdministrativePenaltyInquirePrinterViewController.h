@@ -4,7 +4,7 @@
 //
 //  Created by yu hongwu on 12-8-9.
 //  Copyright (c) 2012年 中交宇科 . All rights reserved.
-//
+//原来的违章询问笔录
 
 #import "CasePrintViewController.h"
 #import "CaseInquire.h"

@@ -4,7 +4,7 @@
 //
 //  Created by yu hongwu on 12-4-18.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
-//
+//违章勘验（检查）笔录
 
 #import "CasePrintViewController.h"
 #import "CaseProveInfo.h"

@@ -114,6 +114,7 @@
         <attribute name="head_side" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="insurance_company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="insurance_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_from_civilaction" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="isuploaded" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="myid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="organization_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -427,6 +428,33 @@
         <attribute name="yjsj" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="yjsx" optional="YES" attributeType="String" defaultValueString="无" syncable="YES"/>
         <attribute name="yjzb" optional="YES" attributeType="String" defaultValueString="巡查设备齐全完好。" syncable="YES"/>
+    </entity>
+    <entity name="Inspection_Main" syncable="YES">
+        <attribute name="accident_num" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bzgzc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cllmzaw" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_inspection" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="deal_accident_num" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deal_bxlp_num" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fcflws" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fxqx" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fxwfxw" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gzzfj" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspection_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspection_man_num" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspection_mile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspection_principal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspection_principal_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspection_principal_sign_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isuploaded" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="jcsgd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jzwfxw" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qlxr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reporter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reporter_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reporter_sign_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="InspectionCheck" representedClassName="InspectionCheck" syncable="YES">
         <attribute name="checkresult" optional="YES" attributeType="String" syncable="YES"/>
@@ -898,7 +926,7 @@
         <element name="CaseCount" positionX="160" positionY="192" width="128" height="105"/>
         <element name="CaseDeformation" positionX="0" positionY="0" width="128" height="225"/>
         <element name="CaseDocuments" positionX="0" positionY="0" width="128" height="90"/>
-        <element name="CaseInfo" positionX="0" positionY="0" width="128" height="570"/>
+        <element name="CaseInfo" positionX="0" positionY="0" width="128" height="585"/>
         <element name="CaseInquire" positionX="0" positionY="0" width="128" height="345"/>
         <element name="CaseLawInfo" positionX="81" positionY="153" width="128" height="225"/>
         <element name="CaseMap" positionX="160" positionY="192" width="128" height="165"/>
@@ -925,6 +953,7 @@
         <element name="InquireAnswerSentence" positionX="0" positionY="0" width="128" height="75"/>
         <element name="InquireAskSentence" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Inspection" positionX="0" positionY="0" width="128" height="405"/>
+        <element name="Inspection_Main" positionX="81" positionY="153" width="128" height="420"/>
         <element name="InspectionCheck" positionX="0" positionY="0" width="128" height="135"/>
         <element name="InspectionConstruction" positionX="160" positionY="192" width="128" height="270"/>
         <element name="InspectionOutCheck" positionX="0" positionY="0" width="128" height="135"/>

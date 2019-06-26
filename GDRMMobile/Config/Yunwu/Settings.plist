@@ -31,6 +31,8 @@
 		<string>AdministrativePenaltyProveInfoTable</string>
 		<key>文书送达回证</key>
 		<string>AdminstrativePenaltyServiceReceiptTable</string>
+		<key>违章现场平面图</key>
+		<string>AdminstrativePenaltyMapTable</string>
 		<key>责令整改通知书</key>
 		<string>AdminstrativePenaltyConstructionTable</string>
 		<key>勘验检查笔录</key>

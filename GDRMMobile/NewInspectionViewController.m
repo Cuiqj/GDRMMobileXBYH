@@ -194,6 +194,10 @@
         newInspection.weather=self.textWeather.text;
         newInspection.carcode=self.textAutoNumber.text;
         newInspection.classe=self.textWorkShift.text;
+        
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        NSLog(@"%@",[formatter stringFromDate:newInspection.date_inspection]);
+        
         //extern NSString *my_org_id;
         //newInspection.organization_id=  my_org_id;
         
@@ -227,7 +231,7 @@
             newCheck.checkresult=checkItem.checkResult;
             [[AppDelegate App] saveContext];
         }
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
         [self.delegate setInspectionDelegate:newInspectionID];
         [self.delegate addObserverToKeyBoard];
     }

@@ -63,8 +63,6 @@
     //    [fetchRequest setEntity:entity];
     //    [fetchRequest setPredicate:nil];
     //    return [context executeFetchRequest:fetchRequest error:nil];
-    
-    
 }
 +(TrafficRecord*)trafficRecordForID:(NSString*)ID{
     if(ID==nil) return nil;

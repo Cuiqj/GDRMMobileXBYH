@@ -15,6 +15,21 @@
             <defaultLineWidth>0.4</defaultLineWidth>
             <!--上线-->
             <line x1="19" y1="46" x2="279" y2="46" lineWidth="0.6"/>
+            
+            <line x1="130" y1="56" x2="130" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="60" y1="56" x2="60" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="70" y1="56" x2="70" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="80" y1="56" x2="80" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="120" y1="56" x2="120" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="110" y1="56" x2="110" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="100" y1="56" x2="100" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="90" y1="56" x2="90" y2="154" lineWidth="0.1" lineStyle = "dotted"/>
+            
+            <line x1="19" y1="66" x2="279" y2="66" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="19" y1="76" x2="279" y2="76" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="19" y1="86" x2="279" y2="86" lineWidth="0.1" lineStyle = "dotted"/>
+            <line x1="19" y1="96" x2="279" y2="96" lineWidth="0.1" lineStyle = "dotted"/>
+            
             <!--下线-->
             <line x1="19" y1="186" x2="279" y2="186" lineWidth="0.6"/>
             <!-- 左边框 -->

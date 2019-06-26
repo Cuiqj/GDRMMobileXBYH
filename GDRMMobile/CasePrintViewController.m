@@ -126,11 +126,12 @@ typedef enum {
     
     TBXMLElement *staticTables=[TBXML childElementNamed:@"StaticTable" parentElement:root];
     if (staticTables != nil) {
-        
         TBXMLElement *lines=[TBXML childElementNamed:@"Lines" parentElement:staticTables];
         if (lines != nil) {
             TBXMLElement *tempElement=[TBXML childElementNamed:@"defaultLineWidth" parentElement:lines];
             CGFloat defaultLineWidth=[[TBXML textForElement:tempElement] floatValue];
+            
+            
             TBXMLElement *line=[TBXML childElementNamed:@"line" parentElement:lines];
             if (line != nil) {
                 do {
@@ -138,7 +139,7 @@ typedef enum {
                     CGFloat y1=[[TBXML valueOfAttributeNamed:@"y1" forElement:line] floatValue] * MMTOPIX * SCALEFACTOR;
                     CGFloat x2=[[TBXML valueOfAttributeNamed:@"x2" forElement:line] floatValue] * MMTOPIX * SCALEFACTOR;
                     CGFloat y2=[[TBXML valueOfAttributeNamed:@"y2" forElement:line] floatValue] * MMTOPIX * SCALEFACTOR;
-                    CGFloat lineWidth=defaultLineWidth;
+                    CGFloat lineWidth = defaultLineWidth;
                     PDFDrawLineStyleOptions *lineStyle = PDFDrawLineStyleDefault;
                     TBXMLAttribute *attribute = line->firstAttribute;
                     while (attribute) {

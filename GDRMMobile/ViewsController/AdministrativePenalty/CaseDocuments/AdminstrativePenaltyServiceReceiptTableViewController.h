@@ -4,7 +4,7 @@
 //
 //  Created by admin on 2018/8/3.
 //
-
+//文书送达回证
 #import "CasePrintViewController.h"
 
 @interface AdminstrativePenaltyServiceReceiptTableViewController : CasePrintViewController

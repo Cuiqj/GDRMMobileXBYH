@@ -49,6 +49,9 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UITextField *textCheckTime;
 @property (weak, nonatomic) IBOutlet UITextField *textStationName;
 @property (weak, nonatomic) IBOutlet UITextField *textCheckStatus;
+//本班次巡查信息汇总    按钮
+@property (weak, nonatomic) IBOutlet UIButton *EveryShiftButton;
+
 
 @property (nonatomic,retain) NSString *inspectionID;
 //@property (nonatomic,retain) NSString *inspectRecordID;
@@ -66,6 +69,8 @@ typedef enum {
 - (IBAction)btnInpectionList:(id)sender;
 - (IBAction)btnAddNew:(id)sender;
 - (IBAction)btnToFujian:(id)sender;
+//本班次巡查信息汇总
+- (IBAction)pushtoEveryShiftController:(id)sender;
 
 - (void) createRecodeByCaseID:(NSString *)inspectRecordID;
 - (void) createRecodeByShiGongCheckID:(NSString *)shiGongCheckID;

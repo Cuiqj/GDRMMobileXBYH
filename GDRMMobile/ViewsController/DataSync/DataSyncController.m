@@ -8,9 +8,10 @@
 
 #import "DataSyncController.h"
 #import "OMGToast.h"
-#import "InitBasicData.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
+#import "InitBasicData.h"
+
 @interface  DataSyncController()<UIAlertViewDelegate>
 @property (retain, nonatomic) DataDownLoad *dataDownLoader;
 @property (retain, nonatomic) DataUpLoad   *dataUploader;

@@ -42,8 +42,11 @@ typedef enum:NSUInteger {
 @property (nonatomic, retain) NSNumber * station_start;
 @property (nonatomic, retain) NSString * weater;
 @property (nonatomic, retain) NSNumber * isuploaded;
-//已反馈 1 已反馈 0 没有反馈
+//已反馈 1 已反馈 0 没有反馈     处罚结果
 @property (nonatomic, retain) NSNumber * case_character;
+//当事人 是否在场  默认在场  0为在场    1为不在场
+@property (nonatomic, retain) NSNumber * is_from_civilaction;
+
 @property (nonatomic, retain) NSString * project_id;
 @property (nonatomic, retain) NSString * peccancy_type;
 //6 未立案  7 已立案未结案  8  已结案

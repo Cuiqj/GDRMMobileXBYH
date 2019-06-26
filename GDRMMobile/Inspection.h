@@ -37,5 +37,10 @@
 @property (nonatomic, retain) NSString * jsr;
 @property (nonatomic, retain) NSDate * yjsj;
 
-+ (NSArray *)inspectionForID:(NSString *)inspectionID;
++(NSArray *)inspectionForID:(NSString *)inspectionID;
+
++(Inspection *)oneDatainspectionForID:(NSString *)ID;
+
++(NSDate *)inspectionfortime_endsettingtimeyjsj:(NSDate *)time_end;
+
 @end
