@@ -306,8 +306,8 @@
         </UITextField>
         <!--绘图-->
         <UIImgView>
-            <origin x="20.5" y="57.5" />
-            <size width="259" height="96" />
+            <origin x="20.5" y="45" />
+            <size width="259" height="113" />
             <content>
                 <data>
                     <attributeName>map_file</attributeName>

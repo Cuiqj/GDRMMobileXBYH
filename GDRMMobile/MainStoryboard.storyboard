@@ -2369,7 +2369,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2019-06-17" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="57M-aP-vf8">
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="57M-aP-vf8">
                                         <rect key="frame" x="185" y="25" width="120" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.81545681420000005" alpha="1" colorSpace="calibratedWhite"/>
@@ -2377,7 +2377,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="全天巡查里程合计:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dic-9O-iFL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="本班巡查里程合计:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dic-9O-iFL">
                                         <rect key="frame" x="355" y="25" width="150" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2391,7 +2391,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="当日参加巡查人次:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RkJ-7m-Cky">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="本班参加巡查人次:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RkJ-7m-Cky">
                                         <rect key="frame" x="690" y="23" width="150" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -6327,7 +6327,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7w-P5-gf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2973" y="-3"/>
+            <point key="canvasLocation" x="-2844" y="107"/>
         </scene>
         <!--申请材料列表-->
         <scene sceneID="LyI-Jr-A12">
@@ -15660,7 +15660,7 @@
         <image name="违法登记.png" width="189" height="69"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nsa-p9-XQO"/>
+        <segue reference="igo-Ui-LX5"/>
         <segue reference="Nlb-lU-TKd"/>
         <segue reference="CBw-Kr-1du"/>
         <segue reference="0Ek-I7-xpQ"/>
@@ -15668,12 +15668,12 @@
         <segue reference="vQ0-4d-GPt"/>
         <segue reference="RB0-Vc-zey"/>
         <segue reference="LH0-e5-T0o"/>
-        <segue reference="eon-yW-bpX"/>
+        <segue reference="HAB-gn-8eY"/>
         <segue reference="B55-m9-xva"/>
         <segue reference="6B5-e1-bgj"/>
-        <segue reference="8OW-OQ-xnw"/>
-        <segue reference="CIm-gV-nba"/>
-        <segue reference="UL8-xp-Il7"/>
-        <segue reference="Fl6-7H-frt"/>
+        <segue reference="byz-V4-8Qu"/>
+        <segue reference="Oku-Sd-2QN"/>
+        <segue reference="RIr-Pz-GWT"/>
+        <segue reference="YD9-lU-M6O"/>
     </inferredMetricsTieBreakers>
 </document>

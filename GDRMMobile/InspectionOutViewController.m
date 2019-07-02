@@ -179,7 +179,12 @@
             //[formatter setTimeZone:[NSTimeZone systemTimeZone]];
             inspection.time_end=[formatter dateFromString:self.textEndDate.text];
             if (!inspection.yjsj) {
-                inspection.yjsj = inspection.time_end;
+                inspection.yjsj = [Inspection inspectionfortime_endsettingtimeyjsj:inspection.time_end andtime_start:inspection.time_start andclasse:inspection.classe];
+                inspection.time_end = inspection.yjsj;
+                inspection.time_start =[NSDate dateWithTimeInterval:-8*60*60
+                                                          sinceDate:inspection.time_end];
+                
+//                inspection.yjsj = inspection.time_end;
             }
             inspection.inspection_milimetres=@(self.textMile.text.floatValue);
             inspection.isdeliver=@(YES);

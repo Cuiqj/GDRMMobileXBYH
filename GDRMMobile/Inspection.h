@@ -43,4 +43,6 @@
 
 +(NSDate *)inspectionfortime_endsettingtimeyjsj:(NSDate *)time_end;
 
++(NSDate *)inspectionfortime_endsettingtimeyjsj:(NSDate *)time_end andtime_start:(NSDate *)time_start andclasse:(NSString *)classe;
+
 @end

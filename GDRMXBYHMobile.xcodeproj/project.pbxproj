@@ -319,7 +319,6 @@
 		803202DB1804B9F00046843E /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 803202DA1804B9F00046843E /* Settings.plist */; };
 		80D20816180722FD00D17F47 /* books.xml in Resources */ = {isa = PBXBuildFile; fileRef = 80D2080C180722FD00D17F47 /* books.xml */; };
 		80D20817180722FD00D17F47 /* CaseCountTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 80D2080D180722FD00D17F47 /* CaseCountTable.xml */; };
-		80D20818180722FD00D17F47 /* CaseMapTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 80D2080E180722FD00D17F47 /* CaseMapTable.xml */; };
 		80D20819180722FD00D17F47 /* CaseMapTemplate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 80D2080F180722FD00D17F47 /* CaseMapTemplate.xml */; };
 		80D2081A180722FD00D17F47 /* ConstructionTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 80D20810180722FD00D17F47 /* ConstructionTable.xml */; };
 		80D2081B180722FD00D17F47 /* InquireTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 80D20811180722FD00D17F47 /* InquireTable.xml */; };
@@ -340,6 +339,7 @@
 		840D872F1FA96ABE009F38EF /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 840D872E1FA96ABE009F38EF /* mapapi.bundle */; };
 		840D87331FA96C35009F38EF /* InspectInMapViewCOntroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D87321FA96C35009F38EF /* InspectInMapViewCOntroller.m */; };
 		841132F52119AE97007E9180 /* AdminstrativePenaltyConstructionTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 841132F42119AE97007E9180 /* AdminstrativePenaltyConstructionTable.xml */; };
+		84256FF322CB4CEC0002239D /* CaseMapTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 84256FF522CB4CEC0002239D /* CaseMapTable.xml */; };
 		842B398220C7CA3700984830 /* SelectTypeResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B398120C7CA3700984830 /* SelectTypeResultController.m */; };
 		843A515C200C90EF00279362 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A515B200C90EF00279362 /* AipOcrSdk.framework */; };
 		84441020211423A800505843 /* AdminisInquireTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444101F211423A800505843 /* AdminisInquireTableViewController.m */; };
@@ -1003,7 +1003,6 @@
 		803202DA1804B9F00046843E /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		80D2080C180722FD00D17F47 /* books.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = books.xml; sourceTree = "<group>"; };
 		80D2080D180722FD00D17F47 /* CaseCountTable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CaseCountTable.xml; sourceTree = "<group>"; };
-		80D2080E180722FD00D17F47 /* CaseMapTable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CaseMapTable.xml; sourceTree = "<group>"; };
 		80D2080F180722FD00D17F47 /* CaseMapTemplate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CaseMapTemplate.xml; sourceTree = "<group>"; };
 		80D20810180722FD00D17F47 /* ConstructionTable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ConstructionTable.xml; sourceTree = "<group>"; };
 		80D20811180722FD00D17F47 /* InquireTable.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = InquireTable.xml; sourceTree = "<group>"; };
@@ -1028,6 +1027,7 @@
 		840D87311FA96C35009F38EF /* InspectInMapViewCOntroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspectInMapViewCOntroller.h; sourceTree = "<group>"; };
 		840D87321FA96C35009F38EF /* InspectInMapViewCOntroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspectInMapViewCOntroller.m; sourceTree = "<group>"; };
 		841132F42119AE97007E9180 /* AdminstrativePenaltyConstructionTable.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AdminstrativePenaltyConstructionTable.xml; sourceTree = "<group>"; };
+		84256FF422CB4CEC0002239D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/CaseMapTable.xml; sourceTree = "<group>"; };
 		842B398020C7CA3700984830 /* SelectTypeResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectTypeResultController.h; sourceTree = "<group>"; };
 		842B398120C7CA3700984830 /* SelectTypeResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectTypeResultController.m; sourceTree = "<group>"; };
 		843A515B200C90EF00279362 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipOcrSdk.framework; path = "../../Library/Developer/Xcode/DerivedData/GDRMMobile-ccubgkldojoojqegcfvsqeccobth/Build/Products/Debug-iphonesimulator/AipOcrSdk.framework"; sourceTree = "<group>"; };
@@ -2343,7 +2343,7 @@
 				331DBD2E1C87E5720068B5E1 /* AtonementNoticeTable123.xml */,
 				80D2080C180722FD00D17F47 /* books.xml */,
 				80D2080D180722FD00D17F47 /* CaseCountTable.xml */,
-				80D2080E180722FD00D17F47 /* CaseMapTable.xml */,
+				84256FF522CB4CEC0002239D /* CaseMapTable.xml */,
 				80D2080F180722FD00D17F47 /* CaseMapTemplate.xml */,
 				80D20810180722FD00D17F47 /* ConstructionTable.xml */,
 				80D20811180722FD00D17F47 /* InquireTable.xml */,
@@ -2781,7 +2781,7 @@
 				33318EAE1E15F86F00C4F18A /* AssistanceNoticeTable.xml in Resources */,
 				80D20817180722FD00D17F47 /* CaseCountTable.xml in Resources */,
 				845D2BBB22BC838500323CAD /* AdminstrativePenaltyMapTable.xml in Resources */,
-				80D20818180722FD00D17F47 /* CaseMapTable.xml in Resources */,
+				84256FF322CB4CEC0002239D /* CaseMapTable.xml in Resources */,
 				80D20819180722FD00D17F47 /* CaseMapTemplate.xml in Resources */,
 				330AD2B51E56D16600913004 /* 应急保障事件.png in Resources */,
 				80D2081A180722FD00D17F47 /* ConstructionTable.xml in Resources */,
@@ -3196,6 +3196,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		84256FF522CB4CEC0002239D /* CaseMapTable.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84256FF422CB4CEC0002239D /* en */,
+			);
+			name = CaseMapTable.xml;
+			sourceTree = "<group>";
+		};
 		847CFFAE21461FC100DEF48E /* AtonementNoticeTable.xml */ = {
 			isa = PBXVariantGroup;
 			children = (

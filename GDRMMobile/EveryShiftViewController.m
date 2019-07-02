@@ -21,6 +21,7 @@
     //    scrollview未设置   故事板里含有
     [super viewDidLoad];
     self.title = @"本班次巡查信息汇总";
+    //    scrollview.contentSize =   CGSizeMake(900, );
     //显示时间
     self.inspectioneveryshift = [Inspection_Main Inspection_MainForinspection_id:self.InspectionID];
     [self setdateforinspectioneveryshift];
