@@ -46,6 +46,7 @@
 @"损坏公路设施索赔清单",\
 @"施工整改通知书（回执）"\
 ]
+
 #define ADMINISTRATIVE_PENALTY_DOC_TEMPLATES_NAME_ARRAY @[\
 @"违章勘验（检查）/现场笔录",\
 @"违章询问笔录",\

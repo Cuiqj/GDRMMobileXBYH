@@ -41,6 +41,7 @@
 - (NSString *)prover2;
 - (NSString *)prover1_exelawid;
 - (NSString *)prover2_exelawid;
+- (NSString *)recorder_name_exelawid;
 
 - (NSString *)remark;
 

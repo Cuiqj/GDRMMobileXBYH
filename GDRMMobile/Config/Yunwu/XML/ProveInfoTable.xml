@@ -26,29 +26,31 @@
             <!--天气情况-上线-->
             <line x1="25" y1="64" x2="186" y2="64" />
             <!--勘验人1-上线-->
-            <line x1="25" y1="133" x2="186" y2="133" />
-            <!--勘验人2-上线-->
             <line x1="25" y1="73" x2="186" y2="73" />
-            <!--当事人-上线-->
+            <!--勘验人2-上线-->
             <line x1="25" y1="83" x2="186" y2="83" />
-            <!--当事人代表-上线-->
+            <!--勘验人3-上线-->
             <line x1="25" y1="93" x2="186" y2="93" />
-            <!--被邀请人-上线-->
+            <!--当事人-上线-->
             <line x1="25" y1="103" x2="186" y2="103" />
-            <!--记录人-上线-->
+            <!--当事人代表-上线-->
             <line x1="25" y1="113" x2="186" y2="113" />
-            <!--勘验情况及结果-上线-->
+            <!--被邀请人-上线-->
             <line x1="25" y1="123" x2="186" y2="123" />
+            <!--记录人-上线-->
+            <line x1="25" y1="133" x2="186" y2="133" />
+            <!--勘验情况及结果-上线-->
+            <line x1="25" y1="143" x2="186" y2="143" />
             <!--勘验人签名-上线-->
             <line x1="25" y1="238" x2="186" y2="238" />
             <!--被邀请人签名-上线-->
             <line x1="25" y1="248" x2="186" y2="248" />
             <!--勘验人1-竖线1-->
-            <line x1="63" y1="73" x2="63" y2="133" />
+            <line x1="63" y1="73" x2="63" y2="143" />
             <!--勘验人1-竖线2-->
-            <line x1="95" y1="73" x2="95" y2="133" />
+            <line x1="95" y1="73" x2="95" y2="143" />
             <!--勘验人1-竖线3-->
-            <line x1="125" y1="73" x2="125" y2="133" />
+            <line x1="125" y1="73" x2="125" y2="143" />
             <line x1="83" y1="29" x2="93" y2="29" lineWidth="1.0" />
         </Lines>
         
@@ -193,7 +195,7 @@
                 <size width="72" height="17" />
             </Text>
             <Text>
-                <text>当 事 人</text>
+                <text>勘验人3</text>
                 <fontSize>12</fontSize>
                 <origin x="27" y="95" />
                 <size width="60" height="17" />
@@ -205,10 +207,10 @@
                 <size width="72" height="17" />
             </Text>
             <Text>
-                <text>当事人代表</text>
+                <text>当 事 人</text>
                 <fontSize>12</fontSize>
                 <origin x="27" y="105" />
-                <size width="84" height="17" />
+                <size width="60" height="17" />
             </Text>
             <Text>
                 <text>单位及职务</text>
@@ -217,10 +219,10 @@
                 <size width="72" height="17" />
             </Text>
             <Text>
-                <text>被邀请人</text>
+                <text>当事人代表</text>
                 <fontSize>12</fontSize>
                 <origin x="27" y="115" />
-                <size width="60" height="17" />
+                <size width="84" height="17" />
             </Text>
             <Text>
                 <text>单位及职务</text>
@@ -229,7 +231,7 @@
                 <size width="72" height="17" />
             </Text>
             <Text>
-                <text>记 录 人</text>
+                <text>被邀请人</text>
                 <fontSize>12</fontSize>
                 <origin x="27" y="125" />
                 <size width="60" height="17" />
@@ -241,9 +243,21 @@
                 <size width="72" height="17" />
             </Text>
             <Text>
-                <text>勘验情况及结果：</text>
+                <text>记 录 人</text>
                 <fontSize>12</fontSize>
                 <origin x="27" y="135" />
+                <size width="60" height="17" />
+            </Text>
+            <Text>
+                <text>单位及职务</text>
+                <fontSize>12</fontSize>
+                <origin x="98" y="135" />
+                <size width="72" height="17" />
+            </Text>
+            <Text>
+                <text>勘验情况及结果：</text>
+                <fontSize>12</fontSize>
+                <origin x="27" y="145" />
                 <size width="144" height="17" />
             </Text>
             <Text>
@@ -277,7 +291,7 @@
                 <size width="170" height="17" />
             </Text>
             <Text>
-                <text>（本页写不下的内容，或需绘制勘验与贴照片的，可另附纸）</text>
+                <text>（本页填写不下的内容，或需绘制勘验与贴照片的，可另附纸）</text>
                 <fontSize>12</fontSize>
                 <origin x="27" y="259" />
                 <size width="460" height="17" />
@@ -511,12 +525,9 @@
             <origin x="70" y="85" />
             <size width="14" height="6" />
             <content>
-                
                 <data>
                     <attributeName>prover2</attributeName>
-                    
                 </data>
-                
             </content>
         </UITextField>
         
@@ -525,17 +536,35 @@
             <origin x="128" y="82" />
             <size width="60" height="12" />
             <content>
-
                 <data>
                     <attributeName>prover2_org_duty</attributeName>
-                    
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="70" y="95" />
+            <size width="14" height="6" />
+            <content>
+                <data>
+                    <attributeName>prover3</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="128" y="92" />
+            <size width="60" height="12" />
+            <content>
+                <data>
+                    <attributeName>prover3_org_duty</attributeName>
                 </data>
             </content>
         </UITextField>
         
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="70" y="95" />
+            <origin x="70" y="105" />
             <size width="14" height="6" />
             <content>
                 <!--$F{citizen_name}-->
@@ -548,7 +577,7 @@
         
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="128" y="92" />
+            <origin x="128" y="102" />
             <size width="60" height="12" />
             <content>
                 <!--$F{citizen_sex}-->
@@ -561,7 +590,7 @@
         
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="70" y="105" />
+            <origin x="70" y="115" />
             <size width="14" height="6" />
             <content>
 
@@ -574,7 +603,7 @@
         
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="128" y="102" />
+            <origin x="128" y="112" />
             <size width="60" height="12" />
             <content>
 
@@ -585,7 +614,7 @@
         </UITextField>
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="70" y="115" />
+            <origin x="70" y="125" />
             <size width="14" height="6" />
             <content>
 
@@ -596,7 +625,7 @@
         </UITextField>
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="128" y="112" />
+            <origin x="128" y="122" />
             <size width="60" height="12" />
             <content>
                 <data>
@@ -607,7 +636,7 @@
         
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="70" y="125" />
+            <origin x="70" y="135" />
             <size width="14" height="6" />
             <content>
                 <!--记录人 单位职务-->
@@ -619,7 +648,7 @@
         
         <UITextField>
             <fontSize>12</fontSize>
-            <origin x="128" y="122" />
+            <origin x="128" y="132" />
             <size width="60" height="12" />
             <content>
                 <!--记录人 单位职务-->
@@ -631,8 +660,8 @@
         <!--         当事人-->
         <UITextView>
             <fontSize>12</fontSize>
-            <origin x="28" y="142" />
-            <size width="155" height="132" />
+            <origin x="28" y="152" />
+            <size width="155" height="122" />
             <lineHeight>12</lineHeight>
             <leftOffSet>8</leftOffSet>
              <lineHeight>28</lineHeight>

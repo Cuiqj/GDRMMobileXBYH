@@ -928,7 +928,7 @@
 
 - (NSString *) prover1{
     NSArray *chunks = [self.prover componentsSeparatedByString: @","];
-    if([chunks count]==2)
+    if([chunks count]>=2)
     {
         //勘验人1 单位职务
         return [chunks objectAtIndex:0];
@@ -955,23 +955,43 @@
         return @"";
     }
 }
-
 - (NSString *) prover2_org_duty{
     if ([self prover2].length>0) {
         return [self textProver_duty_nsstringName:[self prover2]];
     }
     return @"";
 }
+- (NSString *) prover3{
+    NSArray *chunks = [self.prover componentsSeparatedByString: @","];
+    if(chunks && [chunks count]>=3){
+        //勘验人3 单位职务
+        return [chunks objectAtIndex:2];
+    }else{
+        return @"";
+    }
+}
+    
+- (NSString *) prover3_org_duty{
+    if ([self prover3].length>0) {
+        return [self textProver_duty_nsstringName:[self prover3]];
+    }
+    return @"";
+}
+    
 - (NSString *) citizen_org_duty{
     Citizen *citizen = [Citizen citizenForCitizenName:self.citizen_name nexus:@"当事人" case:self.caseinfo_id];
+    NSString * citizenorgduty;
     if (citizen.org_name && citizen.org_principal_duty) {
         if(citizen.org_name && !citizen.org_principal_duty){
-            return citizen.org_name;
+            citizenorgduty = citizen.org_name;
         }else if (!citizen.org_name && citizen.org_principal_duty){
-            return citizen.org_principal_duty;
+            citizenorgduty = citizen.org_principal_duty;
         }else{
-            return [NSString stringWithFormat:@"%@%@", citizen.org_name, citizen.org_principal_duty];
+            citizenorgduty = [NSString stringWithFormat:@"%@%@", citizen.org_name, citizen.org_principal_duty];
         }
+    }
+    if(citizenorgduty.length > 0){
+        return citizenorgduty;
     }else{
         return @"无";
     }

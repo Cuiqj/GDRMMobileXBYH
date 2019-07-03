@@ -116,6 +116,15 @@
     }
     return nil;
 }
+    
+- (NSString *)recorder_name_exelawid{
+    if (self.recorder_name) {
+        NSString * exelawid  = [UserInfo exelawIDForUserName:self.recorder_name];
+        return exelawid;
+    }
+    return nil;
+}
+
 - (NSString *)remark{
     CaseProveInfo * proveinfo = [CaseProveInfo proveInfoForCase:self.proveinfo_id];
     return proveinfo.remark;

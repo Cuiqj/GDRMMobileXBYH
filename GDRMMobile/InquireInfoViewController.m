@@ -305,6 +305,13 @@ Boolean isSelectMuban;
         self.textFieldInquirer.text = currentUserName;
         if (inspectorArray != nil && [inspectorArray count] > 0) {
             self.textFieldRecorder.text = [inspectorArray objectAtIndex:0];
+            if([[inspectorArray objectAtIndex:0] isEqualToString:currentUserName]){
+                if( [inspectorArray count] > 1){
+                    self.textFieldRecorder.text = [inspectorArray objectAtIndex:1];
+                }
+            }
+        }else{
+            self.textFieldRecorder.text = currentUserName;
         }
         
     }
@@ -385,6 +392,13 @@ Boolean isSelectMuban;
         self.textFieldInquirer.text = currentUserName;
         if (inspectorArray != nil && [inspectorArray count] > 0) {
             self.textFieldRecorder.text = [inspectorArray objectAtIndex:0];
+            if([[inspectorArray objectAtIndex:0] isEqualToString:currentUserName]){
+                if( [inspectorArray count] > 1){
+                    self.textFieldRecorder.text = [inspectorArray objectAtIndex:1];
+                }
+            }
+        }else{
+            self.textFieldRecorder.text = currentUserName;
         }
         
     }
@@ -435,6 +449,13 @@ Boolean isSelectMuban;
         self.textFieldInquirer.text = currentUserName;
         if (inspectorArray != nil && [inspectorArray count] > 0) {
             self.textFieldRecorder.text = [inspectorArray objectAtIndex:0];
+            if([[inspectorArray objectAtIndex:0] isEqualToString:currentUserName]){
+                if( [inspectorArray count] > 1){
+                    self.textFieldRecorder.text = [inspectorArray objectAtIndex:1];
+                }
+            }
+        }else{
+            self.textFieldRecorder.text = currentUserName;
         }
     }
     inquireSaved=YES;
@@ -1172,7 +1193,7 @@ Boolean isSelectMuban;
    */
     NSString* text = @"";
     text = [Systype sysTypeForCodeNameAndTypeValue:@"询问笔录模板" withType_value:self.textMuban.text];
-//    text = [NSString stringWithFormat:@"问：我们是#机构#的路政员，现向你问起这事故的有关情况，你的证词将作为法律依据，请你如实回答。\n答：好的。\n问：你叫什么名字，在哪里工作？\n答：我叫#当事人#，在#车辆所在地#工作。\n问：你是什么时间，在什么地点，因何原因造成这起事故的？\n答：#案件基本情况描述#\n问：事故现场经我们勘验检查，损坏公路路产有：#损坏路产情况\n#。你是否承认？\n答：我承认。\n问：你是否还有什么需要陈述或申辩的？\n答：没有。"];
+//    text = [NSString stringWithFormat:@"问：我们是#机构#的路政员，现向你问起这事故的有关情况，你的证词将作为法律依据，请你如实回答。\n答：好的。\n问：你叫什么名字，在哪里工作？?\n答：我叫#当事人#，在#车辆所在地#工作。\n问：你是什么时间，在什么地点，因何原因造成这起事故的？\n答：#案件基本情况描述#\n问：事故现场经我们勘验检查，损坏公路路产有：#损坏路产情况\n#。你是否承认？\n答：我承认。\n问：你是否还有什么需要陈述或申辩的？\n答：没有。"];
     text= [self paraseMuBan:text];
            return text;
 }

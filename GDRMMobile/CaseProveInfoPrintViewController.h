@@ -25,7 +25,10 @@
 @property (nonatomic, weak) IBOutlet UITextField *textprover1_duty;//单行多文本框    单位及职务
 @property (nonatomic, weak) IBOutlet UITextField *textprover2;//单行多文本框    勘查人2
 @property (nonatomic, weak) IBOutlet UITextField *textprover2_duty;//单行多文本框    单位及职务
-
+@property (weak, nonatomic) IBOutlet UITextField *textprover3;//单行多文本框    勘查人3
+@property (weak, nonatomic) IBOutlet UITextField *textprover3_duty;//单行多文本框    单位及职务
+    
+    
 @property (nonatomic, weak) IBOutlet UITextField *textcitizen_name;//单行多文本框    当事人
 @property (nonatomic, weak) IBOutlet UITextField *textcitizen_duty;//单行多文本框    单位及职务
 

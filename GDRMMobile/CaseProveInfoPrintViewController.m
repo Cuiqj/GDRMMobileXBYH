@@ -125,8 +125,7 @@ static NSString * const xmlName = @"ProveInfoTable";
 /*add by lxm
  *2013.05.02
  */
-- (void)pageLoadInfo
-{
+- (void)pageLoadInfo{
     //案号
     CaseInfo *caseInfo=[CaseInfo caseInfoForID:self.caseID];
     // 当事人
@@ -169,32 +168,31 @@ static NSString * const xmlName = @"ProveInfoTable";
     //分割字符串
     NSArray *chunks = [self.caseProveInfo.prover componentsSeparatedByString: @","];
 
-    if(chunks && [chunks count]>=2)
+    if(chunks && [chunks count]>=3)
     {
+        //勘验人1 单位职务    西部沿海高速公路路政大队路政管理员
+        self.textprover1.text = [chunks objectAtIndex:0];
+        self.textprover1_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:[chunks objectAtIndex:0]]];
+        //勘验人2 单位职务
+        self.textprover2.text = [chunks objectAtIndex:1];
+        self.textprover2_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:[chunks objectAtIndex:1]]];
+        //勘验人3 单位职务
+        self.textprover3.text = [chunks objectAtIndex:2];
+        self.textprover3_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:[chunks objectAtIndex:2]]];
+    }else if(chunks && [chunks count]>=2){
         //勘验人1 单位职务    西部沿海高速公路路政大队路政管理员
         self.textprover1.text = [chunks objectAtIndex:0];
 //        self.textprover1_duty.text = @"西部沿海高速公路路政大队路政管理员";
         self.textprover1_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:[chunks objectAtIndex:0]]];
-//        self.textprover1_duty.text = [[[UserInfo orgAndDutyForUserName:[chunks objectAtIndex:0]] stringByReplacingOccurrencesOfString: @"二中队" withString: @""] stringByReplacingOccurrencesOfString: @"一中队" withString: @""] ;
-//        self.textprover1_duty.text = [[self.textprover1_duty.text stringByReplacingOccurrencesOfString: @"三中队" withString: @""] stringByReplacingOccurrencesOfString: @"四中队" withString: @""] ;
-        
         //勘验人2 单位职务
         self.textprover2.text = [chunks objectAtIndex:1];
 //        self.textprover2_duty.text = @"西部沿海高速公路路政大队路政管理员";
         self.textprover2_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:[chunks objectAtIndex:1]]];
 //        self.textprover2_duty.text=[[[UserInfo orgAndDutyForUserName:[chunks objectAtIndex:1]] stringByReplacingOccurrencesOfString: @"二中队" withString: @""] stringByReplacingOccurrencesOfString: @"一中队" withString: @""] ;
 //        self.textprover2_duty.text = [[self.textprover2_duty.text stringByReplacingOccurrencesOfString: @"三中队" withString: @""] stringByReplacingOccurrencesOfString: @"四中队" withString: @""] ;
-    }
-    else
-    {
+    }else{
         self.textprover1.text = self.caseProveInfo.prover;
         self.textprover1_duty.text = [self.textprover1.text length] >0 ? [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:self.caseProveInfo.prover]] : @"";
-//        if (self.caseProveInfo.prover) {
-//            //self.textprover1_duty.text = [UserInfo orgAndDutyForUserName:self.caseProveInfo.prover];
-//            self.textprover1_duty.text = [[[UserInfo orgAndDutyForUserName:self.caseProveInfo.prover] stringByReplacingOccurrencesOfString: @"二中队" withString: @""] stringByReplacingOccurrencesOfString: @"一中队" withString: @""] ;;
-//            self.textprover1_duty.text = [[self.textprover1_duty.text stringByReplacingOccurrencesOfString: @"三中队" withString: @""] stringByReplacingOccurrencesOfString: @"四中队" withString: @""] ;
-//        }
-        
         self.textprover2.text = self.caseProveInfo.secondProver;
         self.textprover2_duty.text = [self.textprover2.text length] >0 ? [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:self.caseProveInfo.secondProver]] : @"";
 //        if ([self.caseProveInfo.secondProver length] > 0) {
@@ -227,12 +225,12 @@ static NSString * const xmlName = @"ProveInfoTable";
 //    }
     
     //当事人代表  单位职务
-    self.textparty.text = [self.caseProveInfo.organizer length] > 0 ? self.caseProveInfo.organizer : @"";
-    self.textparty_org_duty.text = [self.caseProveInfo.organizer_org_duty length] > 0? self.caseProveInfo.organizer_org_duty : @"";
+    self.textparty.text = [self.caseProveInfo.organizer length] > 0 ? self.caseProveInfo.organizer : @"无";
+    self.textparty_org_duty.text = [self.caseProveInfo.organizer_org_duty length] > 0? self.caseProveInfo.organizer_org_duty : @"无";
     
     //被邀请人 单位职务
-    self.textinvitee.text = [self.caseProveInfo.invitee length] > 0? self.caseProveInfo.invitee : @"";
-    self.textInvitee_org_duty.text = [self.caseProveInfo.invitee_org_duty length] > 0 ? self.caseProveInfo.invitee_org_duty : @"";
+    self.textinvitee.text = [self.caseProveInfo.invitee length] > 0? self.caseProveInfo.invitee : @"无";
+    self.textInvitee_org_duty.text = [self.caseProveInfo.invitee_org_duty length] > 0 ? self.caseProveInfo.invitee_org_duty : @"无";
     
     //记录人 单位职务
     self.textrecorder.text = self.caseProveInfo.recorder;
@@ -247,8 +245,7 @@ static NSString * const xmlName = @"ProveInfoTable";
 }
 
 //保存数据
-- (void)pageSaveInfo
-{
+- (void)pageSaveInfo{
     //案号
 //    self.caseProveInfo.caseinfo =
 //    self.caseProveInfo.case_mark2 = self.textMark2.text;
@@ -273,23 +270,32 @@ static NSString * const xmlName = @"ProveInfoTable";
     self.caseProveInfo.remark = self.textprover_place.text;
     
     //勘验人1 单位职务
-    if([self.textprover2.text length]==0)
-    {
-        self.caseProveInfo.prover = self.textprover1.text;
+    NSString * prover1 = self.textprover1.text;
+    NSString * prover2 = self.textprover2.text;
+    NSString * prover3 = self.textprover3.text;
+    if(prover2.length != 0){
+        prover2 = [NSString stringWithFormat:@",%@",prover2];
     }
-    else if(([self.textprover1.text length]==0)&&(([self.textprover2.text length]==0)))
-    {
-        self.caseProveInfo.prover = @"";
+    if(prover3.length != 0){
+        prover3 = [NSString stringWithFormat:@",%@",prover3];
     }
-    else if(([self.textprover2.text length]!=0)&&(([self.textprover1.text length]!=0)))
-    {
-        self.caseProveInfo.prover=[NSString stringWithFormat:@"%@,%@",self.textprover1.text,self.textprover2.text];
-    }
-    else if([self.textprover1.text length]==0)
-    {
-        self.caseProveInfo.prover=self.textprover2.text;
+    if(prover1.length != 0){
+        self.caseProveInfo.prover=[NSString stringWithFormat:@"%@%@%@",prover1,prover2,prover3];
     }
     
+//    if([self.textprover2.text length]==0)
+//    {
+//        self.caseProveInfo.prover = self.textprover1.text;
+//    }else if(([self.textprover1.text length]==0)&&(([self.textprover2.text length]==0))){
+//        self.caseProveInfo.prover = @"";
+//    }
+//    else if(([self.textprover2.text length]!=0)&&(([self.textprover1.text length]!=0))){
+//        self.caseProveInfo.prover=[NSString stringWithFormat:@"%@,%@",self.textprover1.text,self.textprover2.text];
+//    }
+//    else if([self.textprover1.text length]==0){
+//        self.caseProveInfo.prover=self.textprover2.text;
+//    }
+//
     // modified by cjl
 //    self.caseProveInfo.prover = self.textprover1.text;
     self.caseProveInfo.secondProver = self.textprover2.text;
@@ -297,11 +303,9 @@ static NSString * const xmlName = @"ProveInfoTable";
     //当事人 单位职务
     self.caseProveInfo.citizen_name = self.textcitizen_name.text;
 //    Citizen *citizen = [Citizen citizenForCitizenName:self.caseProveInfo.citizen_name nexus:@"当事人" case:self.caseID];
-    
     //当事人代理人 单位职务
     self.caseProveInfo.organizer  =   self.textparty.text ;
     self.caseProveInfo.organizer_org_duty  =   self.textparty_org_duty.text;
-    
     //被邀请人 单位职务'
     self.caseProveInfo.invitee   =   self.textinvitee.text;
     self.caseProveInfo.invitee_org_duty = self.textInvitee_org_duty.text;
@@ -445,6 +449,7 @@ static NSString * const xmlName = @"ProveInfoTable";
         case 200:
         case 201:
         case 202:
+        case 205:
             return NO;
             break;
         default:
@@ -453,8 +458,7 @@ static NSString * const xmlName = @"ProveInfoTable";
     }
 }
 
-- (void)setPastDate:(NSDate *)date withTag:(int)tag
-{
+- (void)setPastDate:(NSDate *)date withTag:(int)tag{
     if (tag == self.textstart_date_time.tag) {
         self.caseProveInfo.start_date_time = date;
         
@@ -496,6 +500,9 @@ static NSString * const xmlName = @"ProveInfoTable";
         self.textprover2.text = name;
         self.textprover2_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:name]];
     }else if (self.textFieldTag == 202){
+        self.textprover3.text = name;
+        self.textprover3_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:name]];
+    }else if (self.textFieldTag == 205){
         self.textrecorder.text = name;
         self.textrecorder_duty.text = [self textProver_duty_nsstring:[UserInfo orgAndDutyForUserName:name]];
         //        [UserInfo orgAndDutyForUserName:name];
@@ -510,4 +517,12 @@ static NSString * const xmlName = @"ProveInfoTable";
     }
     return duty;
 }
+- (void)deleteCurrentDoc{
+    NSManagedObjectContext * context = [[AppDelegate App] managedObjectContext];
+    if(self.caseProveInfo){
+        [context deleteObject:self.caseProveInfo];
+        [[AppDelegate App] saveContext];
+    }
+}
+    
 @end

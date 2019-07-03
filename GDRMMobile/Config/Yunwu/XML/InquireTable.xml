@@ -11,12 +11,12 @@
             <!--上线-->
             <line x1="25" y1="42" x2="185" y2="42" />
             <!--底线-->
-            <line x1="25" y1="263" x2="185" y2="263" />
-             <line x1="25" y1="263" x2="185" y2="263" />
+<!--            <line x1="25" y1="263" x2="185" y2="263" />-->
+<!--            <line x1="25" y1="263" x2="185" y2="263" />-->
             <!--左边框-->
-            <line x1="25" y1="32" x2="25" y2="263" />
+            <line x1="25" y1="32" x2="25" y2="253" />
             <!--右边框-->
-            <line x1="185" y1="32" x2="185" y2="263" />
+            <line x1="185" y1="32" x2="185" y2="253" />
             <!--询问人-上线-->
             <line x1="25" y1="53" x2="185" y2="53" />
             <!--被询问人-上线-->
@@ -27,31 +27,31 @@
             <!--地址-上线-->
             <line x1="25" y1="83" x2="185" y2="83" />
             <!--线条1-->
-            <line x1="25" y1="93" x2="185" y2="93" />
-            <!--线条2-->
-            <line x1="25" y1="103" x2="185" y2="103" />
-            <!--线条3-->
-            <line x1="25" y1="113" x2="185" y2="113" />
-            <!--线条4-->
-            <line x1="25" y1="123" x2="185" y2="123" />
-            <!--线条5-->
-            <line x1="25" y1="133" x2="185" y2="133" />
-            <!--线条6-->
-            <line x1="25" y1="143" x2="185" y2="143" />
-            <!--线条7-->
-            <line x1="25" y1="153" x2="185" y2="153" />
-            <!--线条8-->
-            <line x1="25" y1="163" x2="185" y2="163" />
-            <!--线条9-->
-            <line x1="25" y1="173" x2="185" y2="173" />
-            <!--线条10-->
-            <line x1="25" y1="183" x2="185" y2="183" />
-            <!--线条11-->
-            <line x1="25" y1="193" x2="185" y2="193" />
-            <!--线条12-->
-            <line x1="25" y1="203" x2="185" y2="203" />
-            <!--线条13-->
-            <line x1="25" y1="213" x2="185" y2="213" />
+<!--            <line x1="25" y1="93" x2="185" y2="93" />-->
+<!--            <!--线条2-->-->
+<!--            <line x1="25" y1="103" x2="185" y2="103" />-->
+<!--            <!--线条3-->-->
+<!--            <line x1="25" y1="113" x2="185" y2="113" />-->
+<!--            <!--线条4-->-->
+<!--            <line x1="25" y1="123" x2="185" y2="123" />-->
+<!--            <!--线条5-->-->
+<!--            <line x1="25" y1="133" x2="185" y2="133" />-->
+<!--            <!--线条6-->-->
+<!--            <line x1="25" y1="143" x2="185" y2="143" />-->
+<!--            <!--线条7-->-->
+<!--            <line x1="25" y1="153" x2="185" y2="153" />-->
+<!--            <!--线条8-->-->
+<!--            <line x1="25" y1="163" x2="185" y2="163" />-->
+<!--            <!--线条9-->-->
+<!--            <line x1="25" y1="173" x2="185" y2="173" />-->
+<!--            <!--线条10-->-->
+<!--            <line x1="25" y1="183" x2="185" y2="183" />-->
+<!--            <!--线条11-->-->
+<!--            <line x1="25" y1="193" x2="185" y2="193" />-->
+<!--            <!--线条12-->-->
+<!--            <line x1="25" y1="203" x2="185" y2="203" />-->
+<!--            <!--线条13-->-->
+<!--            <line x1="25" y1="213" x2="185" y2="213" />-->
             <!--被询问人-上线-->
             <line x1="25" y1="223" x2="185" y2="223" />
             <!--询问人-上线-->
@@ -60,8 +60,9 @@
             <line x1="25" y1="243" x2="185" y2="243" />
             <!--页码-上线-->
             <line x1="25" y1="253" x2="185" y2="253" />
-            <line x1="25" y1="263" x2="185" y2="263" />
-            <line x1="83" y1="15" x2="97" y2="15" LineWidth="0.8"/>
+<!--            <line x1="25" y1="263" x2="185" y2="263" />-->
+            <!--     赔（补）偿  中横线     -->
+<!--            <line x1="83" y1="15" x2="97" y2="15" LineWidth="0.8"/>-->
         </Lines>
         <Texts>
             <defaultFontSize>19</defaultFontSize>
@@ -154,13 +155,13 @@
             
             <!--被询问人签名并按印-->
             <Text>
-                <text>被询问人（签名并按印）：</text>
+                <text>被询问人签名并按印：</text>
                 <origin x="27" y="228" />
                 <size width="200" height="6" />
             </Text>
             <!--询问人签字-->
             <Text>
-                <text>询问人（签字）：</text>
+                <text>询问人签字：</text>
                 <origin x="27" y="238" />
                 <size width="100" height="6" />
             </Text>
@@ -172,7 +173,7 @@
             </Text>
             <!--记录人签字-->
             <Text>
-                <text>记录人（签字）：</text>
+                <text>记录人签字：</text>
                 <origin x="27" y="248" />
                 <size width="100" height="6" />
             </Text>
@@ -184,18 +185,18 @@
             </Text>
             <Text>
                 <text>共    页</text>
-                <origin x="145" y="258" />
+                <origin x="145" y="255" />
                 <size width="100" height="6" />
             </Text>
             <Text>
                 <text>第    页</text>
-                <origin x="165" y="258" />
+                <origin x="165" y="255" />
                 <size width="100" height="6" />
             </Text>
             <!--备注说明-->
             <Text>
-                <text>（本页写不下的内容，或需绘制勘验与贴照片的，可另附纸）</text>
-                <origin x="32" y="268" />
+                <text>（本页填写不下的内容，可另附纸）</text>
+                <origin x="25" y="255" />
                 <size width="400" height="6" />
             </Text>
         </Texts>
@@ -377,9 +378,9 @@
         <!--询问内容-->
         <UITextView>
             <origin x="27" y="86" />
-            <size width="160" height="139" />
+            <size width="158" height="152" />
             <fontSize>12</fontSize>
-            <lineHeight>28</lineHeight>
+            <lineHeight>28.5</lineHeight>
             <content>
                 <data>
                     <attributeName>inquiry_note</attributeName>
@@ -387,10 +388,31 @@
                 </data>
             </content>
         </UITextView>
+        <!--    询问人和记录人   证件号码 -->
+        <UITextField>
+            <origin x="120" y="236" />
+            <size width = "70" height = "6" />
+            <fontSize>12</fontSize>
+            <content>
+                <data>
+                    <attributeName>prover1_exelawid</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="120" y="246" />
+            <size width = "70" height = "6" />
+            <fontSize>12</fontSize>
+            <content>
+                <data>
+                    <attributeName>recorder_name_exelawid</attributeName>
+                </data>
+            </content>
+        </UITextField>
         
         <!--页码-->
         <UITextField>
-            <origin x="146" y="256" />
+            <origin x="146" y="253" />
             <size width="15" height="6" />
             <fontSize>12</fontSize>
             <alignment>center</alignment>
@@ -402,7 +424,7 @@
             </content>
         </UITextField>
         <UITextField>
-            <origin x="166" y="256" />
+            <origin x="167" y="253" />
             <size width="11" height="6" />
             <fontSize>12</fontSize>
             <alignment>center</alignment>

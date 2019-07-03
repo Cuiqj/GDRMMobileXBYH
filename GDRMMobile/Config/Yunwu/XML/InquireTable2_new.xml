@@ -1,100 +1,184 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<InquireTable2>
+<?xml version="1.0" encoding="utf-8"?>
+<InquireTable>
     <Paper size = "A4" width = "595" height = "842">
         <Margin top= "0" left = "0" right = "65" bottom = "65" />
         <orientation isPortrait="YES" />
-	</Paper>
+    </Paper>
     <StaticTable>
-    	<Lines>
-    		<defaultLineWidth>0.2</defaultLineWidth>
-    		<line x1="26.5" y1="53.5" x2="188" y2="53.5" />
-            <line x1="26.5" y1="64.3" x2="188" y2="64.3" />
-            <line x1="26.5" y1="75.2" x2="188" y2="75.2" />
-            <line x1="26.5" y1="86" x2="188" y2="86" />
-            <line x1="26.5" y1="96.8" x2="188" y2="96.8" />
-            <line x1="26.5" y1="107.7" x2="188" y2="107.7" />
-            <line x1="26.5" y1="118.5" x2="188" y2="118.5" />
-            <line x1="26.5" y1="129.3" x2="188" y2="129.3" />
-            <line x1="26.5" y1="140.2" x2="188" y2="140.2" />
-            <line x1="26.5" y1="151" x2="188" y2="151" />
-            <line x1="26.5" y1="161.8" x2="188" y2="161.8" />
-            <line x1="26.5" y1="172.7" x2="188" y2="172.7" />
-            <line x1="26.5" y1="183.5" x2="188" y2="183.5" />
-            <line x1="26.5" y1="194.3" x2="188" y2="194.3" />
-            <line x1="26.5" y1="205.2" x2="188" y2="205.2" />
-            <line x1="26.5" y1="216" x2="188" y2="216" />
-            <line x1="26.5" y1="226.8" x2="188" y2="226.8" />
-            <line x1="26.5" y1="237.7" x2="188" y2="237.7" />
-            <line x1="26.5" y1="248.5" x2="188" y2="248.5" />
-            <line x1="26.5" y1="259.3" x2="188" y2="259.3" />
-            <line x1="26.5" y1="270.2" x2="188" y2="270.2" />
+        <Lines>
+            <defaultLineWidth>0.2</defaultLineWidth>
+            <!--上线-->
+            <line x1="25" y1="32" x2="185" y2="32" />
+            <!--底线-->
+<!--            <line x1="25" y1="263" x2="185" y2="263" />-->
+            <!--左边框-->
+            <line x1="25" y1="32" x2="25" y2="253" />
+            <!--右边框-->
+            <line x1="185" y1="32" x2="185" y2="253" />
             
-            <line x1="26.5" y1="53.5" x2="26.5" y2="270.2" />
-            <line x1="188" y1="53.5" x2="188" y2="270.2" />
-    	</Lines>
-    	<Texts>
-    		<defaultFontSize>19</defaultFontSize>
-    		<Text>
-    			<text>公路赔（补）偿案件询问笔录</text>
-    			<fontSize>15</fontSize>
-    			<origin x="72" y="29" />
-    			<size width="200" height="6" />
-    		</Text>
-    		<Text>
-    			<text>（接上页）</text>
-                <fontSize>14</fontSize>
-    			<origin x="95" y="39.5" />
-    			<size width="200" height="6" />
-    		</Text>
-    		<Text>
-    			<text>被询问人（签字并按手印）：</text>
-    			<origin x="29" y="255.5" />
-    			<size width="200" height="6" />
-    		</Text>
-    		<Text>
-    			<text>共   页   第  页</text>
-    			<origin x="133" y="264.3" />
-    			<size width="200" height="6" />
-    		</Text>
-    	</Texts>
+            
+            <!--被询问人-上线-->
+            <line x1="25" y1="223" x2="185" y2="223" />
+            <!--询问人-上线-->
+            <line x1="25" y1="233" x2="185" y2="233" />
+            <!--记录人-上线-->
+            <line x1="25" y1="243" x2="185" y2="243" />
+            <!--页码-上线-->
+            <line x1="25" y1="253" x2="185" y2="253" />
+<!--            <line x1="25" y1="263" x2="185" y2="263" />-->
+<!--            <line x1="83" y1="15" x2="97" y2="15" LineWidth="0.8"/>-->
+        </Lines>
+        <Texts>
+            <defaultFontSize>19</defaultFontSize>
+            <!--标题-->
+            <Text>
+                <text>公路赔（补）偿案件询问笔录</text>
+                <fontSize>19</fontSize>
+                <origin x="60" y="14" />
+                <size width="300" height="6" />
+            </Text>
+            <!--案号-->
+            <Text>
+                <text>案号（</text>
+                <origin x="126" y="27.5" />
+                <size width="100" height="6" />
+            </Text>
+            <!--）年-->
+            <Text>
+                <text>）年（</text>
+                <origin x="150" y="27.5" />
+                <size width="100" height="6" />
+            </Text>
+            <!--）号-->
+            <Text>
+                <text>）号</text>
+                <origin x="173" y="27.5" />
+                <size width="100" height="6" />
+            </Text>
+            <!--被询问人签名并按印-->
+            <Text>
+                <text>被询问人签名并按印：</text>
+                <origin x="27" y="228" />
+                <size width="200" height="6" />
+            </Text>
+            <!--询问人签字-->
+            <Text>
+                <text>询问人签字：</text>
+                <origin x="27" y="238" />
+                <size width="100" height="6" />
+            </Text>
+            <!--询问人-证件号码-->
+            <Text>
+                <text>证件号码：</text>
+                <origin x="100" y="238" />
+                <size width="100" height="6" />
+            </Text>
+            <!--记录人签字-->
+            <Text>
+                <text>记录人签字：</text>
+                <origin x="27" y="248" />
+                <size width="100" height="6" />
+            </Text>
+            <!---记录人-证件号码-->
+            <Text>
+                <text>证件号码：</text>
+                <origin x="100" y="248" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>共    页</text>
+                <origin x="145" y="255" />
+                <size width="100" height="6" />
+            </Text>
+            <Text>
+                <text>第    页</text>
+                <origin x="165" y="255" />
+                <size width="100" height="6" />
+            </Text>
+            <!--备注说明-->
+            <Text>
+                <text>（本页填写不下的内容，可另附纸）</text>
+                <origin x="25" y="255" />
+                <size width="400" height="6" />
+            </Text>
+        </Texts>
     </StaticTable>
     <DataTable>
-    	<DefaultFontSize>19</DefaultFontSize>
-    	<UITextView>
-    		<origin x="32" y="60.5" />
-    		<size width="150" height="248" />
-    		<fontSize>12</fontSize>
-    		<lineHeight>29</lineHeight>
-    		<content>
-    			<data>
-    				<attributeName>inquiry_note</attributeName>
-    				<entityName></entityName>
-    			</data>
-    		</content>
-    	</UITextView>
-    	<UITextField>
-    		<origin x="110" y="262.3" />
-    		<size width="60" height="6" />
-    		<fontSize>12</fontSize>
-    		<alignment>center</alignment>
-    		<content>
-    			<data>
-    				<attributeName>pageCount</attributeName>
-    				<entityName>PageNumberInfo</entityName>
-    			</data>
-    		</content>
-    	</UITextField>
-    	<UITextField>
-    		<origin x="131" y="262.3" />
-    		<size width="60" height="6" />
-    		<fontSize>12</fontSize>
-    		<alignment>center</alignment>
-    		<content>
-    			<data>
-    				<attributeName>pageNumber</attributeName>
-    				<entityName>PageNumberInfo</entityName>
-    			</data>
-    		</content>
-    	</UITextField>
+        <!--设置默认字体-->
+        <DefaultFontSize>19</DefaultFontSize>
+        <UITextField>
+            <fontSize>12</fontSize>
+            <origin x="140" y="26" />
+            <size width="28" height="6" />
+            <content>
+                <!--案号-->
+                <data>
+                    <attributeName>case_mark2</attributeName>
+                    <entityName>CaseInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
+        
+        <!--询问内容-->
+        <UITextView>
+            <origin x="27" y="36" />
+            <size width="158" height="200" />
+            <fontSize>12</fontSize>
+            <lineHeight>28.5</lineHeight>
+            <content>
+                <data>
+                    <attributeName>inquiry_note</attributeName>
+                </data>
+            </content>
+        </UITextView>
+        
+        <!--    询问人和记录人   证件号码 -->
+        <UITextField>
+            <origin x="120" y="236" />
+            <size width = "70" height = "6" />
+            <fontSize>12</fontSize>
+            <content>
+                <data>
+                    <attributeName>prover1_exelawid</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="120" y="246" />
+            <size width = "70" height = "6" />
+            <fontSize>12</fontSize>
+            <content>
+                <data>
+                    <attributeName>recorder_name_exelawid</attributeName>
+                </data>
+            </content>
+        </UITextField>
+        
+        <!--页码-->
+        <UITextField>
+            <origin x="146" y="253" />
+            <size width="15" height="6" />
+            <fontSize>12</fontSize>
+            <alignment>center</alignment>
+            <content>
+                <data>
+                    <attributeName>pageCount</attributeName>
+                    <entityName>PageNumberInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
+        <UITextField>
+            <origin x="167" y="253" />
+            <size width="11" height="6" />
+            <fontSize>12</fontSize>
+            <alignment>center</alignment>
+            <content>
+                <data>
+                    <attributeName>pageNumber</attributeName>
+                    <entityName>PageNumberInfo</entityName>
+                </data>
+            </content>
+        </UITextField>
     </DataTable>
-</InquireTable2>
+</InquireTable>
+

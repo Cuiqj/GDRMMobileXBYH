@@ -57,8 +57,7 @@
     return [NSArray array];
 }
 
-+ (NSArray *)caseServiceFilesForCaseServiceReceipt:(NSString *)receiptID
-{
++ (NSArray *)caseServiceFilesForCaseServiceReceipt:(NSString *)receiptID{
     NSManagedObjectContext *context=[[AppDelegate App] managedObjectContext];
     NSEntityDescription *entity=[NSEntityDescription entityForName:@"CaseServiceFiles" inManagedObjectContext:context];
     NSPredicate *predicate=[NSPredicate predicateWithFormat:@"servicereceipt_id==%@", receiptID];
@@ -76,13 +75,13 @@
     if (caseInfo) {
         if ([caseInfo.case_type_id isEqualToString:CaseTypeIDPei]) {
             CaseServiceFiles *defaultServiceFile1 = [CaseServiceFiles newCaseServiceFilesForCaseServiceReceipt:receiptID];
-            defaultServiceFile1.service_file = @"《公路赔（补）偿通知书》";
+//            defaultServiceFile1.service_file = @"《公路赔（补）偿通知书》";
+            defaultServiceFile1.service_file = @"公路赔（补）偿通知书";
             [addedFiles addObject:defaultServiceFile1];
-            /*
+           
             CaseServiceFiles *defaultServiceFile2 = [CaseServiceFiles newCaseServiceFilesForCaseServiceReceipt:receiptID];
-            defaultServiceFile2.service_file = @"公路赔（补）偿清单";
+            defaultServiceFile2.service_file = @"损坏公路设施索赔清单";
             [addedFiles addObject:defaultServiceFile2];
-             */
         }
     }
     return addedFiles;

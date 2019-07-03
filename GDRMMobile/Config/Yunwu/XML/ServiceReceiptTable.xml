@@ -93,14 +93,14 @@
             <Text>
             	<text>送达单位：</text>
                 <fontSize>12</fontSize>
-            	<origin x="21" y="67.5" />
+            	<origin x="21" y="68" />
                 <size width="100" height="6" />
             </Text>
             <!--送达地点： -->
             <Text>
             	<text>送达地点：</text>
                 <fontSize>12</fontSize>
-            	<origin x="21" y="76.5" />
+            	<origin x="21" y="78" />
                 <size width="100" height="6" />
             </Text>
             <!-- 送达文件名称-->
@@ -219,7 +219,7 @@
         </UITextField>
         <!--送达单位-->
         <UITextField>
-            <origin x="52" y="65.5" />
+            <origin x="52" y="66" />
             <size width = "140" height = "6" />
             <content>
                 <data>

@@ -305,8 +305,8 @@ static NSString * xmlName = @"AtonementNoticeTable";
         notice.case_desc = [array objectAtIndex:1];
     }
     notice.citizen_name       = proveInfo.citizen_name;
-    //notice.witness = @"现场照片、勘验检查笔录、询问笔录、现场勘验图";
-    notice.witness            = @"勘验笔录，证人证词和现场拍摄的照片等材料";
+    notice.witness = @"现场照片、现场勘查图、勘验检查笔录、询问笔录";
+//    notice.witness            = @"勘验笔录，证人证词和现场拍摄的照片等材料";
     notice.check_organization = [[Systype typeValueForCodeName:@"复核单位"] objectAtIndex:0];
     NSString *currentUserID=[[NSUserDefaults standardUserDefaults] stringForKey:USERKEY];
     notice.organization_id    = [[OrgInfo orgInfoForOrgID:[UserInfo userInfoForUserID:currentUserID].organization_id] valueForKey:@"orgname"];

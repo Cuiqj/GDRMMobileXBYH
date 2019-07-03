@@ -216,7 +216,7 @@ static NSString * const xmlName = @"ServiceReceiptTable";
 - (void)deleteCurrentDoc{
     if (![self.caseID isEmpty] && self.caseServiceReceipt){
         [[[AppDelegate App] managedObjectContext] deleteObject:self.caseServiceReceipt];
-        for (CaseServiceFiles *csf in self.data) {
+        for (CaseServiceFiles * csf in self.data) {
             [[[AppDelegate App] managedObjectContext] deleteObject:csf];
         }
         [[AppDelegate App] saveContext];

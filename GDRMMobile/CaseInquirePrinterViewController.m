@@ -12,8 +12,8 @@
 #import "CaseInfo.h"
 
 static NSString * const xmlName = @"InquireTable";
-//static NSString * const secondPageXmlName = @"InquireTable2_new"; //该文件改用来作为第二页 | xushiwen | 2013.7.30
-static NSString * const secondPageXmlName = @"InquireTable2GZX"; //该文件改用来作为第二页 | xushiwen | 2013.7.30
+static NSString * const secondPageXmlName = @"InquireTable2_new"; //该文件改用来作为第二页 | xushiwen | 2013.7.30
+//static NSString * const secondPageXmlName = @"InquireTable2GZX"; //该文件改用来作为第二页 | xushiwen | 2013.7.30
 
 enum kPageInfo {
     kPageInfoFirstPage = 0,
@@ -57,6 +57,7 @@ enum kPageInfo {
     self.caseInquire.phone = self.textphone.text;
     self.caseInquire.address=self.textaddress.text ;
     self.caseInquire.locality=self.textlocality.text ;
+    self.caseInquire.inquirer_name = self.textinquirer_name.text;
     self.caseInquire.recorder_name = self.textrecorder_name.text;
     citizen.postalcode = self.textpostalcode.text;
     self.caseInquire.postalcode = self.textpostalcode.text;
@@ -108,15 +109,11 @@ enum kPageInfo {
         NSArray *pages = [self pagesSplitted];
         NSMutableDictionary *dataInfo = [self getDataInfo];
         if ([pages count] < 2) {
-            
             dataInfo[@"PageNumberInfo"][@"pageCount"][@"value"] = @([pages count]);
             dataInfo[@"PageNumberInfo"][@"pageNumber"][@"value"] = @([pages count]);
-            
             UIGraphicsBeginPDFPageWithInfo(pdfRect, nil);
             [self drawDataTable:xmlName withDataInfo:dataInfo];
-            
         } else {
-            
             for (int i = [pages count] - 1 ; i >= kPageInfoFirstPage; i--) {
                 //第i页
                 dataInfo[@"CaseInquire"][@"inquiry_note"][@"value"] = pages[i];     //也会影响到dataInfo[@"Default"]对应的值
@@ -185,19 +182,15 @@ enum kPageInfo {
 
 - (NSArray *)pagesSplitted {
     NSString *inquiryNote = self.caseInquire.inquiry_note;
-    
     CGFloat fontSize1 = [self fontSizeInPage:kPageInfoFirstPage];
     CGFloat lineHeight1 = [self lineHeightInPage:kPageInfoFirstPage];
     UIFont *font1 = [UIFont fontWithName:FONT_FangSong size:fontSize1];
     CGRect page1Rect = [self rectInPage:kPageInfoFirstPage];
-    
     CGFloat fontSize2 = [self fontSizeInPage:kPageInfoSucessivePage];
     CGFloat lineHeight2 = [self lineHeightInPage:kPageInfoSucessivePage];
     UIFont *font2 = [UIFont fontWithName:FONT_FangSong size:fontSize2]; 
     CGRect page2Rect = [self rectInPage:kPageInfoSucessivePage];
-    
     NSArray *pages = [inquiryNote pagesWithFont:font1 lineHeight:lineHeight1 horizontalAlignment:UITextAlignmentLeft page1Rect:page1Rect followPageRect:page2Rect];
-    
     if ([pages count] > 2) {
         NSString *textInFirstPage = pages[kPageInfoFirstPage];
         NSRange firstpageRange = NSMakeRange(0, [textInFirstPage length]);
@@ -314,8 +307,17 @@ enum kPageInfo {
                               attribValue,@"value",
                               @(attribType),@"valueType",nil];
         [caseInquireDataInfo setObject:data forKey:attribName];
-
     }
+    //给caseinquire添加一些数据 打印需要
+    NSDictionary * dicddata1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                [self.caseInquire prover1_exelawid],@"value",
+                                @(NSStringAttributeType),@"valueType",nil];
+    NSDictionary * dicddata2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                [self.caseInquire recorder_name_exelawid],@"value",
+                                @(NSStringAttributeType),@"valueType",nil];
+    //    [caseInquireDataInfo setObject: forKey:@"inquirer_name_num"];
+    [caseInquireDataInfo setObject:dicddata1 forKey:@"prover1_exelawid"];
+    [caseInquireDataInfo setObject:dicddata2 forKey:@"recorder_name_exelawid"];
     
     //将CaseInfo的属性名、属性值、属性描述装入dataInfo
     CaseInfo *relativeCaseInfo = [CaseInfo caseInfoForID:self.caseID];
@@ -346,6 +348,15 @@ enum kPageInfo {
                  forKey:@"PageNumberInfo"];
     
     return dataInfo;
+}
+    
+- (void)deleteCurrentDoc{
+    NSManagedObjectContext * content = [[AppDelegate App] managedObjectContext];
+    if(self.caseInquire){
+        [content deleteObject:self.caseInquire];
+        [[AppDelegate App] saveContext];
+    }
+        
 }
 
 @end

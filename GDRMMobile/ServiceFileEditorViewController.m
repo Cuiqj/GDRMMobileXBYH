@@ -22,8 +22,7 @@
 	// Do any additional setup after loading the view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
@@ -115,7 +114,8 @@
     if ([self.textFileName.text isEmpty]) {
         self.textFileName.text = @"";
     }
-    self.textFileName.text = [NSString stringWithFormat:@"《%@》",serviceFileName] ;
+//    self.textFileName.text = [NSString stringWithFormat:@"《%@》",serviceFileName];
+    self.textFileName.text = [NSString stringWithFormat:@"%@",serviceFileName];
 }
 
 @end

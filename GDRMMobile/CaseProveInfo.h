@@ -56,6 +56,9 @@
 - (NSString *) prover1_org_duty;
 - (NSString *) prover2;
 - (NSString *) prover2_org_duty;
+- (NSString *) prover3;
+- (NSString *) prover3_org_duty;
+    
 //勘验检查人执法证号
 - (NSString *)prover1_exelawid;
 //勘验检查人执法证号
