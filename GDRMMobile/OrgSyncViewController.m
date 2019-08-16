@@ -379,6 +379,9 @@ NSString  *my_org_id;
     [myqueue addOperation:reloadData];
 }
 
-
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.preferredContentSize = CGSizeMake(540.0, 620.0);
+}
 
 @end

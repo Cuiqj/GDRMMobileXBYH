@@ -13,8 +13,12 @@
 #import "Systype.h"
 #import "OrgInfo.h"
 #import "BridgeCheck+CoreDataClass.h"
-#import "BridgeCheckDetail+CoreDataClass.h"
+//#import "BridgeCheckDetail+CoreDataClass.h"
+#import "BridgeCheckDetail.h"
 #import "BridgeCheckItem+CoreDataClass.h"
+#import "UNderBridgeViewController.h"
+#import "UserPickerViewController.h"
+
 @interface BrgAndCavCheckViewController (){
     NSInteger leng;
     NSInteger currentSeg;
@@ -27,6 +31,8 @@
 @property (nonatomic,strong) NSMutableArray         *currentCheckDetailListDataUnDone;
 @property (nonatomic,strong) NSMutableArray         *CheckItemListData;
 @property (nonatomic,strong) NSMutableArray         *CurrentBanciListData;
+///////
+@property (nonatomic,strong) UIPopoverController * pickerPopover;
 ////////
 @property(nonatomic,strong)NSMutableArray * mainListArray;
 @property(nonatomic,strong)NSMutableArray * detailListArray;
@@ -39,6 +45,8 @@ NSInteger currentTag;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setup];
+    
+    [self.ExceptionHandlingBtn setHidden:YES];
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -53,14 +61,17 @@ NSInteger currentTag;
     [self.saveBtn setBackgroundImage:image forState:UIControlStateNormal];
     [self.saveBtn setBackgroundImage:image forState:UIControlStateFocused];
     [self.saveBtn setBackgroundImage:image forState:UIControlEventTouchDown];
+    [self.ExceptionHandlingBtn setBackgroundImage:image forState:UIControlStateNormal];
+    [self.ExceptionHandlingBtn setBackgroundImage:image forState:UIControlStateFocused];
+    [self.ExceptionHandlingBtn setBackgroundImage:image forState:UIControlEventTouchDown];
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
+    //桥涵检查   巡查情况已废弃
     if (self.currentMainCheckData !=nil&&
         self.roadinspectVC ) {
         if (self.currentMainCheckData !=nil) {
             [self.roadinspectVC createRecodeByServicesCheck:self.currentMainCheckData];
-            
         }
     }
     self.roadinspectVC = nil;
@@ -88,6 +99,10 @@ NSInteger currentTag;
     //[self getNewCurrentCheckDetailListData];
     [self.saveBtn.layer setMasksToBounds:YES];
     [self.saveBtn.layer  setCornerRadius:10.0];
+    [self.ExceptionHandlingBtn.layer setMasksToBounds:YES];
+    [self.ExceptionHandlingBtn.layer  setCornerRadius:10.0];
+    
+    // 完成    未完成 添加了改变方法
     [self.doneorNotSeg addTarget:self action:@selector(segChange:) forControlEvents:UIControlEventValueChanged];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -102,17 +117,17 @@ NSInteger currentTag;
 //新增的时候 从标准表拷贝到detail表
 -(void)getNewCurrentCheckDetailListData{
     [self.detailListArray removeAllObjects];
-    for(int i           = 0;i<self.CheckItemListData.count;i++){
+    for(int i  = 0;i<self.CheckItemListData.count;i++){
         BridgeCheckItem *item=[self.CheckItemListData objectAtIndex:i];
-        BridgeCheckDetail*record=[BridgeCheckDetail newDataObjectWithEntityName:@"BridgeCheckDetail"];
+        BridgeCheckDetail * record=[BridgeCheckDetail newDataObjectWithEntityName:@"BridgeCheckDetail"];
         //record.parent_id=self.currentMainCheckData.myid;
         record.myid=[NSString randomID];
         record.parent_id    = self.mainModelData.myid;
         record.isuploaded=@(0);
         record.status=@"0";
         record.name         = item.name;
-        record.project           = item.project;
-        record.east           = item.east;
+        record.project       = item.project;
+        record.east          = item.east;
         record.west         = item.west;
         record.classes      = item.classes;
         record.item_id = item.myid;
@@ -148,7 +163,7 @@ NSInteger currentTag;
 
 #pragma mark - uitextfield delegate
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if(textField.tag==3||textField.tag==5)
+    if(textField.tag==3||textField.tag==5 ||textField.tag == 345 || textField.tag == 346 )
         return NO;
     else
         return YES;
@@ -397,7 +412,6 @@ NSInteger currentTag;
             }
         }
     }
-    
 }
 -(void)LoadDetailModelData:(BridgeCheckDetail*)data{
     self.textProject.text=[NSString stringWithFormat:@"%@%@",data.name,data.project];
@@ -405,24 +419,32 @@ NSInteger currentTag;
     self.textwest.text=data.west;
     self.texthandle.text=data.handle;
     self.textremark.text=data.remark;
+    self.textcheckuser.text = data.checkuser;
+    
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy年MM月dd日HH时mm分"];
+    self.textrecordtime.text = [formatter stringFromDate:data.recordtime];
 }
 -(void)loadMainModelData:(BridgeCheck*)Data{
     self.detailListArray=[BridgeCheckDetail bridgeCheckDetailForParent_id:Data.myid];
     [self refreshDetailTableVIewDataSource];
     [self.detailTableView reloadData];
 }
-
-
 - (IBAction)btnSave:(id)sender {
-    if(self.detailModelData ==nil)
+    //无异常处理
+    if(self.detailModelData == nil)
         return;
-    
     self.detailModelData.east=self.texteast.text;
     self.detailModelData.west=self.textwest.text;
     self.detailModelData.handle=self.texthandle.text;
     self.detailModelData.remark=self.textremark.text;
     self.detailModelData.recordtime=[NSDate date];
     self.detailModelData.status=@"1";
+    
+    NSDateFormatter * formator =[[NSDateFormatter alloc]init];
+    [formator setDateFormat:@"yyyy年MM月dd日HH时mm分"];
+    self.detailModelData.recordtime = [formator dateFromString:self.textrecordtime.text];
+    self.detailModelData.checkuser = self.textcheckuser.text;
     if (currentSeg==0){
         [self.currentCheckDetailListDataDone insertObject:self.detailModelData atIndex:0];
         NSIndexPath *selectedIndexPath=[self.detailTableView indexPathForSelectedRow];
@@ -433,12 +455,29 @@ NSInteger currentTag;
         self.textwest.text=@"";
         self.texthandle.text=@"";
         self.textremark.text=@"";
+        self.textrecordtime.text = @"";
+        self.textcheckuser.text = @"";
     }
     [[AppDelegate App]saveContext];
+    self.detailModelData = nil;
+}
+
+- (IBAction)ExceptionHandlingClick:(id)sender {
+    if(self.detailModelData == nil)
+        return;
+    //有异常跳转     桥下检查  详细情况
+    UIStoryboard *mainstoryboard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UNderBridgeViewController * underbridgeview = [mainstoryboard instantiateViewControllerWithIdentifier:@"BridgeView"];
+    underbridgeview.roadname = self.detailModelData.name;
+    underbridgeview.extendedLayoutIncludesOpaqueBars = true;
+    //    __weak
+//    [underbridgeview setRoadVC:self];
+    [self.navigationController pushViewController:underbridgeview animated:YES];
 }
 - (IBAction)btnNewZhangliang:(UIButton *)sender {
+    //新增检查     桥涵检查
     //[[AppDelegate App] saveContext];
-    BridgeCheck *mainRecord=[BridgeCheck newDataObjectWithEntityName:@"BridgeCheck"];
+    BridgeCheck * mainRecord=[BridgeCheck newDataObjectWithEntityName:@"BridgeCheck"];
     mainRecord.myid=[NSString randomID];
     mainRecord.check_date=[NSDate date];
     mainRecord.org_id=[[OrgInfo orgInfoForSelected] valueForKey:@"myid"];
@@ -450,6 +489,57 @@ NSInteger currentTag;
     [self.detailTableView reloadData];
     //[self.leftTableview selectRowAtIndexPath:[NSIndexPath indexPathWithIndex:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
     //[self.leftTableview selectRowAtIndexPath:[NSIndexPath indexPathWithIndex:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
-    
+}
+
+- (IBAction)recordtimeClick:(id)sender {
+    if ([self.pickerPopover isPopoverVisible]) {
+        [self.pickerPopover dismissPopoverAnimated:YES];
+    } else {
+        UIStoryboard *MainStoryboard            = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        DateSelectController * datePicker = [MainStoryboard instantiateViewControllerWithIdentifier:@"datePicker"];
+        UITextField * textField = sender;
+        CGRect frame = textField.frame;
+        datePicker.delegate = self;
+        datePicker.pickerType=1;
+        // [datePicker showdate:self.textDate.text];
+        self.pickerPopover=[[UIPopoverController alloc] initWithContentViewController:datePicker];
+        [self.pickerPopover presentPopoverFromRect:frame inView:self.editView permittedArrowDirections:UIPopoverArrowDirectionRight animated:YES];
+        datePicker.dateselectPopover= self.pickerPopover;
+    }
+}
+- (void)setDate:(NSString *)date{
+    NSDateFormatter * formator =[[NSDateFormatter alloc]init];
+    [formator setLocale:[NSLocale currentLocale]];
+    [formator setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSDate * nowdate = [formator dateFromString:date];
+    [formator setDateFormat:@"yyyy年MM月dd日HH时mm分"];
+    self.textrecordtime.text = [formator stringFromDate:nowdate];
+}
+- (IBAction)userClcik:(id)sender {
+    if ([self.pickerPopover isPopoverVisible]) {
+        [self.pickerPopover dismissPopoverAnimated:YES];
+    } else {
+        UITextField * textField = sender;
+        CGRect frame = textField.frame;
+        UserPickerViewController *acPicker=[[UserPickerViewController alloc] init];
+        acPicker.delegate = self;
+        self.pickerPopover=[[UIPopoverController alloc] initWithContentViewController:acPicker];
+        [self.pickerPopover setPopoverContentSize:CGSizeMake(140, 200)];
+        [self.pickerPopover presentPopoverFromRect:frame inView:self.editView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+        acPicker.pickerPopover = self.pickerPopover;
+    }
+}
+
+- (IBAction)CleartextUser:(id)sender {
+    self.textcheckuser.text = @"";
+}
+- (void)setUser:(NSString *)name andUserID:(NSString *)userID{
+    if (self.textcheckuser.text.length >0) {
+        self.textcheckuser.text = [NSString stringWithFormat:@"%@,%@",self.textcheckuser.text,name];
+    }else{
+        self.textcheckuser.text = name;
+    }
+//    if (self.detailModelData == nil) return;
+//    self.detailModelData.checkuser = self.textcheckuser.text;
 }
 @end

@@ -164,11 +164,7 @@ enum kUISwitchTag {
             NSString *photoPath=[NSString stringWithFormat:@"交通事故照片/%@",inspection.myid];
             photoPath=[documentPath stringByAppendingPathComponent:photoPath];
             [[NSFileManager defaultManager]removeItemAtPath:photoPath error:nil];
-            
             [[AppDelegate App] saveContext];
-            
-            
-            
             self.roadWayClosedID = @"";
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             

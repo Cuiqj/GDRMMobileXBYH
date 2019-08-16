@@ -63,12 +63,10 @@
 
 InspectionCheckState inspectionState;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     self.state               = kRecord;
     UIFont *segFont          = [UIFont boldSystemFontOfSize:14.0f];
-    NSDictionary *attributes = [NSDictionary dictionaryWithObject:segFont
-                                                           forKey:UITextAttributeFont];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:segFont                                                           forKey:UITextAttributeFont];
     [self.inspectionSeg setTitleTextAttributes:attributes
                                       forState:UIControlStateNormal];
     
@@ -89,6 +87,7 @@ InspectionCheckState inspectionState;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+
     self.inspectionID=[[NSUserDefaults standardUserDefaults] valueForKey:INSPECTIONKEY];
     self.isCurrentInspection = YES;
     BOOL isJiangzhong        = [[[AppDelegate App].projectDictionary objectForKey:@"projectname"] isEqualToString:@"zhongjiang"];
@@ -167,9 +166,10 @@ InspectionCheckState inspectionState;
         [caseVC setInspectionID:self.inspectionID];
         [caseVC setRoadInspectVC:self];
     }else if ([segueIdentifer isEqualToString:@"inspectToShiGongCheck"]){
+        //施工检查   施工检查跳转   
         ShiGongCheckViewController *ShiGongVC = segue.destinationViewController;
-        [ShiGongVC setInspectionID:self.inspectionID];
-        [ShiGongVC setRoadInspectVC:self];
+//        [ShiGongVC setInspectionID:self.inspectionID];
+//        [ShiGongVC setRoadInspectVC:self];
     }else if ([segueIdentifer isEqualToString:@"inspectToBaoxianCase"]){
         BaoxianCaseViewController *baoxiancase = segue.destinationViewController;
         [baoxiancase setInspectionID:self.inspectionID];
@@ -601,8 +601,6 @@ InspectionCheckState inspectionState;
         return roadline;
     }
     return nil;
-    
-    
 }
 
 -(NSString *)selectStationforNSString:(NSString *)station{
@@ -721,6 +719,7 @@ InspectionCheckState inspectionState;
 
 
 - (IBAction)pushtoEveryShiftController:(id)sender {
+    //本班次巡查信息汇总界面
     UIStoryboard *mainstoryboard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     EveryShiftViewController * everyshift = [mainstoryboard instantiateViewControllerWithIdentifier:@"everyshift"];
     everyshift.InspectionID = self.inspectionID;

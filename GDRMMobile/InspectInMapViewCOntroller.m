@@ -129,3 +129,4 @@
     _mapView.mapType=seg.selectedSegmentIndex;
 }
 @end
+

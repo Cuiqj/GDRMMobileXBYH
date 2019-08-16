@@ -13,7 +13,7 @@
 - (void)downLoadServiceOrg:(NSString *)orgID {
     WebServiceInit;
     //[service downloadDataSet:@"select * from UserInfo" orgid:orgID];
-    [service downloadDataSet:@"select *from ServiceOrg "  ];
+    [service downloadDataSet:@"select * from ServiceOrg"];
 }
 
 - (NSDictionary *)xmlParser:(NSString *)webString{

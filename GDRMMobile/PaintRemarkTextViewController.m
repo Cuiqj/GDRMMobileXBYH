@@ -38,6 +38,11 @@
 @synthesize pickerState = _pickerState;
 
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.preferredContentSize = CGSizeMake(540.0, 620.0);
+}
+
 - (void)viewDidLoad
 {
     //监视键盘出现和隐藏通知

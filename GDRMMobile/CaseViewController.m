@@ -351,13 +351,10 @@ BOOL _wasKeyboardManagerEnabled;
     if ([self.caseListpopover isPopoverVisible]) {
         [self.caseListpopover dismissPopoverAnimated:NO];
     }
-    
     [super viewWillDisappear:animated];
     [[IQKeyboardManager sharedManager] setEnable:_wasKeyboardManagerEnabled];
 }
-
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     [[self.infoView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setInfoView:nil];
@@ -441,13 +438,10 @@ BOOL _wasKeyboardManagerEnabled;
         [self.caseInfoPickerpopover presentPopoverFromRect:self.segInfoPage.frame inView:self.view permittedArrowDirections:
          UIPopoverArrowDirectionLeft animated:YES];
     }
-    
-    
 }
 - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller{
     return UIModalPresentationNone;
 }
-
 - (BOOL)popoverPresentationControllerShouldDismissPopover:(UIPopoverPresentationController *)popoverPresentationController{
     //no点击蒙版popover不消失， 默认yes
     return NO;
@@ -462,12 +456,10 @@ BOOL _wasKeyboardManagerEnabled;
     }else{
         [message appendFormat:@"%@", result];
     }
-    
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [[[UIAlertView alloc] initWithTitle:@"识别结果" message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
         self.citizenInfo.org_name = message;
     }];
-    
 }
 - (void)ocrOnFail:(NSError *)error {
     NSLog(@"%@", error);

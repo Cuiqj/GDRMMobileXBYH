@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D86591BC0AD1C72804B96D9 /* libPods-GDRMXBYHMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A68C1E8F4DBE699E4B2195 /* libPods-GDRMXBYHMobile.a */; };
 		330158EC1A37F35700F641C5 /* PaintBriefOfAdministrativePenaltyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330158EB1A37F35700F641C5 /* PaintBriefOfAdministrativePenaltyViewController.m */; };
 		330159031A37F4E300F641C5 /* InquireInfoBriefOfAdministrativePenaltyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330158FD1A37F4E300F641C5 /* InquireInfoBriefOfAdministrativePenaltyViewController.m */; };
 		330159041A37F4E300F641C5 /* InquireInfoOfAdministrativePenaltyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330158FF1A37F4E300F641C5 /* InquireInfoOfAdministrativePenaltyViewController.m */; };
@@ -339,8 +338,16 @@
 		840D872F1FA96ABE009F38EF /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 840D872E1FA96ABE009F38EF /* mapapi.bundle */; };
 		840D87331FA96C35009F38EF /* InspectInMapViewCOntroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D87321FA96C35009F38EF /* InspectInMapViewCOntroller.m */; };
 		841132F52119AE97007E9180 /* AdminstrativePenaltyConstructionTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 841132F42119AE97007E9180 /* AdminstrativePenaltyConstructionTable.xml */; };
+		841CE81B230252CD00DBE91F /* libPods-GDRMXBYHMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A68C1E8F4DBE699E4B2195 /* libPods-GDRMXBYHMobile.a */; };
+		8420828522E54BB400950EC8 /* BridgeSpaceCheckSpecialB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420828422E54BB400950EC8 /* BridgeSpaceCheckSpecialB.m */; };
+		8420828822E54BD700950EC8 /* BridgeSpaceCheckSpecial.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420828722E54BD700950EC8 /* BridgeSpaceCheckSpecial.m */; };
+		8420828E22E5504000950EC8 /* UNderBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420828C22E5503F00950EC8 /* UNderBridgeViewController.m */; };
+		8420829122E59A4300950EC8 /* BridgeCheckDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420829022E59A4300950EC8 /* BridgeCheckDetail.m */; };
+		8420829322E5AE8000950EC8 /* 桥下安全检查.png in Resources */ = {isa = PBXBuildFile; fileRef = 8420829222E5AE8000950EC8 /* 桥下安全检查.png */; };
 		84256FF322CB4CEC0002239D /* CaseMapTable.xml in Resources */ = {isa = PBXBuildFile; fileRef = 84256FF522CB4CEC0002239D /* CaseMapTable.xml */; };
 		842B398220C7CA3700984830 /* SelectTypeResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B398120C7CA3700984830 /* SelectTypeResultController.m */; };
+		8431D27922CD92620077F16A /* DailyRoadWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431D27722CD92610077F16A /* DailyRoadWorkViewController.m */; };
+		8431D27C22CD95050077F16A /* MaintainCheckDaily.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431D27A22CD95040077F16A /* MaintainCheckDaily.m */; };
 		843A515C200C90EF00279362 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A515B200C90EF00279362 /* AipOcrSdk.framework */; };
 		84441020211423A800505843 /* AdminisInquireTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444101F211423A800505843 /* AdminisInquireTableViewController.m */; };
 		8444102621144C5300505843 /* AdminstrativePenaltyConstructionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444102521144C5300505843 /* AdminstrativePenaltyConstructionTableViewController.m */; };
@@ -399,9 +406,6 @@
 		84B459842021B7D900FAEAF6 /* BridgeCheck+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B459792021B7D900FAEAF6 /* BridgeCheck+CoreDataClass.m */; };
 		84B459852021B7D900FAEAF6 /* BridgeCheck+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4597B2021B7D900FAEAF6 /* BridgeCheck+CoreDataProperties.m */; };
 		84B459862021B7D900FAEAF6 /* BridgeCheckItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4597D2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataClass.m */; };
-		84B459872021B7D900FAEAF6 /* BridgeCheckItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4597F2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataProperties.m */; };
-		84B459882021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B459812021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataClass.m */; };
-		84B459892021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B459832021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataProperties.m */; };
 		84B4598E2021BAB200FAEAF6 /* BrgAndCavCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4598C2021BAB200FAEAF6 /* BrgAndCavCheckViewController.m */; };
 		84B4598F2021BAB200FAEAF6 /* BrgAndCavCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B4598D2021BAB200FAEAF6 /* BrgAndCavCheckViewController.xib */; };
 		84B459912021C11F00FAEAF6 /* 桥涵检查.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B459902021C11F00FAEAF6 /* 桥涵检查.png */; };
@@ -1027,9 +1031,22 @@
 		840D87311FA96C35009F38EF /* InspectInMapViewCOntroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspectInMapViewCOntroller.h; sourceTree = "<group>"; };
 		840D87321FA96C35009F38EF /* InspectInMapViewCOntroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspectInMapViewCOntroller.m; sourceTree = "<group>"; };
 		841132F42119AE97007E9180 /* AdminstrativePenaltyConstructionTable.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AdminstrativePenaltyConstructionTable.xml; sourceTree = "<group>"; };
+		8420828322E54BB400950EC8 /* BridgeSpaceCheckSpecialB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgeSpaceCheckSpecialB.h; path = BrgAndCavCheck/BridgeSpaceCheckSpecialB.h; sourceTree = "<group>"; };
+		8420828422E54BB400950EC8 /* BridgeSpaceCheckSpecialB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BridgeSpaceCheckSpecialB.m; path = BrgAndCavCheck/BridgeSpaceCheckSpecialB.m; sourceTree = "<group>"; };
+		8420828622E54BD700950EC8 /* BridgeSpaceCheckSpecial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgeSpaceCheckSpecial.h; path = BrgAndCavCheck/BridgeSpaceCheckSpecial.h; sourceTree = "<group>"; };
+		8420828722E54BD700950EC8 /* BridgeSpaceCheckSpecial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BridgeSpaceCheckSpecial.m; path = BrgAndCavCheck/BridgeSpaceCheckSpecial.m; sourceTree = "<group>"; };
+		8420828C22E5503F00950EC8 /* UNderBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UNderBridgeViewController.m; path = BrgAndCavCheck/UNderBridgeViewController.m; sourceTree = "<group>"; };
+		8420828D22E5503F00950EC8 /* UNderBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNderBridgeViewController.h; path = BrgAndCavCheck/UNderBridgeViewController.h; sourceTree = "<group>"; };
+		8420828F22E59A4300950EC8 /* BridgeCheckDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeCheckDetail.h; sourceTree = "<group>"; };
+		8420829022E59A4300950EC8 /* BridgeCheckDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeCheckDetail.m; sourceTree = "<group>"; };
+		8420829222E5AE8000950EC8 /* 桥下安全检查.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "桥下安全检查.png"; sourceTree = "<group>"; };
 		84256FF422CB4CEC0002239D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/CaseMapTable.xml; sourceTree = "<group>"; };
 		842B398020C7CA3700984830 /* SelectTypeResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectTypeResultController.h; sourceTree = "<group>"; };
 		842B398120C7CA3700984830 /* SelectTypeResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectTypeResultController.m; sourceTree = "<group>"; };
+		8431D27722CD92610077F16A /* DailyRoadWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyRoadWorkViewController.m; sourceTree = "<group>"; };
+		8431D27822CD92620077F16A /* DailyRoadWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyRoadWorkViewController.h; sourceTree = "<group>"; };
+		8431D27A22CD95040077F16A /* MaintainCheckDaily.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaintainCheckDaily.m; sourceTree = "<group>"; };
+		8431D27B22CD95040077F16A /* MaintainCheckDaily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaintainCheckDaily.h; sourceTree = "<group>"; };
 		843A515B200C90EF00279362 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipOcrSdk.framework; path = "../../Library/Developer/Xcode/DerivedData/GDRMMobile-ccubgkldojoojqegcfvsqeccobth/Build/Products/Debug-iphonesimulator/AipOcrSdk.framework"; sourceTree = "<group>"; };
 		8444101D211422DF00505843 /* AdminisInquireTable.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AdminisInquireTable.xml; sourceTree = "<group>"; };
 		8444101E211423A800505843 /* AdminisInquireTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminisInquireTableViewController.h; sourceTree = "<group>"; };
@@ -1126,11 +1143,6 @@
 		84B4597C2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BridgeCheckItem+CoreDataClass.h"; sourceTree = "<group>"; };
 		84B4597D2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BridgeCheckItem+CoreDataClass.m"; sourceTree = "<group>"; };
 		84B4597E2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BridgeCheckItem+CoreDataProperties.h"; sourceTree = "<group>"; };
-		84B4597F2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BridgeCheckItem+CoreDataProperties.m"; sourceTree = "<group>"; };
-		84B459802021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BridgeCheckDetail+CoreDataClass.h"; sourceTree = "<group>"; };
-		84B459812021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BridgeCheckDetail+CoreDataClass.m"; sourceTree = "<group>"; };
-		84B459822021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BridgeCheckDetail+CoreDataProperties.h"; sourceTree = "<group>"; };
-		84B459832021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BridgeCheckDetail+CoreDataProperties.m"; sourceTree = "<group>"; };
 		84B4598B2021BAB200FAEAF6 /* BrgAndCavCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrgAndCavCheckViewController.h; path = BrgAndCavCheck/BrgAndCavCheckViewController.h; sourceTree = "<group>"; };
 		84B4598C2021BAB200FAEAF6 /* BrgAndCavCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrgAndCavCheckViewController.m; path = BrgAndCavCheck/BrgAndCavCheckViewController.m; sourceTree = "<group>"; };
 		84B4598D2021BAB200FAEAF6 /* BrgAndCavCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrgAndCavCheckViewController.xib; path = BrgAndCavCheck/BrgAndCavCheckViewController.xib; sourceTree = "<group>"; };
@@ -1213,6 +1225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841CE81B230252CD00DBE91F /* libPods-GDRMXBYHMobile.a in Frameworks */,
 				843A515C200C90EF00279362 /* AipOcrSdk.framework in Frameworks */,
 				8477DB931FD690F500CC8241 /* AssetsLibrary.framework in Frameworks */,
 				840628F61FC7B7AB0062FA6E /* libz.tbd in Frameworks */,
@@ -1229,7 +1242,6 @@
 				33A5274D14F4E3E6009BC91E /* Foundation.framework in Frameworks */,
 				33A5274F14F4E3E6009BC91E /* CoreGraphics.framework in Frameworks */,
 				33980B8C150F3FD200FE0E5B /* CoreData.framework in Frameworks */,
-				1D86591BC0AD1C72804B96D9 /* libPods-GDRMXBYHMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1397,8 +1409,6 @@
 		33693F3019A1EA1B004D0ABC /* InspectionConstruction */ = {
 			isa = PBXGroup;
 			children = (
-				331E21AE1E286938004E78C2 /* ShiGongCheckViewController.h */,
-				331E21AF1E286971004E78C2 /* ShiGongCheckViewController.m */,
 				33693F3119A1EA46004D0ABC /* InspectionConstructionViewController.h */,
 				33693F3219A1EA46004D0ABC /* InspectionConstructionViewController.m */,
 				3342557E19A48DB80092832D /* InspectionConstructionCell.h */,
@@ -1816,6 +1826,7 @@
 				330EC2481E777F50003274BB /* Developing */,
 				33D091111A359A8700F83538 /* DataSync */,
 				334860C01A2863EC00579A69 /* AdministrativePenalty */,
+				8431D27622CD92240077F16A /* 施工检查 */,
 				33693F3019A1EA1B004D0ABC /* InspectionConstruction */,
 				67CAEBF9178C6F6C000BF8A7 /* SystemTypeListViewController.h */,
 				67CAEBFA178C6F6E000BF8A7 /* SystemTypeListViewController.m */,
@@ -1855,6 +1866,7 @@
 			isa = PBXGroup;
 			children = (
 				84B459902021C11F00FAEAF6 /* 桥涵检查.png */,
+				8420829222E5AE8000950EC8 /* 桥下安全检查.png */,
 				84ED1B131FCC07D600BA89E8 /* 识别.png */,
 				84ED1B0F1FCBF0F600BA89E8 /* 其它检查.png */,
 				84ED1B101FCBF0F600BA89E8 /* 服务区检查.png */,
@@ -1928,11 +1940,8 @@
 				84B4597C2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataClass.h */,
 				84B4597D2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataClass.m */,
 				84B4597E2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataProperties.h */,
-				84B4597F2021B7D900FAEAF6 /* BridgeCheckItem+CoreDataProperties.m */,
-				84B459802021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataClass.h */,
-				84B459812021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataClass.m */,
-				84B459822021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataProperties.h */,
-				84B459832021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataProperties.m */,
+				8420828F22E59A4300950EC8 /* BridgeCheckDetail.h */,
+				8420829022E59A4300950EC8 /* BridgeCheckDetail.m */,
 				336F285E1E272BA000A09EEF /* RectificationNotice.h */,
 				336F285F1E272BA000A09EEF /* RectificationNotice.m */,
 				336F28601E272BA000A09EEF /* StopNotice.h */,
@@ -2392,6 +2401,27 @@
 			name = Map;
 			sourceTree = "<group>";
 		};
+		8431D27622CD92240077F16A /* 施工检查 */ = {
+			isa = PBXGroup;
+			children = (
+				8431D27F22CD95550077F16A /* 日常检查 */,
+				331E21AE1E286938004E78C2 /* ShiGongCheckViewController.h */,
+				331E21AF1E286971004E78C2 /* ShiGongCheckViewController.m */,
+				8431D27822CD92620077F16A /* DailyRoadWorkViewController.h */,
+				8431D27722CD92610077F16A /* DailyRoadWorkViewController.m */,
+			);
+			path = "施工检查";
+			sourceTree = "<group>";
+		};
+		8431D27F22CD95550077F16A /* 日常检查 */ = {
+			isa = PBXGroup;
+			children = (
+				8431D27B22CD95040077F16A /* MaintainCheckDaily.h */,
+				8431D27A22CD95040077F16A /* MaintainCheckDaily.m */,
+			);
+			path = "日常检查";
+			sourceTree = "<group>";
+		};
 		84510A6820B4F41100C556D0 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -2573,6 +2603,12 @@
 				84B4598B2021BAB200FAEAF6 /* BrgAndCavCheckViewController.h */,
 				84B4598C2021BAB200FAEAF6 /* BrgAndCavCheckViewController.m */,
 				84B4598D2021BAB200FAEAF6 /* BrgAndCavCheckViewController.xib */,
+				8420828322E54BB400950EC8 /* BridgeSpaceCheckSpecialB.h */,
+				8420828422E54BB400950EC8 /* BridgeSpaceCheckSpecialB.m */,
+				8420828622E54BD700950EC8 /* BridgeSpaceCheckSpecial.h */,
+				8420828722E54BD700950EC8 /* BridgeSpaceCheckSpecial.m */,
+				8420828D22E5503F00950EC8 /* UNderBridgeViewController.h */,
+				8420828C22E5503F00950EC8 /* UNderBridgeViewController.m */,
 			);
 			name = BrgAndCavCheck;
 			sourceTree = "<group>";
@@ -2706,6 +2742,7 @@
 				33A09AFA14FB12090096BA1D /* login-btn-同步.png in Resources */,
 				33A09AFB14FB12090096BA1D /* login-btn-法规.png in Resources */,
 				331DBD2F1C87E5720068B5E1 /* AtonementNoticeTable123.xml in Resources */,
+				8420829322E5AE8000950EC8 /* 桥下安全检查.png in Resources */,
 				33FF24881F13569C00E67567 /* 车辆检查.png in Resources */,
 				8477DB821FD68EFA00CC8241 /* FSActionSheet_cancel@2x.png in Resources */,
 				33A09AFC14FB12090096BA1D /* login-btn-案件.png in Resources */,
@@ -2916,6 +2953,7 @@
 				84B459942022AE5900FAEAF6 /* InitBridgeCheckItem.m in Sources */,
 				33A09B0914FDB83D0096BA1D /* OrgSelectController.m in Sources */,
 				33C1F5B014FDBE1400CA96A3 /* DateSelectController.m in Sources */,
+				8420828822E54BD700950EC8 /* BridgeSpaceCheckSpecial.m in Sources */,
 				33A9037214FDDC5B006587A7 /* LawViewController.m in Sources */,
 				3307299115171DFE0092E281 /* InitUser.m in Sources */,
 				33AE47D815206751005CA38D /* CasePaintViewController.m in Sources */,
@@ -2923,6 +2961,7 @@
 				8477DB811FD68EFA00CC8241 /* FSActionSheetItem.m in Sources */,
 				84B4596C2021AB2200FAEAF6 /* IQKeyboardManager.m in Sources */,
 				B3B6D040152C87D500818B33 /* IconTexts.m in Sources */,
+				8431D27922CD92620077F16A /* DailyRoadWorkViewController.m in Sources */,
 				B3B6D046152C891F00818B33 /* IconModels.m in Sources */,
 				330EF711152D740C0096F7D9 /* DWStroke.m in Sources */,
 				330EF719152D754A0096F7D9 /* PaintArea.m in Sources */,
@@ -2956,7 +2995,6 @@
 				B32AC1F21547276F00A8CC57 /* InquireAnswerSentence.m in Sources */,
 				330EC2561E78D3F6003274BB /* ReportProvePrintViewController.m in Sources */,
 				B32AC1F51547279A00A8CC57 /* InitInquireAnswerSentence.m in Sources */,
-				84B459892021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataProperties.m in Sources */,
 				33C8045F1547A4740035EFB5 /* CaseListViewController.m in Sources */,
 				84B459662021AB2200FAEAF6 /* IQNSArray+Sort.m in Sources */,
 				840A40381FD97D2C0012BCBB /* ALinNetworkTool.m in Sources */,
@@ -2985,7 +3023,6 @@
 				33B4E90A157E06C7002B7D55 /* NSArray+NewCaseDescArray.m in Sources */,
 				336E28931585806200072F24 /* AutoNumerPickerViewController.m in Sources */,
 				337C4FDA1586EE660075F395 /* RoadAssetCell.m in Sources */,
-				84B459872021B7D900FAEAF6 /* BridgeCheckItem+CoreDataProperties.m in Sources */,
 				330EC24E1E77853B003274BB /* illegalActNoticePrintViewController.m in Sources */,
 				3321716415871FDB009DD1F4 /* DeformInfoBriefViewController.m in Sources */,
 				339F39C0158EFD1800952B3C /* CaseInfoPickerViewController.m in Sources */,
@@ -3026,6 +3063,7 @@
 				336CD6CD16005FF200B49EA3 /* TempCheckItem.m in Sources */,
 				337679131F13240D00B53522 /* InitCarCheckItems.m in Sources */,
 				338C2F001601DB9600C49E96 /* InspectionOutViewController.m in Sources */,
+				8420828E22E5504000950EC8 /* UNderBridgeViewController.m in Sources */,
 				33FF248B1F135E5B00E67567 /* CarCheckViewController.m in Sources */,
 				336F286B1E274F6400A09EEF /* MaintainPlan.m in Sources */,
 				330EC2511E779A60003274BB /* CaseLawInfo.m in Sources */,
@@ -3059,6 +3097,7 @@
 				33ADC495165491E2007E3429 /* CaseServiceFiles.m in Sources */,
 				33ADC498165491ED007E3429 /* CaseServiceReceipt.m in Sources */,
 				33ADC49B165492F8007E3429 /* CaseDeformation.m in Sources */,
+				8420828522E54BB400950EC8 /* BridgeSpaceCheckSpecialB.m in Sources */,
 				33ADC4A916549529007E3429 /* InspectionCheck.m in Sources */,
 				33ADC4AC16549533007E3429 /* InspectionOutCheck.m in Sources */,
 				33ADC4B216549560007E3429 /* InspectionRecord.m in Sources */,
@@ -3069,7 +3108,6 @@
 				33ADC4C1165495AF007E3429 /* MatchLaw.m in Sources */,
 				84B459732021AB2200FAEAF6 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				33ADC4C4165495B7007E3429 /* MatchLawDetails.m in Sources */,
-				84B459882021B7D900FAEAF6 /* BridgeCheckDetail+CoreDataClass.m in Sources */,
 				33ADC4D416549B05007E3429 /* InitLaws.m in Sources */,
 				33ADC4DD16549D16007E3429 /* LawbreakingAction.m in Sources */,
 				33ADC4E01654A6D0007E3429 /* RoadWayClosed.m in Sources */,
@@ -3080,6 +3118,7 @@
 				33B2DEAA1CD83AE000DAF01E /* MMProgressHUDOverlayView.m in Sources */,
 				B30D42821655310B009F62A2 /* ParkingNode.m in Sources */,
 				B30D428516553146009F62A2 /* InspectionPath.m in Sources */,
+				8431D27C22CD95050077F16A /* MaintainCheckDaily.m in Sources */,
 				33AB0FE71655CEC3005A2BE8 /* CaseMap.m in Sources */,
 				33BA88CB165A18BB0050F599 /* CaseInquire.m in Sources */,
 				331673101EB9AA6D0090EDE7 /* ServiceCheckDetail.m in Sources */,
@@ -3099,6 +3138,7 @@
 				336CEE5716635B7A004A6763 /* NSString+DDXML.m in Sources */,
 				8477DB841FD68EFA00CC8241 /* TAAbstractDotView.m in Sources */,
 				336CEE5816635B7A004A6763 /* DDXMLDocument.m in Sources */,
+				8420829122E59A4300950EC8 /* BridgeCheckDetail.m in Sources */,
 				336CEE5916635B7A004A6763 /* DDXMLElement.m in Sources */,
 				336CEE5A16635B7A004A6763 /* DDXMLNode.m in Sources */,
 				33A9DF6C1664570700C7CE8E /* DDXMLNode+CDATA.m in Sources */,
@@ -3380,6 +3420,7 @@
 			baseConfigurationReference = 1C91395715968954BB46419C /* Pods-GDRMXBYHMobile.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3424,6 +3465,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = AllProjectCanUsedevelopment;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3433,6 +3475,7 @@
 			baseConfigurationReference = A4D3E7FA69BCB2AB3979102B /* Pods-GDRMXBYHMobile.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -3476,6 +3519,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = AllProjectCanDistribution;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -56,10 +56,10 @@
 
 
 #define VERSION_NAME @"西部沿海路政"
-#define VERSION_TIME @"2019年04月16号"
+#define VERSION_TIME @"2019年08月15号"
 
 //用来检测最新版本
-#define VERSION_NUMBER @2018122401
+#define VERSION_NUMBER @2019081501
 //#define VERSION_NUMBER @2018000000
 //https://www.example.com/image.512x512.png
 /*

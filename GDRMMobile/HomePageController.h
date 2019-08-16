@@ -19,6 +19,11 @@
 - (IBAction)btnLogOut:(UIBarButtonItem *)sender;
 - (IBAction)btnServicesCheck:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *CarcheckBtn;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *BridgeSafeBtn;
+- (IBAction)bridgeSafeClick:(id)sender;
+
 - (IBAction)btnCarcheck:(id)sender;
 - (IBAction)btnYZDN:(UIButton *)sender;
 

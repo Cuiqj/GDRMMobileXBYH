@@ -397,4 +397,9 @@
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
     return NO;
 }
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.preferredContentSize = CGSizeMake(540.0, 620.0);
+}
+
 @end

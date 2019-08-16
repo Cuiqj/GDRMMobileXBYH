@@ -114,11 +114,10 @@
     }else {
         if (self.delegate && [self.delegate respondsToSelector:@selector(setDate:)]) {
             [self.delegate setDate:[self.formatter stringFromDate:[self.datePicker date]]];
+        }else{
+            [self.delegate setDate:[self.datePicker date] forcheckdate:@""];
         }
-        
     }
-    NSLog(@"%@",[self.datePicker date]);
-    
     [self.dateselectPopover dismissPopoverAnimated:YES];
 }
 

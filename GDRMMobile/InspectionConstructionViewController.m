@@ -230,11 +230,7 @@ typedef enum {
             NSString *photoPath=[NSString stringWithFormat:@"InspectionConstruction/%@",inspection.myid];
             photoPath=[documentPath stringByAppendingPathComponent:photoPath];
             [[NSFileManager defaultManager]removeItemAtPath:photoPath error:nil];
-            
             [[AppDelegate App] saveContext];
-            
-            
-            
             self.constructionID = @"";
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             

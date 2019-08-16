@@ -12,7 +12,7 @@
 #import "UploadRecord.h"
 #import "InspectionConstruction.h"
 #import "ListMutiSelectViewController.h"
-//#import "MBProgressHUD.h"
+#import "MBProgressHUD.h"
 #import <BaiduMapAPI_Base/BMKMapManager.h>
 #import "DataSyncController.h"
 #import "AFNetworking.h"
@@ -43,7 +43,7 @@
 {
     [self initServer];
     _mapManager = [[BMKMapManager alloc] init];
-    //启动地图引擎
+//    启动地图引擎
     BOOL success = [_mapManager start:@"XF0KwvF44zqy8p4kgFlKeHP7ZoPIbwjQ" generalDelegate:self];
     
     if (!success) {
@@ -99,20 +99,20 @@
      [application scheduleLocalNotification:noti];
      */
     //检查版本更新
-    NSString *filePath=@"http://124.172.189.177:81/xbyh/app/update.json";
-    NSURL *fileUrl=[NSURL URLWithString:filePath];
-    if ([WebServiceHandler isServerReachable]){
-    id Update=[NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:fileUrl] options:NSJSONReadingMutableLeaves error:nil];
-        if(  [Update[@"versionNum"] intValue]> [VERSION_NUMBER intValue]){
-            if([Update[@"isMustUpdate"] boolValue]){
-                [[[UIAlertView alloc]initWithTitle:@"版本更新提示" message:Update[@"log"] delegate:self cancelButtonTitle:@"去更新" otherButtonTitles:nil, nil] show];
-            }else{
-                [[[UIAlertView alloc]initWithTitle:@"版本更新提示" message:Update[@"log"] delegate:self cancelButtonTitle:@"不了" otherButtonTitles:@"去更新", nil] show];
-            }
-        }
-    }else{
-      [OMGToast showWithText:@"无法连接服务器，请检查网络连接。" bottomOffset:100 duration:5];
-    }
+//    NSString *filePath=@"http://124.172.189.177:81/xbyh/app/update.json";
+//    NSURL *fileUrl=[NSURL URLWithString:filePath];
+//    if ([WebServiceHandler isServerReachable]){
+//    id Update=[NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:fileUrl] options:NSJSONReadingMutableLeaves error:nil];
+//        if(  [Update[@"versionNum"] intValue]> [VERSION_NUMBER intValue]){
+//            if([Update[@"isMustUpdate"] boolValue]){
+//                [[[UIAlertView alloc]initWithTitle:@"版本更新提示" message:Update[@"log"] delegate:self cancelButtonTitle:@"去更新" otherButtonTitles:nil, nil] show];
+//            }else{
+//                [[[UIAlertView alloc]initWithTitle:@"版本更新提示" message:Update[@"log"] delegate:self cancelButtonTitle:@"不了" otherButtonTitles:@"去更新", nil] show];
+//            }
+//        }
+//    }else{
+//        [OMGToast showWithText:@"无法连接服务器，请检查网络连接。" bottomOffset:100 duration:5];
+//    }
     
     
     [IQKeyboardManager sharedManager].enable=YES;

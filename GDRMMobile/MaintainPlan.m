@@ -22,6 +22,8 @@
 @dynamic tel_number;
 @dynamic remark;
 @dynamic code;
+@dynamic project_direction;
+@dynamic org_id;
 
 +(NSArray *)allMaintainPlan{
     NSManagedObjectContext *moc=  [[AppDelegate App] managedObjectContext];
@@ -29,6 +31,8 @@
     NSFetchRequest *request = [[NSFetchRequest alloc]init];
     [request setEntity:entity];
     [request setPredicate:nil];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date_end" ascending:NO];
+    [request setSortDescriptors: [NSArray arrayWithObject: sortDescriptor]];
     return [moc executeFetchRequest:request error:nil];
 }
 

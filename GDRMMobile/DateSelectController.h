@@ -31,4 +31,6 @@
 @optional
 -(void)setDate:(NSString *)date;
 -(void)setPastDate:(NSDate *)date withTag:(int)tag;
+
+-(void)setDate:(NSDate *)date forcheckdate:(NSString *)check;
 @end

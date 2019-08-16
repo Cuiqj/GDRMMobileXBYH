@@ -62,8 +62,7 @@
 //    dispatch_release(myqueue);
 }
 
-- (void)getUploadedRecords:(int)count
-{
+- (void)getUploadedRecords:(int)count{
     NSError* error;
     NSManagedObjectContext* managedObjectContext = [[AppDelegate App] managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -76,9 +75,7 @@
     NSArray* fileList = [managedObjectContext executeFetchRequest:request error:&error];
     [self removeExpireRecord:fileList];
 }
-- (void)removeBeyondTheSevenDayRecord
-{
-    
+- (void)removeBeyondTheSevenDayRecord{
     NSError* error;
     NSManagedObjectContext* managedObjectContext = [[AppDelegate App] managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];

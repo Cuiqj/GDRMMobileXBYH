@@ -28,4 +28,6 @@
 
 -(NSString *)dataXMLStringForCasePhoto;
 -(NSString *)dataXMLStringForCaseMap;
+//上传所有写入数据
++ (NSArray *)uploadAnyClassArrayOfObject;
 @end

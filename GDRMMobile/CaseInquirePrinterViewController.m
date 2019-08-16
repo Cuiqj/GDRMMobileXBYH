@@ -12,7 +12,8 @@
 #import "CaseInfo.h"
 
 static NSString * const xmlName = @"InquireTable";
-static NSString * const secondPageXmlName = @"InquireTable2_new"; //该文件改用来作为第二页 | xushiwen | 2013.7.30
+static NSString * const secondPageXmlName = @"InquireTable";
+//static NSString * const secondPageXmlName = @"InquireTable2_new"; //该文件改用来作为第二页 | xushiwen | 2013.7.30
 //static NSString * const secondPageXmlName = @"InquireTable2GZX"; //该文件改用来作为第二页 | xushiwen | 2013.7.30
 
 enum kPageInfo {

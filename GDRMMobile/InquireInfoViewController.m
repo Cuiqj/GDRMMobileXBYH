@@ -393,7 +393,7 @@ Boolean isSelectMuban;
         if (inspectorArray != nil && [inspectorArray count] > 0) {
             self.textFieldRecorder.text = [inspectorArray objectAtIndex:0];
             if([[inspectorArray objectAtIndex:0] isEqualToString:currentUserName]){
-                if( [inspectorArray count] > 1){
+                if([inspectorArray count] > 1){
                     self.textFieldRecorder.text = [inspectorArray objectAtIndex:1];
                 }
             }

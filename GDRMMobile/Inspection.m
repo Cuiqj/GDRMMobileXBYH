@@ -111,6 +111,8 @@
     }else if([classe containsString:@"中班"]){
         temp = [NSDate dateWithTimeInterval:24*60*60 sinceDate:time_start];
         timestring = [NSString stringWithFormat:@"%@00时00分",[matter stringFromDate:temp]];
+    }else{
+        return time_end;
     }
     [matter setDateFormat:@"yyyy年MM月dd日HH时mm分"];
     return [matter dateFromString:timestring];

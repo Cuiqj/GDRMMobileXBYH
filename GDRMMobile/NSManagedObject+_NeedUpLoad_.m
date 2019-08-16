@@ -298,8 +298,7 @@
     UIImage * image;
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         image = [[UIImage alloc] initWithContentsOfFile:filePath];
-    }
-    else{
+    }else{
         image = nil;
     }
     NSData *data = UIImagePNGRepresentation(image);
@@ -309,6 +308,34 @@
 }
 
 
-
++ (NSArray *)uploadAnyClassArrayOfObject{
+    NSManagedObjectContext *moc=  [[AppDelegate App] managedObjectContext];
+    NSEntityDescription *entity= [NSEntityDescription entityForName:NSStringFromClass([self class]) inManagedObjectContext:moc];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    [request setEntity:entity];
+    [request setPredicate:nil];
+    return [moc executeFetchRequest:request error:nil];
+//    NSManagedObjectContext *context=[[AppDelegate App] managedObjectContext];
+//    NSEntityDescription *entity=[NSEntityDescription entityForName:NSStringFromClass([self class]) inManagedObjectContext:context];
+//    NSFetchRequest *fetchRequest=[[NSFetchRequest alloc] init];
+//    [fetchRequest setEntity:entity];
+//    if ([NSStringFromClass([self class]) isEqualToString:@"CasePhoto"]) {
+//        [fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@"proveinfo_id != nil||project_id!=nil"]];
+//        //[fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@"isuploaded.boolValue == NO"  ]];
+//    }else if ([NSStringFromClass([self class]) isEqualToString:@"CarCheckRecords"]) {
+//        [fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@"parent_id != nil "]];
+//        //[fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@"isuploaded.boolValue == NO"  ]];
+//    }else if ([NSStringFromClass([self class]) isEqualToString:@"RoadAsset_Check_detail"]) {
+//        [fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@""]];
+//        //[fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@"isuploaded.boolValue == NO"  ]];
+//    }else if ([NSStringFromClass([self class]) isEqualToString:@"BridgeCheckDetail"]) {
+//        [fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@""]];
+//        //[fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@"isuploaded.boolValue == NO"  ]];
+//    }else{
+//        [fetchRequest setPredicate:[NSPredicate  predicateWithFormat:@""]];
+//    }
+//
+//    return [context executeFetchRequest:fetchRequest error:nil];
+}
 
 @end

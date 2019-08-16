@@ -15,6 +15,9 @@
 #import "OMGToast.h"
 #import "InspectInMapViewCOntroller.h"
 #import "BrgAndCavCheckViewController.h"
+
+#import "UNderBridgeViewController.h"
+
 @interface HomePageController ()
 - (void) loadUserLabel;
 @property (nonatomic,retain) UIPopoverController *popover;
@@ -96,8 +99,6 @@
     UIStoryboard *secondStoryboard = [UIStoryboard storyboardWithName:@"SecondStoryboard" bundle:nil];
     
     ServicesCheckViewController *servicesCheckVC = [secondStoryboard instantiateViewControllerWithIdentifier:@"servicesCheckVC"];
-    
-    
     [self.navigationController pushViewController:servicesCheckVC animated:YES];
 }
 
@@ -153,6 +154,13 @@
     InspectInMapViewCOntroller *destVC=[[InspectInMapViewCOntroller alloc] init];
     destVC.view.backgroundColor=[UIColor whiteColor];
      [self.navigationController pushViewController:destVC animated:YES];
+}
+
+- (IBAction)bridgeSafeClick:(id)sender {
+    UIStoryboard *mainstoryboard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UNderBridgeViewController * underbridgeview = [mainstoryboard instantiateViewControllerWithIdentifier:@"BridgeView"];
+    underbridgeview.extendedLayoutIncludesOpaqueBars = true;
+    [self.navigationController pushViewController:underbridgeview animated:YES];
 }
 
 - (IBAction)btnCarcheck:(id)sender {

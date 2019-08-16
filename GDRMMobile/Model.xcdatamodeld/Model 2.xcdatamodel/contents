@@ -23,6 +23,7 @@
     </entity>
     <entity name="BridgeCheckDetail" representedClassName="BridgeCheckDetail" syncable="YES">
         <attribute name="check_situation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="checkuser" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cubic_m" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="east" optional="YES" attributeType="String" syncable="YES"/>
@@ -46,6 +47,29 @@
         <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="project" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="west" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BridgeSpaceCheckSpecial" syncable="YES">
+        <attribute name="b_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bsd_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="check_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="check_project" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="check_require" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="check_result" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isuploaded" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BridgeSpaceCheckSpecialB" syncable="YES">
+        <attribute name="accept_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="acceptor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bsd_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="check_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="check_user" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finish_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isuploaded" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recheck" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="road_name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="CarCheckItems" representedClassName="CarCheckItems" syncable="YES">
         <attribute name="checkdesc" optional="YES" attributeType="String" syncable="YES"/>
@@ -552,6 +576,36 @@
         <attribute name="myid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="MaintainCheckDaily" syncable="YES">
+        <attribute name="approval" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="canalization" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="check_station" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="constr_are" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="constr_car_light" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="constr_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="constr_nature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="constr_org" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="direction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="have_against" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="have_safe_person" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="have_supervise" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="inspector" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isuploaded" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="maintain_plan_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="material_stack" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="myid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="night_light" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notice" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="org" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="person_saft_mark" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="project_code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sign_lay" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="traffic_cone" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="work_length_require" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
     <entity name="MaintainPlan" representedClassName="MaintianPlan" syncable="YES">
         <attribute name="close_desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
@@ -559,8 +613,10 @@
         <attribute name="date_end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="date_start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="myid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="org_principal" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="project_address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="project_direction" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="project_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tel_number" optional="YES" attributeType="String" syncable="YES"/>
@@ -919,8 +975,10 @@
     <elements>
         <element name="AtonementNotice" positionX="160" positionY="192" width="128" height="240"/>
         <element name="BridgeCheck" positionX="90" positionY="162" width="128" height="105"/>
-        <element name="BridgeCheckDetail" positionX="108" positionY="180" width="128" height="270"/>
+        <element name="BridgeCheckDetail" positionX="108" positionY="180" width="128" height="285"/>
         <element name="BridgeCheckItem" positionX="99" positionY="171" width="128" height="150"/>
+        <element name="BridgeSpaceCheckSpecial" positionX="90" positionY="162" width="128" height="165"/>
+        <element name="BridgeSpaceCheckSpecialB" positionX="81" positionY="153" width="128" height="210"/>
         <element name="CarCheckItems" positionX="99" positionY="171" width="128" height="150"/>
         <element name="CarCheckRecords" positionX="90" positionY="162" width="128" height="165"/>
         <element name="CaseCount" positionX="160" positionY="192" width="128" height="105"/>
@@ -963,7 +1021,8 @@
         <element name="LawbreakingAction" positionX="160" positionY="192" width="128" height="105"/>
         <element name="LawItems" positionX="160" positionY="192" width="128" height="120"/>
         <element name="Laws" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="MaintainPlan" positionX="117" positionY="189" width="128" height="210"/>
+        <element name="MaintainCheckDaily" positionX="81" positionY="153" width="128" height="465"/>
+        <element name="MaintainPlan" positionX="117" positionY="189" width="128" height="240"/>
         <element name="MaintainPlanCheck" positionX="126" positionY="198" width="128" height="450"/>
         <element name="MatchLaw" positionX="160" positionY="192" width="128" height="105"/>
         <element name="MatchLawDetails" positionX="160" positionY="192" width="128" height="120"/>

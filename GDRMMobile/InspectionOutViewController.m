@@ -36,7 +36,7 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    self.preferredContentSize = CGSizeMake(540, 660);
+    self.preferredContentSize = CGSizeMake(540.0, 620.0);
 }
 
 - (void)viewDidLoad
@@ -181,8 +181,12 @@
             if (!inspection.yjsj) {
                 inspection.yjsj = [Inspection inspectionfortime_endsettingtimeyjsj:inspection.time_end andtime_start:inspection.time_start andclasse:inspection.classe];
                 inspection.time_end = inspection.yjsj;
-                inspection.time_start =[NSDate dateWithTimeInterval:-8*60*60
-                                                          sinceDate:inspection.time_end];
+                //如果是机动班或其他班不改变 巡查开始时间
+                if ([inspection.classe isEqualToString:@"早班"] || [inspection.classe isEqualToString:@"中班"] || [inspection.classe isEqualToString:@"晚班"]){
+                    inspection.time_start =[NSDate dateWithTimeInterval:-8*60*60 sinceDate:inspection.time_end];
+                }else{
+                    
+                }
                 
 //                inspection.yjsj = inspection.time_end;
             }
@@ -393,4 +397,5 @@
 - (void)sideLongPress{
     [self.textroad becomeFirstResponder];
 }
+
 @end

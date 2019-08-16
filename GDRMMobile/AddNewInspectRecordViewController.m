@@ -20,7 +20,7 @@
 #import "NSString+MyStringProcess.h"
 #import "ZLYHRoadAssetCheckViewController.h"
 #import "ZLYNinInspectVC.h"
-
+#import "ShiGongCheckViewController.h"
 #import "RoadSegment.h"
 
 @interface AddNewInspectRecordViewController ()
@@ -663,9 +663,15 @@
     [((RoadInspectViewController*)self.delegate) performSegueWithIdentifier:@"inspectToCaseView" sender:self];
 }
 -(void)btnToShiGongCheck:(UIButton *)sender{
+    //施工检查 施工检查跳转
     [self.delegate addObserverToKeyBoard];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [((RoadInspectViewController*)self.delegate) performSegueWithIdentifier:@"inspectToShiGongCheck" sender:self];
+    [self dismissViewControllerAnimated:YES completion:^{
+        UIStoryboard *mainstoryboard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        ShiGongCheckViewController * ShiGongCheck = [mainstoryboard instantiateViewControllerWithIdentifier:@"shigongcheck"];
+//        ShiGongCheck.roadInspectVC = ((RoadInspectViewController*)self.delegate);
+        ShiGongCheck.inspectionID = self.inspectionID;
+        [((RoadInspectViewController*)self.delegate).navigationController pushViewController:ShiGongCheck animated:YES];
+    }];
 }
 - (IBAction)toUnderBridgeCheck:(id)sender {
     //UIViewController *caseView = [self.storyboard instantiateViewControllerWithIdentifier:@"CaseView"];
@@ -805,6 +811,7 @@
         //		[self.navigationController pushViewController:receive animated:YES];
     }
     if ([segue.identifier isEqualToString:@"inspectToShiGongCheck"]) {
+        //施工检查跳转
         UIViewController * destvc = segue.destinationViewController;
         destvc.navigationItem.title=@"施工检查";
     }
@@ -1039,6 +1046,10 @@
     [self dismissViewControllerAnimated:YES completion:^{
         [((RoadInspectViewController*)self.delegate) performSegueWithIdentifier:@"toTrafficRecord" sender:self];
     }];
+}
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.preferredContentSize = CGSizeMake(540.0, 620.0);
 }
 
 @end
