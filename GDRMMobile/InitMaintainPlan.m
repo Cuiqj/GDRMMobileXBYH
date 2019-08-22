@@ -12,8 +12,12 @@
 
 - (void)downMaintainPlan:(NSString *)orgID{
     WebServiceInit;
-    
-    [service downloadDataSet:[NSString stringWithFormat: @"select * from MaintainPlan where org_id=%@ ",orgID]];
+    NSDate * date = [NSDate date];
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString * nowstring = [formatter stringFromDate:date];
+    [service downloadDataSet:[NSString stringWithFormat: @"select * from MaintainPlan where org_id=%@",orgID]];
+//    [service downloadDataSet:[NSString stringWithFormat: @"select * from MaintainPlan where org_id=%@ and '%@' < date_end ",orgID,nowstring]];
 //    [service downloadDataSet:@"select * from MaintainPlan" ];
     //[service downloadDataSet:[@"select * from MaintianPlan where org_id = " stringByAppendingString:orgID]];
 }

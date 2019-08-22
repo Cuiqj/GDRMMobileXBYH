@@ -43,6 +43,8 @@
 @property (nonatomic, retain) NSString *inspectionID;
 //所选施工项目的封道情况
 @property (nonatomic, retain) NSString *close_desc;
+//所选施工项目名称
+@property (nonatomic, retain) NSString *checkproject;
 
 //  巡查情况要用到   施工检查要用到
 @property (nonatomic, assign) RoadInspectViewController *roadInspectVC;

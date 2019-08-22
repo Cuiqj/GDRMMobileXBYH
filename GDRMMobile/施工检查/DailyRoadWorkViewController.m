@@ -111,7 +111,7 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"yyyy年MM月dd日HH时"];
+    [formatter setDateFormat:@"yyyy年MM月dd日HH时mm分"];
     MaintainCheckDaily * CheckDaily;
     if (self.dataarray.count>0) {
         CheckDaily = self.dataarray[indexPath.row];
@@ -135,7 +135,7 @@
     self.dailyCheck = (MaintainCheckDaily *)self.dataarray[indexPath.row];
     NSDateFormatter * dateformatter = [[NSDateFormatter alloc] init];
     [dateformatter setLocale:[NSLocale currentLocale]];
-    [dateformatter setDateFormat:@"yyyy年MM月dd日HH时"];
+    [dateformatter setDateFormat:@"yyyy年MM月dd日HH时mm分"];
     self.textdate.text = [dateformatter stringFromDate:self.dailyCheck.date];
     self.textdirection.text = self.dailyCheck.direction;
     self.textinspector.text = self.dailyCheck.inspector;
@@ -379,7 +379,7 @@
     self.dailyCheck.direction = self.textdirection.text;
     NSDateFormatter *formator =[[NSDateFormatter alloc]init];
     [formator setLocale:[NSLocale currentLocale]];
-    [formator setDateFormat:@"yyyy年MM月dd日HH时"];
+    [formator setDateFormat:@"yyyy年MM月dd日HH时mm分"];
     self.dailyCheck.date = [formator dateFromString:self.textdate.text];
     if ([self.textconstr_nature1 isSelected]) {
         self.dailyCheck.constr_nature = @"长期作业";
@@ -521,7 +521,7 @@
     self.dailyCheck.date = date;
     NSDateFormatter *formator =[[NSDateFormatter alloc]init];
     [formator setLocale:[NSLocale currentLocale]];
-    [formator setDateFormat:@"yyyy年MM月dd日HH时"];
+    [formator setDateFormat:@"yyyy年MM月dd日HH时mm分"];
     self.textdate.text = [formator stringFromDate:date];
 }
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView{
@@ -563,12 +563,12 @@
     inspectionRecord.start_time     = self.dailyCheck.date;
     inspectionRecord.station        = @(0);
     NSDateFormatter * dateformatter = [[NSDateFormatter alloc] init];
-    [dateformatter setDateFormat:@"HH时mm分"];
+    [dateformatter setDateFormat:@"HH:mm"];
     NSString * timestring = [dateformatter stringFromDate:self.dailyCheck.date];
     if([self maintainCheckDailyforDemand]){
-        inspectionRecord.remark = [NSString stringWithFormat:@"%@巡查至S32%@%@时，检查广东省路路通有限公司取消省界收费站工程施工点，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施符合规范。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,self.dailyCheck.project_code,self.close_desc];
+        inspectionRecord.remark = [NSString stringWithFormat:@"%@ 巡查至S32%@%@时，检查%@，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施符合规范。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,self.checkproject,self.dailyCheck.project_code,self.close_desc];
     }else{
-        inspectionRecord.remark = [NSString stringWithFormat:@"%@巡查至S32%@%@时，检查广东省路路通有限公司取消省界收费站工程施工点，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施不符合规范，已现场开具《广东西部沿海高速公路涉路施工整改通知书》或《广东西部沿海高速公路涉路施工停工通知书》或《广东西部沿海高速公路涉路施工安全保证金扣除通知书》。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,self.dailyCheck.project_code,self.close_desc];
+        inspectionRecord.remark = [NSString stringWithFormat:@"%@ 巡查至S32%@%@时，检查%@，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施不符合规范，已现场开具《广东西部沿海高速公路涉路施工整改通知书》或《广东西部沿海高速公路涉路施工停工通知书》或《广东西部沿海高速公路涉路施工安全保证金扣除通知书》。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,self.checkproject,self.dailyCheck.project_code,self.close_desc];
     }
     [[AppDelegate App] saveContext];
 }

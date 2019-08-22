@@ -11,7 +11,9 @@
 @interface DailyRoadWorkViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate>
 
 @property (nonatomic,retain) NSString * planID;
-//@property (nonatomic,retain) NSString * usedescription;
+
+//检查项目
+@property (nonatomic,retain) NSString * checkproject;
 //跳转的巡查ID
 @property (nonatomic,retain) NSString * inspectionID;
 //所选施工项目的封道情况

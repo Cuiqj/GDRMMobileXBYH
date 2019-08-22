@@ -71,17 +71,32 @@ typedef enum {
 //@synthesize pdfFormatFileURL;
 //@synthesize pdfFileURL;
 
+-(BOOL)compareDate:(NSDate *)startDate withDate:(NSDate *)endDate{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString * string1 = [formatter stringFromDate:startDate];
+    NSString * string2 = [formatter stringFromDate:endDate];
+    NSDate * date1 = [formatter dateFromString:string1];
+    NSDate * date2 = [formatter dateFromString:string2];
+    NSComparisonResult result = [date1 compare:date2];
+    if(result == NSOrderedAscending){
+//        date1 在过去
+        return YES;
+    }
+    return NO;
+}
 - (void)viewDidLoad{
     [self.ButtonfuJian setHidden:YES];
-    
+    self.constructionList = [NSMutableArray arrayWithCapacity:1];
     NSArray * array = [MaintainPlan allMaintainPlan];
     for (int i = 0; i<[array count]; i++) {
         MaintainPlan * plan = array[i];
-        if ([plan.is_finish intValue] == 0) {
+        NSDate * now = [NSDate date];
+        if ([self compareDate:now withDate:[NSDate dateWithTimeInterval:3*30*24*60*60 sinceDate:plan.date_end]]) {
             [self.constructionList addObject:plan];
         }
     }
-    self.constructionList = [[MaintainPlan allMaintainPlan] mutableCopy];
+//    self.constructionList = [[MaintainPlan allMaintainPlan] mutableCopy];
     [self.textProject setEnabled:NO];
     [self.Fuzeren setEnabled:NO];
     [self.stattdate setEnabled:NO];
@@ -186,6 +201,7 @@ typedef enum {
     
     //施工封道情况
     self.close_desc = maintainplan.close_desc;
+    self.checkproject = maintainplan.project_name;
     //所有控制表格中行高亮的代码都只在这里
     [self.tableCloseList deselectRowAtIndexPath:[self.tableCloseList indexPathForSelectedRow] animated:YES];
     [self.tableCloseList selectRowAtIndexPath:indexPath animated:nil scrollPosition:nil];
@@ -200,6 +216,7 @@ typedef enum {
 //            dailyroadworkcheck.usedescription = @"巡查施工检查";
             dailyroadworkcheck.inspectionID = self.inspectionID;
             dailyroadworkcheck.close_desc= self.close_desc;
+            dailyroadworkcheck.checkproject = self.checkproject;
         }
         dailyroadworkcheck.planID = self.maintainPlanID;
         [self.navigationController pushViewController:dailyroadworkcheck animated:YES];
