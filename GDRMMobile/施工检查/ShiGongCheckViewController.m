@@ -198,10 +198,7 @@ typedef enum {
     self.textchedao.text = maintainplan.close_desc;
     self.tel_phone.text = maintainplan.tel_number;
     self.textcheck_remark.text = maintainplan.remark;
-    
-    //施工封道情况
-    self.close_desc = maintainplan.close_desc;
-    self.checkproject = maintainplan.project_name;
+
     //所有控制表格中行高亮的代码都只在这里
     [self.tableCloseList deselectRowAtIndexPath:[self.tableCloseList indexPathForSelectedRow] animated:YES];
     [self.tableCloseList selectRowAtIndexPath:indexPath animated:nil scrollPosition:nil];
@@ -215,8 +212,8 @@ typedef enum {
         if (![self.inspectionID isEmpty]) {
 //            dailyroadworkcheck.usedescription = @"巡查施工检查";
             dailyroadworkcheck.inspectionID = self.inspectionID;
-            dailyroadworkcheck.close_desc= self.close_desc;
-            dailyroadworkcheck.checkproject = self.checkproject;
+//            dailyroadworkcheck.close_desc= self.close_desc;
+//            dailyroadworkcheck.checkproject = self.checkproject;
         }
         dailyroadworkcheck.planID = self.maintainPlanID;
         [self.navigationController pushViewController:dailyroadworkcheck animated:YES];

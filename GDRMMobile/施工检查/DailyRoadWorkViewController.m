@@ -16,6 +16,7 @@
 
 #import "InspectionRecord.h"
 #import "RoadInspectViewController.h"
+#import "MaintainPlan.h"
 
 @interface DailyRoadWorkViewController ()
 @property (nonatomic, retain) NSMutableArray * dataarray;
@@ -552,6 +553,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
 - (void)createInspectionRecordforShiGongCheck{
+    MaintainPlan * plan = [MaintainPlan maintainPlanInfoForID:self.planID];
 
     InspectionRecord *inspectionRecord=[InspectionRecord newDataObjectWithEntityName:@"InspectionRecord"];
     //        //要把交通事故的照片带过来
@@ -566,9 +568,9 @@
     [dateformatter setDateFormat:@"HH:mm"];
     NSString * timestring = [dateformatter stringFromDate:self.dailyCheck.date];
     if([self maintainCheckDailyforDemand]){
-        inspectionRecord.remark = [NSString stringWithFormat:@"%@ 巡查至S32%@%@时，检查%@，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施符合规范。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,self.checkproject,self.dailyCheck.project_code,self.close_desc];
+        inspectionRecord.remark = [NSString stringWithFormat:@"%@ 巡查至S32%@%@时，检查%@%@，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施符合规范。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,plan.construct_org,plan.project_name,self.dailyCheck.project_code,plan.close_desc];
     }else{
-        inspectionRecord.remark = [NSString stringWithFormat:@"%@ 巡查至S32%@%@时，检查%@，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施不符合规范，已现场开具《广东西部沿海高速公路涉路施工整改通知书》或《广东西部沿海高速公路涉路施工停工通知书》或《广东西部沿海高速公路涉路施工安全保证金扣除通知书》。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,self.checkproject,self.dailyCheck.project_code,self.close_desc];
+        inspectionRecord.remark = [NSString stringWithFormat:@"%@ 巡查至S32%@%@时，检查%@%@，施工证号：%@，现场有人（无人）施工，现场封闭%@，作业区的布控及各交安设施不符合规范，已现场开具《广东西部沿海高速公路涉路施工整改通知书》或《广东西部沿海高速公路涉路施工停工通知书》或《广东西部沿海高速公路涉路施工安全保证金扣除通知书》。",timestring,self.dailyCheck.direction,self.dailyCheck.check_station,plan.construct_org,plan.project_name,self.dailyCheck.project_code,plan.close_desc];
     }
     [[AppDelegate App] saveContext];
 }

@@ -180,19 +180,21 @@
             inspection.time_end=[formatter dateFromString:self.textEndDate.text];
             if (!inspection.yjsj) {
 //                inspection.yjsj = [Inspection inspectionfortime_endsettingtimeyjsj:inspection.time_end andtime_start:inspection.time_start andclasse:inspection.classe];
-//                inspection.time_end = inspection.yjsj;
+                inspection.yjsj = inspection.time_end;
 //                //如果是机动班或其他班不改变 巡查开始时间
 //                if ([inspection.classe isEqualToString:@"早班"] || [inspection.classe isEqualToString:@"中班"] || [inspection.classe isEqualToString:@"晚班"]){
 //                    inspection.time_start =[NSDate dateWithTimeInterval:-8*60*60 sinceDate:inspection.time_end];
 //                }else{
 //
-//                }
+//
                 NSArray * recorddata = [InspectionRecord recordsForInspection:inspectionID];
-                InspectionRecord * startrecord = recorddata[0];
-                InspectionRecord * endrecord = recorddata[[recorddata count]-1];
-                inspection.time_start = startrecord.start_time;
-                inspection.time_end = endrecord.start_time;
-                inspection.yjsj = endrecord.start_time;
+                if([recorddata count]>=1){
+                    InspectionRecord * startrecord = recorddata[0];
+                    InspectionRecord * endrecord = recorddata[[recorddata count]-1];
+                    inspection.time_start = startrecord.start_time;
+                    inspection.time_end = endrecord.start_time;
+                    inspection.yjsj = endrecord.start_time;
+                }
             }
             inspection.inspection_milimetres=@(self.textMile.text.floatValue);
             inspection.isdeliver=@(YES);

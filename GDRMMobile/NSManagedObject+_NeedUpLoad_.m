@@ -131,6 +131,14 @@
     return typeString;
 }
 - (NSString *)dataXMLString{
+    NSString *currentOrgID=[[NSUserDefaults standardUserDefaults] stringForKey:ORGKEY];
+    if (currentOrgID.length > 0) {
+        
+    }else{
+        NSString *currentUserID=[[NSUserDefaults standardUserDefaults] stringForKey:USERKEY];
+        currentOrgID = [UserInfo userInfoForUserID:currentUserID].organization_id;
+    }
+    
     NSString *dataXMLString = @"";
     NSEntityDescription *entity=[self entity];
     NSDictionary *attributes = [entity attributesByName];
@@ -143,6 +151,15 @@
                 case NSStringAttributeType:{
                     if (obj == nil) {
                         obj = @"";
+                        if ([attriName isEqualToString:@"organization_id"]) {
+                            obj = currentOrgID;
+                        }
+                        if ([attriName isEqualToString:@"inspection_id"]) {
+                            obj = currentOrgID;
+                        }
+                        if ([attriName isEqualToString:@"inspectionid"]) {
+                            obj = currentOrgID;
+                        }
                     }
                     if (![attriName isEqualToString:@"maintainplan_id"]) {
                         if ([attriName isEqualToString:@"myid"]) {

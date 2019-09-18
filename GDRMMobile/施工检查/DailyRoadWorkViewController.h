@@ -11,13 +11,13 @@
 @interface DailyRoadWorkViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate>
 
 @property (nonatomic,retain) NSString * planID;
-
-//检查项目
-@property (nonatomic,retain) NSString * checkproject;
 //跳转的巡查ID
 @property (nonatomic,retain) NSString * inspectionID;
-//所选施工项目的封道情况
-@property (nonatomic, retain) NSString *close_desc;
+
+////检查项目
+//@property (nonatomic,retain) NSString * checkproject;
+////所选施工项目的封道情况
+//@property (nonatomic, retain) NSString *close_desc;
 
 //施工性质
 @property (weak, nonatomic) IBOutlet UIButton *textconstr_nature1;
