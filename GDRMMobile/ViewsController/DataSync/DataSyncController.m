@@ -162,6 +162,7 @@
 
 - (IBAction)btnUpdateDocFormat:(UIButton *)sender {
     //更新文书
+    return;
     if ([WebServiceHandler isServerReachable]){
         NSArray *libPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
         NSString * libPath=[libPaths objectAtIndex:0 ];
@@ -208,8 +209,6 @@
     }else{
         [OMGToast showWithText:@"无法连接服务器，请检查网络连接。" bottomOffset:100 duration:2];
     }
-    
-    
 }
 
 - (IBAction)Changeorganization:(id)sender {

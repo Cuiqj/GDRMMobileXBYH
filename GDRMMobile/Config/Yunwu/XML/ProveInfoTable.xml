@@ -59,7 +59,7 @@
                 <text>公路赔（补）偿案件勘验检查笔录</text>
                 <fontSize>17</fontSize>
                 <origin x="160" y="75" />
-                <size width="280" height="14" />
+                <size width="350" height="14" />
             </Text>
         </Title>
         <Texts>

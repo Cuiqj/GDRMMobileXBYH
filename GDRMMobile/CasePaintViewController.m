@@ -38,7 +38,6 @@
 @property (nonatomic,assign) BOOL isModify;
 
 
-
 -(void)loadIconModelAtIndexPath:(NSIndexPath*)indexPath
                    InImageBoard:(UIImageView *)iconModelImage
                   OriginalPoint:(CGPoint) originalPoint;

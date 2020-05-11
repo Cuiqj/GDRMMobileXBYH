@@ -16,6 +16,6 @@ target 'GDRMXBYHMobile' do
     #pod 'GPUImage', '~> 0.1.7' 由于LFLiveKit里面已经集成了GPUImage
     pod 'LFLiveKit', '~> 1.6'
     pod 'BaiduMapKit', '~> 4.1.1'
-# 'BaiduMapKit',可能是  '-> 3.4.2'
+# 'BaiduMapKit',原版可能是  '-> 3.4.2'
 end
 

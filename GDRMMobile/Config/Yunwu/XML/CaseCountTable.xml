@@ -396,7 +396,7 @@
         <!--单位    已写死 逃逸事故    42   54.7-->
       <UITextField> <!--  contentVerticalAlignment = UIControlContentVerticalAlignmentCenter>-->
             <origin x="32" y="53.5"/>
-            <size width="40" height="10"/>
+            <size width="36" height="10"/>
 <!--            contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;-->
             <content>
                 <data>
